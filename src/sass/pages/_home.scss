@@ -236,7 +236,9 @@
 /* Agenda Section
 /* -------------------------------------------------------------------------- */
 .agenda-section {
-  padding-bottom: 120px;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .agenda-container {
@@ -294,4 +296,61 @@
   fill: rgb(220, 220, 220);
   width: 48px;
   height: 48px;
+}
+
+
+/* Speakers Section
+/* -------------------------------------------------------------------------- */
+.speakers-section {
+  background-color: white;
+  margin-top: -120px;
+  padding-top: 240px;
+}
+
+.speakers-item-list {
+  @include m-list-unstyled;
+}
+
+.speakers-item {
+  @include m-button-unstyled;
+  text-align: left;
+  margin-bottom: $spacing-4;
+}
+
+.speakers-item__profile {
+  width: 100%;
+  position: relative;
+  margin-bottom: $spacing-4;
+}
+.speakers-item__profile img {
+  max-width: 100%;
+}
+
+.speakers-item__logo {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 60px;
+  height: 60px;
+}
+
+.speakers-item__details {
+  font-size: 16px;
+}
+
+.speakers-item__details small {
+  font-size: $font-size-1;
+}
+
+.speakers-info {
+  background-color: $color-secondary;
+  background-image: url('../img/pattern-02.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: $spacing-6;
+  color: white;
+}
+
+.speakers-info p:last-child {
+  margin-bottom: 0;
 }

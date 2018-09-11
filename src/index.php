@@ -221,6 +221,57 @@
   </div>
 </section>
 
+
+<!-- Speakers Section -->
+<section class="speakers-section section">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Curated Speakers</h2>
+    </header>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Speakers List -->
+      <div class="col-7">
+        <ul class="speakers-item-list row">
+          <?php for ($i = 0; $i < 9; $i++): ?>
+          <li class="col-4">
+            <button class="speakers-item">
+              <div class="speakers-item__profile">
+                <img src="https://unsplash.it/240/240" alt="Photo of X">
+                <div class="speakers-item__logo">
+                  <img src="https://unsplash.it/72/72" alt="Logo of X">
+                </div>
+              </div>
+              <p class="speakers-item__details">
+                <strong>Patrick Grove</strong><br>
+                <small>
+                  Cofounder & Group CEO<br>
+                  Captcha Group
+                </small>
+              </p>
+            </button>
+          </li>
+          <?php endfor ;?>
+        </ul>
+      </div>
+
+      <!-- Speakers Info -->
+      <div class="col-5">
+        <div class="speakers-info">
+          <p>
+            <strong>Patrick Grove</strong><br>
+            Cofounder and Group CEO<br>
+            Captcha Group
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
