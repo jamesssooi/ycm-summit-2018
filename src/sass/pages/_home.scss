@@ -37,6 +37,14 @@
   background-image: url('../img/hero-pattern.png');
   background-size: cover;
   mix-blend-mode: screen;
+  animation: 12s linear hero-pattern-hue-rotate infinite;
+}
+
+@keyframes hero-pattern-hue-rotate {
+  0%   { filter: hue-rotate(0deg); }
+  25% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(-180deg); }
+  100% { filter: hue-rotate(0deg); }
 }
 
 .hero-masthead {

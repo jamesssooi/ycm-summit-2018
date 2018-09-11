@@ -320,7 +320,7 @@
       <div class="row">
 
         <!-- Instructions -->
-        <div class="col-lg-6 offset-lg-1 order-lg-1 mb-5 mb-lg-0">
+        <div class="col-lg-6 offset-lg-1 order-lg-2 mb-5 mb-lg-0">
           <div class="registration-instructions">
             <p class="registration-instructions__pullout">
               Lorem ipsum pitch and selling point here. Free? Exclusive?
@@ -380,10 +380,10 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <div class="row text-center text-lg-left">
+    <div class="row text-center text-md-left">
 
       <!-- Left Column -->
-      <div class="col-lg-8 mb-5 mb-lg-0">
+      <div class="col-md-8 mb-5 mb-md-0">
         <a href="#" class="footer__logo mb-4">
           <img src="img/logos/ycm-white.svg" alt="Logo of YCM">
         </a>
@@ -391,11 +391,11 @@
       </div>
 
       <!-- Right Column -->
-      <div class="col-lg-4">
+      <div class="col-md-4">
         <div class="row">
 
           <!-- Links -->
-          <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="col-md-6 mb-4 mb-md-0">
             <ul class="footer-links">
               <li><a href="#">About</a></li>
               <li><a href="#">Agenda</a></li>
@@ -407,7 +407,7 @@
           </div>
 
           <!-- Social Links -->
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <ul class="footer-links">
               <li><a href="#">Facebook</a></li>
               <li><a href="#">Instagram</a></li>
