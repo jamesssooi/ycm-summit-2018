@@ -92,7 +92,7 @@ Boilr
 │  └─ index.html
 │  
 ├─ static/           # Folder for static assets that do not need processing
-├─ dist/             # Final output folder
+├─ public/             # Final output folder
 │  
 │  # Configuration Files
 ├─ tasks/
@@ -149,12 +149,12 @@ Optimizes images.
 ##### `svg`
 Generates SVG sprite sheets.
 ##### `copy`
-Copies files from `static` to `dist`.
+Copies files from `static` to `public`.
 
 <br>
 #### Cleaner Tasks
 ##### `clean:all`
-Deletes all files in `dist`.
+Deletes all files in `public`.
 ##### `clean:images`
 Deletes only images.
 ##### `clean:css`

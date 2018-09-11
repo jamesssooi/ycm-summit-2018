@@ -4,7 +4,7 @@ export const production = env === 'production' ? true : false;
 export const baseDir = {
   static: './static',
   src: './src',
-  dist: './dist',
+  dist: './public',
 
   styles: {
     src: ['sass/**/*.scss', 'css/**/*.css'],

@@ -17,7 +17,7 @@ module.exports = {
     // vendor: [],
   },
   output: {
-    path: path.join(__dirname, 'dist', 'js'),
+    path: path.join(__dirname, 'public', 'js'),
     filename: '[name].js',
     publicPath: '/',
   },
