@@ -138,6 +138,52 @@
   </div>
 </section>
 
+
+<!-- Article Section -->
+<section class="article-section section">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Curated Articles</h2>
+    </header>
+  </div>
+
+  <!-- Article Listings -->
+  <div class="container position-relative">
+
+    <!-- Prev Button -->
+    <button class="article-item-control is-prev">
+      <svg class="icon">
+        <use xlink:href="svg/sprites.svg#icon-arrow-left"></use>
+      </svg>
+    </button>
+
+    <!-- Carousel -->
+    <div class="article-item-list" id="article-item-list">
+      <?php for ($i = 0; $i < 9; $i++): ?>
+      <div class="article-item">
+        <div class="article-item__image">
+          <img src="https://unsplash.it/380/210" alt="">
+        </div>
+        <div class="article-item__details">
+          <time>Aug 9 2018</time>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <?php endfor ?>
+    </div>
+
+    <!-- Next Button -->
+    <button class="article-item-control is-next">
+      <svg class="icon">
+        <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+      </svg>
+    </button>
+
+  </div>
+</section>
+
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
