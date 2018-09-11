@@ -1,0 +1,62 @@
+/**
+ * @component Navigation
+ */
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100px;
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  padding: 10px $spacing-6 0;
+}
+
+.nav-logos a {
+  display: block;
+}
+
+.nav-logos img {
+  display: block;
+  height: 60px;
+}
+
+/* Navigation Menu
+/* -------------------------------------------------------------------------- */
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu__item {
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-menu__item:not(:last-of-type) {
+  margin-right: $spacing-8;
+}
+
+
+/* YCM Gradient Bar
+/* -------------------------------------------------------------------------- */
+.ycm-gradient-bar {
+  height: 10px;
+  background: linear-gradient(
+    to right,
+    #D4DE24 0%,
+    #2372B8 50%,
+    #F05A30 100%
+  );
+}
+
+.ycm-gradient-bar.is-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
