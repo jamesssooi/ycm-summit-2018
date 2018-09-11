@@ -272,6 +272,40 @@
   </div>
 </section>
 
+
+<!-- Sponsors Section -->
+<section class="sponsors-section section">
+  <div class="container">
+    <h2 class="section-title">Platinum Sponsors</h2>
+    <ul class="sponsor-item-list">
+      <li>
+        <div class="sponsor-item">
+          <div class="sponsor-item__logo">
+            <img src="https://unsplash.it/210/210" alt="Logo of X">
+          </div>
+          <p class="sponsor-item__name">ACME Inc</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Silver Sponsors</h2>
+    <ul class="sponsor-item-list">
+      <?php for ($i = 0; $i < 4; $i++): ?>
+      <li>
+        <div class="sponsor-item">
+          <div class="sponsor-item__logo">
+            <img src="https://unsplash.it/210/210" alt="Logo of X">
+          </div>
+          <p class="sponsor-item__name">ACME Inc</p>
+        </div>
+      </li>
+      <?php endfor; ?>
+    </ul>
+  </div>
+</section>
+
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

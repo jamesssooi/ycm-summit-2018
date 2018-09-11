@@ -354,3 +354,56 @@
 .speakers-info p:last-child {
   margin-bottom: 0;
 }
+
+
+/* Sponsors Section
+/* -------------------------------------------------------------------------- */
+.sponsors-section {
+  background-color: rgb(235, 235, 235);
+}
+
+.sponsor-item-list {
+  @include m-list-unstyled;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 #{-$spacing-2};
+}
+
+.sponsor-item-list:after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: $color-border-l2;
+  margin: $spacing-8 $spacing-2;
+}
+
+.sponsors-section > .container:last-of-type .sponsor-item-list:after {
+  content: none;
+}
+
+.sponsor-item-list li {
+  padding: 0 $spacing-2;
+}
+
+.sponsor-item__logo {
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  position: relative;
+  padding: $spacing-4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-4;
+}
+
+.sponsor-item__logo img {
+  display: block;
+  max-width: 100%;
+}
+
+.sponsor-item__name {
+  font-weight: bold;
+  margin-bottom: 0;
+}
