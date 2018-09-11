@@ -15,11 +15,15 @@
 <body>
 
 <!-- Navigation -->
-<header class="nav-bar">
+<header class="nav-bar" id="nav-bar">
   <div class="ycm-gradient-bar is-top" role="presentation"></div>
   <div class="nav-logos">
-    <a href="#">
-      <img src="img/logos/ycm-white.svg" alt="Logo of YCM">
+    <a href="#" class="nav-logos__ycm">
+      <img src="img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
+      <img src="img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
+    </a>
+    <a href="#" class="nav-logos__de">
+      <img src="img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
     </a>
   </div>
   <nav class="nav-menu ml-auto">
@@ -27,12 +31,12 @@
     <a href="#" class="nav-menu__item">Agenda</a>
     <a href="#" class="nav-menu__item">Speakers</a>
     <a href="#" class="nav-menu__item">Sponsors</a>
-    <a href="#" class="nav-menu__item">Register</a>
+    <a href="#" class="nav-menu__item is-cta">Register</a>
   </nav>
 </header>
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero" id="hero">
 
   <div class="hero-pattern">
     <div class="hero-pattern__image"></div>

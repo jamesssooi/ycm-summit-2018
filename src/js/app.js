@@ -6,6 +6,7 @@
 
 import 'slick-carousel';
 import $ from 'jquery';
+import ScrollMonitor from 'scrollmonitor';
 
 window.addEventListener('DOMContentLoaded', () => {
   $('#article-item-list').slick({
@@ -15,4 +16,14 @@ window.addEventListener('DOMContentLoaded', () => {
     nextArrow: '.article-item-control.is-next',
     prevArrow: '.article-item-control.is-prev',
   });
+
+  enableNavbarColorToggle();
 });
+
+function enableNavbarColorToggle() {
+  const hero = document.getElementById('hero');
+  const navbar = document.getElementById('nav-bar');
+  const watcher = ScrollMonitor.create(hero);
+  watcher.exitViewport(() => navbar.classList.add('is-opaque'));
+  watcher.enterViewport(() => navbar.classList.remove('is-opaque'));
+}
