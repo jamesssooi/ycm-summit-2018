@@ -57,5 +57,8 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(env)
     })
   ],
+  externals: {
+    jquery: 'jQuery',
+  },
   devtool: 'source-map'
 };
