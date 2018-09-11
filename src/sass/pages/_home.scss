@@ -114,9 +114,12 @@
 /* About DE
 /* -------------------------------------------------------------------------- */
 .about-de {
-  padding-top: 240px;
+  padding-top: 160px;
   color: rgba(white, 0.7);
   overflow: hidden;
+  @include on-desktop {
+    padding-top: 240px;
+  }
 }
 
 .about-de-pattern {
@@ -156,6 +159,7 @@
   border: 2px solid $color-primary;
   border-radius: 50%;
   margin-right: $spacing-5;
+  flex-shrink: 0;
 }
 
 .about-de-areas__icon .icon {
@@ -176,12 +180,17 @@
 /* -------------------------------------------------------------------------- */
 .article-section {
   overflow: hidden;
+  padding-top: 0;
+  @include on-desktop {
+    padding-top: inherit;
+  }
 }
 
 .article-item-list {
   position: relative;
   margin-left: -$spacing-4;
   margin-right: -$spacing-4;
+  width: 90%;
 }
 
 .article-item {
@@ -220,13 +229,17 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: $color-primary;
-  display: block;
   width: 48px;
   height: 48px;
   font-size: 0;
   z-index: 10;
   transition: 0.3s linear all;
   box-shadow: 0 2px 4px rgba(black, 0.2);
+  display: none;
+
+  @include on-desktop {
+    display: block;
+  }
 }
 
 .article-item-control {
@@ -271,7 +284,10 @@
 
 .agenda-container {
   background-color: #ebebeb;
-  padding: $spacing-8;
+  padding: $spacing-5;
+  @include on-desktop {
+    padding: $spacing-8;
+  }
 }
 
 .agenda-item-list {
@@ -318,6 +334,11 @@
 .agenda-item__icon {
   flex-shrink: 0;
   position: relative;
+  display: none;
+
+  @include on-desktop {
+    display: block;
+  }
 }
 
 .agenda-item__icon .icon {
@@ -358,8 +379,13 @@
   position: absolute;
   bottom: -10px;
   right: -10px;
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
+  
+  @include on-desktop {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .speakers-item__details {
@@ -388,6 +414,11 @@
 /* -------------------------------------------------------------------------- */
 .sponsors-section {
   background-color: rgb(235, 235, 235);
+  text-align: center;
+
+  @include on-desktop {
+    text-align: left;
+  }
 }
 
 .sponsor-item-list {
@@ -395,6 +426,11 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 #{-$spacing-2};
+  justify-content: center;
+
+  @include on-desktop {
+    justify-content: flex-start;
+  }
 }
 
 .sponsor-item-list:after {
@@ -412,6 +448,7 @@
 
 .sponsor-item-list li {
   padding: 0 $spacing-2;
+  margin-bottom: $spacing-6;
 }
 
 .sponsor-item__logo {
@@ -423,7 +460,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: $spacing-4;
+  margin-bottom: $spacing-2;
 }
 
 .sponsor-item__logo img {
@@ -441,20 +478,34 @@
 /* -------------------------------------------------------------------------- */
 .registration-form-section {
   margin-top: -120px;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
+
+  @include on-desktop {
+    padding-bottom: 120px;
+  }
 }
 
 .registration-form-panel {
   background-color: rgb(7, 20, 33);
   box-shadow: 0 4px 8px rgba(black, 0.4);
-  padding: $spacing-8;
+  padding: $spacing-6;
   color: white;
+  
+  @include on-desktop {
+    padding: $spacing-8;
+  }
 }
 
 .registration-form-panel .section-title {
-  font-size: $font-size-3;
-  color: white;
-  margin-bottom: $spacing-8;
+  margin-bottom: $spacing-6;
+  text-align: center;
+
+  @include on-desktop {
+    color: white;
+    margin-bottom: $spacing-8;
+    font-size: $font-size-3;
+    text-align: left;
+  }
 }
 
 .registration-instructions {
@@ -463,9 +514,12 @@
 
 .registration-instructions__pullout {
   font-weight: bold;
-  font-size: $font-size-3;
   line-height: 1.4;
   margin-bottom: $spacing-6;
+  
+  @include on-desktop {
+    font-size: $font-size-3;
+  }
 }
 
 .registration-steps {
@@ -475,23 +529,36 @@
 
 .registration-steps > li {
   position: relative;
-  padding-left: calc(48px + #{$spacing-5});
+  padding-left: calc(32px + #{$spacing-4});
   margin-bottom: $spacing-5;
   min-height: 48px;
+  
+  @include on-desktop {
+    padding-left: calc(48px + #{$spacing-5});
+  }
 
   &:before {
     content: counter(item);
     counter-increment: item;
     display: block;
     position: absolute;
-    top: 6px;
+    top: 3px;
     left: 0;
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     border: 2px solid $color-primary;
     border-radius: 50%;
     text-align: center;
-    line-height: 46px;
+    line-height: 32px;
+    font-size: 14px;
+    
+    @include on-desktop {
+      top: 6px;
+      font-size: 16px;
+      width: 48px;
+      height: 48px;
+      line-height: 46px;
+    }
   }
 }
 

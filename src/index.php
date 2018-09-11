@@ -54,7 +54,7 @@
 
   <div class="hero-footer">
     <div class="row align-items-end">
-      <div class="col-md-4 text-center mb-4 mb-lg-0">
+      <div class="col-md-4 text-center text-lg-left mb-4 mb-lg-0">
         <img
           src="img/logos/ycm-10th-anniversary.png"
           srcset="img/logos/ycm-10th-anniversary@2x.png 2x"
@@ -80,7 +80,7 @@
   <div class="container">
     <article class="row align-items-center">
 
-      <div class="col-6 position-relative">
+      <div class="col-md-6 position-relative mb-5">
         <img class="about-de-pattern" src="img/pattern-01.png" role="presentation">
         <div class="about-de-body">
           <header class="section-header">
@@ -100,7 +100,7 @@
         </div>
       </div>
 
-      <div class="col-4 offset-2">
+      <div class="col-md-4 offset-md-2">
         <header class="section-header">
           <h3 class="section-title">Areas of Interest</h3>
         </header>
@@ -202,7 +202,7 @@
       <!-- Agenda Listings -->
       <ul class="agenda-item-list row">
         <?php for ($i = 0; $i < 8; $i++): ?>
-        <li class="col-6">
+        <li class="col-md-6">
           <button class="agenda-item">
             <div class="agenda-item__header">
               <span class="agenda-item__type">Panel Discussion</span>
@@ -238,10 +238,10 @@
     <div class="row">
 
       <!-- Speakers List -->
-      <div class="col-7">
+      <div class="col-md-7">
         <ul class="speakers-item-list row">
           <?php for ($i = 0; $i < 9; $i++): ?>
-          <li class="col-4">
+          <li class="col-6 col-lg-4">
             <button class="speakers-item">
               <div class="speakers-item__profile">
                 <img src="https://unsplash.it/240/240" alt="Photo of X">
@@ -263,7 +263,7 @@
       </div>
 
       <!-- Speakers Info -->
-      <div class="col-5">
+      <div class="col-5 d-none d-md-block">
         <div class="speakers-info">
           <p>
             <strong>Patrick Grove</strong><br>
@@ -319,8 +319,32 @@
       <h2 class="section-title">Register Now</h2>
       <div class="row">
 
+        <!-- Instructions -->
+        <div class="col-lg-6 offset-lg-1 order-lg-1 mb-5 mb-lg-0">
+          <div class="registration-instructions">
+            <p class="registration-instructions__pullout">
+              Lorem ipsum pitch and selling point here. Free? Exclusive?
+              Networking Opportunities?
+            </p>
+            <ol class="registration-steps">
+              <li>
+                <span class="registration-steps__label">Step 1</span>
+                <p>Register your interest</p>
+              </li>
+              <li>
+                <span class="registration-steps__label">Step 2</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+              </li>
+              <li>
+                <span class="registration-steps__label">Step 3</span>
+                <p>If you are approved, we willsend you further instructions!</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
         <!-- Form -->
-        <div class="col-5">
+        <div class="col-lg-5 order-lg-1">
           <form action="" class="registration-form">
             <div class="form-group mb-5">
               <label for="full-name">Name</label>
@@ -346,30 +370,6 @@
           </form>
         </div>
 
-        <!-- Instructions -->
-        <div class="col-6 offset-1">
-          <div class="registration-instructions">
-            <p class="registration-instructions__pullout">
-              Lorem ipsum pitch and selling point here. Free? Exclusive?
-              Networking Opportunities?
-            </p>
-            <ol class="registration-steps">
-              <li>
-                <span class="registration-steps__label">Step 1</span>
-                <p>Register your interest</p>
-              </li>
-              <li>
-                <span class="registration-steps__label">Step 2</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-              </li>
-              <li>
-                <span class="registration-steps__label">Step 3</span>
-                <p>If you are approved, we willsend you further instructions!</p>
-              </li>
-            </ol>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -380,10 +380,10 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <div class="row">
+    <div class="row text-center text-lg-left">
 
       <!-- Left Column -->
-      <div class="col-8">
+      <div class="col-lg-8 mb-5 mb-lg-0">
         <a href="#" class="footer__logo mb-4">
           <img src="img/logos/ycm-white.svg" alt="Logo of YCM">
         </a>
@@ -391,11 +391,11 @@
       </div>
 
       <!-- Right Column -->
-      <div class="col-4">
+      <div class="col-lg-4">
         <div class="row">
 
-          <!-- Links  -->
-          <div class="col-6">
+          <!-- Links -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
             <ul class="footer-links">
               <li><a href="#">About</a></li>
               <li><a href="#">Agenda</a></li>
@@ -407,7 +407,7 @@
           </div>
 
           <!-- Social Links -->
-          <div class="col-6">
+          <div class="col-lg-6">
             <ul class="footer-links">
               <li><a href="#">Facebook</a></li>
               <li><a href="#">Instagram</a></li>

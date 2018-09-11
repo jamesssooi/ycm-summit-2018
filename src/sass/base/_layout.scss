@@ -18,3 +18,8 @@ $spacing-10: 4rem;   // 64px
 html, body {
   background-color: #030b13;
 }
+
+.container {
+  padding-left: $spacing-5;
+  padding-right: $spacing-5;
+}

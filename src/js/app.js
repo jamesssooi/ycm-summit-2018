@@ -15,6 +15,14 @@ window.addEventListener('DOMContentLoaded', () => {
     infinite: false,
     nextArrow: '.article-item-control.is-next',
     prevArrow: '.article-item-control.is-prev',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   });
 
   enableNavbarColorToggle();
