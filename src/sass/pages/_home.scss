@@ -231,3 +231,67 @@
 .article-item-list .slick-active {
   opacity: 1;
 }
+
+
+/* Agenda Section
+/* -------------------------------------------------------------------------- */
+.agenda-section {
+  padding-bottom: 120px;
+}
+
+.agenda-container {
+  background-color: #ebebeb;
+  padding: $spacing-8;
+}
+
+.agenda-item-list {
+  @include m-list-unstyled;
+  margin: 0 #{-$spacing-2} $spacing-4;
+}
+
+.agenda-item-list > li {
+  padding: 0 $spacing-2;
+}
+
+.agenda-item {
+  @include m-button-unstyled;
+  text-align: left;
+  background-color: white;
+  margin-bottom: $spacing-4;
+  padding: $spacing-4;
+  display: flex;
+  align-items: center;
+
+  &:focus { outline: 3px solid $color-border-l2; }
+}
+
+.agenda-item__header {
+
+}
+
+.agenda-item__type {
+  color: rgb(180, 180, 180);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  letter-spacing: 1px;
+  margin-bottom: $spacing-1;
+}
+
+.agenda-item__title {
+  color: $color-text;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.agenda-item__icon {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.agenda-item__icon .icon {
+  fill: rgb(220, 220, 220);
+  width: 48px;
+  height: 48px;
+}
