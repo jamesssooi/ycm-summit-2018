@@ -1,0 +1,25 @@
+/**
+ * @component Sections
+ */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+
+/* Section Header
+/* -------------------------------------------------------------------------- */
+.section-header {
+  margin-bottom: $spacing-6;
+}
+
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-primary;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: $spacing-4;
+}

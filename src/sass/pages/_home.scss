@@ -81,3 +81,65 @@
   width: 14px;
   height: 14px;
 }
+
+
+/* About DE
+/* -------------------------------------------------------------------------- */
+.about-de {
+  padding-top: 240px;
+  color: rgba(white, 0.7);
+  overflow: hidden;
+}
+
+.about-de-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-20%, -30%);
+  width: 460px;
+  z-index: 1;
+}
+
+.about-de-body {
+  position: relative;
+  z-index: 2;
+}
+
+.about-de-body__pullout {
+  font-size: $font-size-3;
+  font-weight: bold;
+  color: white;
+}
+
+.about-de-areas {
+  @include m-list-unstyled;
+}
+
+.about-de-areas__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-4;
+}
+
+.about-de-areas__icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  margin-right: $spacing-5;
+}
+
+.about-de-areas__icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+}
+
+.about-de-areas__title {
+  font-weight: bold;
+  color: white;
+}
