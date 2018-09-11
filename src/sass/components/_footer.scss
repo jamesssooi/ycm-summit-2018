@@ -1,0 +1,42 @@
+/**
+ * @component Footer
+ */
+
+.footer {
+  position: relative;
+  padding: $spacing-8 0;
+  border-top: 1px solid rgb(7, 20, 33);
+  color: white;
+}
+
+.footer__logo {
+  display: block;
+  text-decoration: none;
+  &:hover { text-decoration: none; }
+}
+
+.footer__logo img {
+  height: 72px;
+}
+
+.footer__disclaimer {
+  color: $color-secondary-l2;
+  font-weight: bold;
+}
+
+.footer-links {
+  @include m-list-unstyled;
+}
+
+.footer-links li {
+  margin-bottom: $spacing-4;
+}
+
+.footer-links a {
+  color: white;
+
+  &:hover {
+    color: $color-secondary-l5;
+    text-decoration: none;
+  }
+}
