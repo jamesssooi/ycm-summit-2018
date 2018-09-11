@@ -56,7 +56,7 @@ export const configs = {
   },
 
   browsersync: {
-    proxy: false,
+    proxy: 'ycm-summit.local.ffshost.com',
     watch: '**/*.*',
     options: {}
   },
