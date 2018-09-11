@@ -26,6 +26,20 @@
       <img src="img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
     </a>
   </div>
+
+  <!-- Mobile Fixed Menu -->
+  <div class="nav-bar-mobile">
+    <a href="#" class="btn btn-primary">Register</a>
+    <button class="btn btn-light nav-hamburger" id="nav-hamburger">
+      <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+        <rect x="6" y="10" width="20" height="2"></rect>
+        <rect x="6" y="16" width="20" height="2"></rect>
+        <rect x="6" y="22" width="20" height="2"></rect>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Desktop Menu -->
   <nav class="nav-menu ml-auto">
     <a href="#" class="nav-menu__item">About</a>
     <a href="#" class="nav-menu__item">Agenda</a>
@@ -34,6 +48,15 @@
     <a href="#" class="nav-menu__item is-cta">Register</a>
   </nav>
 </header>
+
+<!-- Mobile Menu -->
+<nav class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="#" class="nav-mobile-menu__item">About</a>
+  <a href="#" class="nav-mobile-menu__item">Agenda</a>
+  <a href="#" class="nav-mobile-menu__item">Speakers</a>
+  <a href="#" class="nav-mobile-menu__item">Sponsors</a>
+  <a href="#" class="nav-mobile-menu__item is-cta">Register</a>
+</nav>
 
 <!-- Hero -->
 <section class="hero" id="hero">

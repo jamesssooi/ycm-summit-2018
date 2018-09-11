@@ -107,6 +107,7 @@
   margin: 0 auto;
   display: block;
   margin: 0 auto;
+  animation: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) chevron-bob infinite;
 
   &:focus {
     outline: 2px solid rgba($color-primary, 0.2);
@@ -118,6 +119,11 @@
   height: 14px;
 }
 
+@keyframes chevron-bob {
+  0% { transform: translateY(12px); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(12px); }
+}
 
 /* About DE
 /* -------------------------------------------------------------------------- */
@@ -198,7 +204,10 @@
   position: relative;
   margin-left: -$spacing-4;
   margin-right: -$spacing-4;
-  width: 90%;
+  width: 95%;
+  @include on-desktop {
+    // width: 100%;
+  }
 }
 
 .article-item {
@@ -253,6 +262,9 @@
 .article-item-control {
   &.is-next {
     right: calc(-48px + #{$spacing-6 * -1});
+    @include on-desktop {
+      right: $spacing-4;
+    }
   }
   &.is-prev {
     left: calc(-48px + #{$spacing-6 * -1});

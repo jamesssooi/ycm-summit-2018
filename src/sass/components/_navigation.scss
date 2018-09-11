@@ -7,15 +7,16 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 100px;
+  height: 90px;
   display: flex;
   align-items: center;
   padding: 6px $spacing-4 0;
   z-index: 50;
   transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) all;
-
+  
   @include on-desktop {
     padding: 6px $spacing-6 0;
+    height: 100px;
   }
 }
 
@@ -27,6 +28,8 @@
 .nav-logos {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 45;
 }
 
 .nav-logos a {
@@ -42,13 +45,17 @@
   height: 56px;
 }
 
-.nav-logos__de {
+.nav-logos .nav-logos__de {
   border-left: 1px solid $color-border;
   padding-left: $spacing-6;
   visibility: hidden;
   opacity: 0;
   transform: translateX(5px);
   transition: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) all;
+  display: none;
+  @include on-desktop {
+    display: block;
+  }
 }
 
 .nav-logos__de img {
@@ -56,7 +63,6 @@
   position: relative;
   top: -2px;
 }
-
 
 .nav-bar.is-opaque {
   .ycm-logo-white {
@@ -116,6 +122,106 @@
   }
 }
 
+
+/* Navigation Menu (Mobile)
+/* -------------------------------------------------------------------------- */
+.nav-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: $color-secondary;
+  padding: 90px $spacing-4 $spacing-4;
+  z-index: 40;
+
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.nav-mobile-menu__item {
+  display: block;
+  color: white;
+  font-weight: bold;
+  padding: $spacing-4 $spacing-2;
+  border-bottom: 1px solid rgb(7, 20, 33);
+}
+
+.nav-mobile-menu__item:last-child {
+  border-bottom: 0;
+}
+
+.nav-mobile-menu__item:hover {
+  background-color: rgb(7, 20, 33);
+  text-decoration: none;
+  color: white;
+}
+.nav-mobile-menu__item:focus {
+  background-color: rgb(7, 20, 33);
+  outline: none;
+}
+
+// Display logic
+.nav-mobile-menu {
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: 0.75s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+}
+.nav-mobile-menu.is-active {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+
+/* Navbar Fixed Mobile Bar
+/* -------------------------------------------------------------------------- */
+.nav-bar-mobile {
+  text-align: right;
+  margin-left: auto;
+  position: relative;
+  z-index: 45;
+
+  @include on-desktop {
+    display: none;
+  }
+}
+
+
+.nav-bar-mobile a {
+  color: white;
+  font-size: 14px;
+  padding: $spacing-2 $spacing-3;
+  height: 42px;
+  line-height: 24px;
+  box-shadow: 0 2px 4px rgba(black, 0.2);
+  z-index: 40;
+}
+
+.nav-hamburger {
+  @include m-button-unstyled;
+  width: 42px;
+  height: 42px;
+  position: relative;
+  background-color: white;
+  padding: 0 !important;
+}
+
+.nav-hamburger .icon {
+  width: 32px;
+  height: 32px;
+  position: absolute !important;
+  top: calc(50% - 1px) !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  fill: $color-secondary;
+}
+
+.nav-hamburger .icon rect {
+  transition: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) all;
+  transform-origin: 50% 50%;
+}
+.nav-hamburger.is-active .icon rect:nth-child(1) { transform: translateY(6px); }
+.nav-hamburger.is-active .icon rect:nth-child(3) { transform: translateY(-6px); }
 
 /* YCM Gradient Bar
 /* -------------------------------------------------------------------------- */

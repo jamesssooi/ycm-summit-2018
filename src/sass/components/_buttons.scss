@@ -31,6 +31,23 @@
   box-shadow: none;
 }
 
+.btn-outline-primary {
+  border-color: $color-primary;
+  border-width: 2px;
+}
+.btn-outline-primary:hover {
+  border-color: $color-primary-d1;
+  background-color: $color-primary-d1;
+}
+.btn-outline-primary:focus {
+  outline: 3px solid rgba($color-primary, 0.2);
+  box-shadow: none;
+}
+
+.btn-outline-light {
+  border-width: 2px;
+}
+
 
 /* Property Overrides
 /* -------------------------------------------------------------------------- */
