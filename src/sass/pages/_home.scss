@@ -7,10 +7,16 @@
 /* -------------------------------------------------------------------------- */
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 80vh;
   background-image: url('../img/hero-bg.jpg');
   background-size: cover;
   overflow: hidden;
+  padding: 120px $spacing-4 $spacing-6;
+  
+  @include on-desktop {
+    padding: 0;
+    height: 100vh;
+  }
 }
 
 .hero-pattern {
@@ -23,8 +29,8 @@
 
 .hero-pattern__image {
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -34,36 +40,58 @@
 }
 
 .hero-masthead {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  margin: $spacing-6 auto;
+
+  @include on-desktop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
 }
 
 .hero-masthead__logo {
   margin-top: 0;
-  margin-bottom: $spacing-8;
+  margin-bottom: $spacing-6;
+  @include on-desktop {
+    margin-bottom: $spacing-8;
+  }
 }
 
 .hero-masthead__logo img {
   display: block;
-  width: 450px;
+  width: 240px;
+  max-width: 320px;
+  margin: 0 auto;
+  
+  @include on-desktop {
+    max-width: none;
+    width: 450px;
+  }
 }
 
 .hero-masthead__dateline {
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 2;
+  font-size: 14px;
+  @include on-desktop {
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
 }
 
 .hero-footer {
-  position: absolute;
-  left: $spacing-6;
-  right: $spacing-6;
-  bottom: $spacing-6;
+  @include on-desktop {
+    position: absolute;
+    left: $spacing-6;
+    right: $spacing-6;
+    bottom: $spacing-6;
+  }
 }
 
 .hero-footer__chevron {

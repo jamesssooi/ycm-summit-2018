@@ -54,14 +54,14 @@
 
   <div class="hero-footer">
     <div class="row align-items-end">
-      <div class="col-4">
+      <div class="col-md-4 text-center mb-4 mb-lg-0">
         <img
           src="img/logos/ycm-10th-anniversary.png"
           srcset="img/logos/ycm-10th-anniversary@2x.png 2x"
           alt="YCM 10th Anniversary"
         >
       </div>
-      <div class="col-4 text-center">
+      <div class="col-md-4 text-center">
         <a href="#" class="btn btn-primary with-shadow mb-4">Register Now</a>
         <button class="hero-footer__chevron">
           <svg class="icon">
@@ -69,7 +69,7 @@
           </svg>
         </button>
       </div>
-      <div class="col-4" role="presentation"></div>
+      <div class="col-md-4" role="presentation"></div>
     </div>
   </div>
 </section>
