@@ -1,12 +1,4 @@
-![Why Hello There!](logo.png)  
-The Modern Front-End Developers Boilerplate.
-
-## What is Boilr
-`Boilr` is a front-end boilerplate built with [Gulp](https://gulpjs.com/) to make starting your next website an absolute breeze.
-
-No configuration is requried to get started but if needed, `Boilr` is easily customisable and extendable to get it working the way you need.
-<br>
-<br>
+# YCM Summit 2018: Distributed Economy
 
 ## Features
 - **Gulp** - Powerful toolkit for automating painful or time-consuming tasks.
