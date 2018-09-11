@@ -11,6 +11,11 @@
   padding: $spacing-2 $spacing-6;
 }
 
+.btn .icon {
+  position: relative;
+  top: -0.075em;
+}
+
 /* Color Overrides
 /* -------------------------------------------------------------------------- */
 .btn-primary {

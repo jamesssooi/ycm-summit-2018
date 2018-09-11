@@ -274,7 +274,7 @@
 
 
 <!-- Sponsors Section -->
-<section class="sponsors-section section">
+<section class="sponsors-section section with-offset-bottom">
   <div class="container">
     <h2 class="section-title">Platinum Sponsors</h2>
     <ul class="sponsor-item-list">
@@ -305,6 +305,73 @@
     </ul>
   </div>
 </section>
+
+
+<!-- Registration Form -->
+<section class="registration-form-section">
+  <div class="container">
+
+    <div class="registration-form-panel">
+      <h2 class="section-title">Register Now</h2>
+      <div class="row">
+
+        <!-- Form -->
+        <div class="col-5">
+          <form action="" class="registration-form">
+            <div class="form-group mb-5">
+              <label for="full-name">Name</label>
+              <input type="text" name="full-name" class="form-control w-100">
+            </div>
+            <div class="form-group mb-5">
+              <label for="email">Email</label>
+              <input type="text" name="email" class="form-control w-100">
+            </div>
+            <div class="form-group mb-5">
+              <label for="contact-no">Contact Number</label>
+              <input type="text" name="contact-no" class="form-control w-100">
+            </div>
+            <div class="mb-1">
+              <button class="btn btn-primary">
+                Continue
+                <svg class="icon">
+                  <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+            <small>You will continue your registration in Google Forms</small>
+          </form>
+        </div>
+
+        <!-- Instructions -->
+        <div class="col-6 offset-1">
+          <div class="registration-instructions">
+            <p class="registration-instructions__pullout">
+              Lorem ipsum pitch and selling point here. Free? Exclusive?
+              Networking Opportunities?
+            </p>
+            <ol class="registration-steps">
+              <li>
+                <span class="registration-steps__label">Step 1</span>
+                <p>Register your interest</p>
+              </li>
+              <li>
+                <span class="registration-steps__label">Step 2</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+              </li>
+              <li>
+                <span class="registration-steps__label">Step 3</span>
+                <p>If you are approved, we willsend you further instructions!</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

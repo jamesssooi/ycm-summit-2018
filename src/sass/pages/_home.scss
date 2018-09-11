@@ -407,3 +407,69 @@
   font-weight: bold;
   margin-bottom: 0;
 }
+
+
+/* Registration Form
+/* -------------------------------------------------------------------------- */
+.registration-form-section {
+  margin-top: -120px;
+  padding-bottom: 120px;
+}
+
+.registration-form-panel {
+  background-color: rgb(7, 20, 33);
+  box-shadow: 0 4px 8px rgba(black, 0.4);
+  padding: $spacing-8;
+  color: white;
+}
+
+.registration-form-panel .section-title {
+  font-size: $font-size-3;
+  color: white;
+  margin-bottom: $spacing-8;
+}
+
+.registration-instructions {
+  position: relative;
+}
+
+.registration-instructions__pullout {
+  font-weight: bold;
+  font-size: $font-size-3;
+  line-height: 1.4;
+  margin-bottom: $spacing-6;
+}
+
+.registration-steps {
+  @include m-list-unstyled;
+  counter-reset: item;
+}
+
+.registration-steps > li {
+  position: relative;
+  padding-left: calc(48px + #{$spacing-5});
+  margin-bottom: $spacing-5;
+  min-height: 48px;
+
+  &:before {
+    content: counter(item);
+    counter-increment: item;
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 46px;
+  }
+}
+
+.registration-steps__label {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: $color-secondary-l3;
+}
