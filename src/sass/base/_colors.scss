@@ -5,7 +5,7 @@
 
 /* Primary Color
 /* -------------------------------------------------------------------------- */
-$color-primary: rgb(53, 46, 139);
+$color-primary: rgb(205, 152, 53);
 $color-primary-l1: lighten($color-primary, 10%);
 $color-primary-l2: lighten($color-primary, 20%);
 $color-primary-l3: lighten($color-primary, 30%);
@@ -20,7 +20,7 @@ $color-primary-d5: darken($color-primary, 25%);
 
 /* Secondary Color
 /* -------------------------------------------------------------------------- */
-$color-secondary: rgb(243, 208, 52);
+$color-secondary: rgb(3, 11, 19);
 $color-secondary-l1: lighten($color-secondary, 10%);
 $color-secondary-l2: lighten($color-secondary, 20%);
 $color-secondary-l3: lighten($color-secondary, 30%);
@@ -35,7 +35,7 @@ $color-secondary-d5: darken($color-secondary, 25%);
 
 /* Text Color
 /* -------------------------------------------------------------------------- */
-$color-text: rgb(48, 48, 48);
+$color-text: rgb(3, 11, 19);
 $color-text-l1: lighten($color-text, 10%);
 $color-text-l2: lighten($color-text, 20%);
 $color-text-l3: lighten($color-text, 30%);

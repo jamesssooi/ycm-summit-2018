@@ -9,9 +9,17 @@
 @import 'base/responsive';
 @import 'base/colors';
 @import 'base/typography';
+@import 'base/mixins';
 @import 'base/layout';
 
 
 /* Component Imports
 /* -------------------------------------------------------------------------- */
 @import 'components/navigation';
+@import 'components/svg-icons';
+@import 'components/buttons';
+
+
+/* Page Imports
+/* -------------------------------------------------------------------------- */
+@import 'pages/home';
