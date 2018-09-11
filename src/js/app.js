@@ -10,7 +10,7 @@ import $ from 'jquery';
 window.addEventListener('DOMContentLoaded', () => {
   $('#article-item-list').slick({
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     infinite: false,
     nextArrow: '.article-item-control.is-next',
     prevArrow: '.article-item-control.is-prev',
