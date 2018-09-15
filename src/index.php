@@ -18,11 +18,11 @@
 <header class="nav-bar" id="nav-bar">
   <div class="ycm-gradient-bar is-top" role="presentation"></div>
   <div class="nav-logos">
-    <a href="#" class="nav-logos__ycm">
+    <a href="http://www.ycm.org.my" target="_blank" class="nav-logos__ycm">
       <img src="img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
       <img src="img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
     </a>
-    <a href="#" class="nav-logos__de">
+    <a href="#" class="nav-logos__de" data-smooth-scroll>
       <img src="img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
     </a>
   </div>
@@ -41,22 +41,24 @@
 
   <!-- Desktop Menu -->
   <nav class="nav-menu ml-auto">
-    <a href="#" class="nav-menu__item">About</a>
-    <a href="#" class="nav-menu__item">Agenda</a>
-    <a href="#" class="nav-menu__item">Speakers</a>
-    <a href="#" class="nav-menu__item">Sponsors</a>
-    <a href="#" class="nav-menu__item is-cta">Register</a>
+    <a href="#about" class="nav-menu__item" data-smooth-scroll>About</a>
+    <a href="#agenda" class="nav-menu__item" data-smooth-scroll>Agenda</a>
+    <a href="#speakers" class="nav-menu__item" data-smooth-scroll>Speakers</a>
+    <a href="#sponsors" class="nav-menu__item" data-smooth-scroll>Sponsors</a>
+    <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll>Register</a>
   </nav>
 </header>
 
 <!-- Mobile Menu -->
 <nav class="nav-mobile-menu" id="nav-mobile-menu">
-  <a href="#" class="nav-mobile-menu__item">About</a>
-  <a href="#" class="nav-mobile-menu__item">Agenda</a>
-  <a href="#" class="nav-mobile-menu__item">Speakers</a>
-  <a href="#" class="nav-mobile-menu__item">Sponsors</a>
-  <a href="#" class="nav-mobile-menu__item is-cta">Register</a>
+  <a href="#about" class="nav-mobile-menu__item" data-smooth-scroll>About</a>
+  <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll>Agenda</a>
+  <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll>Speakers</a>
+  <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll>Sponsors</a>
+  <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll>Register</a>
 </nav>
+
+<main>
 
 <!-- Hero -->
 <section class="hero" id="hero">
@@ -85,12 +87,12 @@
         >
       </div>
       <div class="col-md-4 text-center">
-        <a href="#" class="btn btn-primary with-shadow mb-4">Register Now</a>
-        <button class="hero-footer__chevron">
+        <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll>Register Now</a>
+        <a href="#about" class="hero-footer__chevron" data-smooth-scroll>
           <svg class="icon">
             <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
           </svg>
-        </button>
+        </a>
       </div>
       <div class="col-md-4" role="presentation"></div>
     </div>
@@ -99,7 +101,7 @@
 
 
 <!-- About DE -->
-<section class="about-de section">
+<section class="about-de section" id="about">
   <div class="container">
     <article class="row align-items-center">
 
@@ -167,7 +169,7 @@
 
 
 <!-- Article Section -->
-<section class="article-section section">
+<section class="article-section section" id="articles">
   <div class="container">
     <header class="section-header">
       <h2 class="section-title">Curated Articles</h2>
@@ -213,7 +215,7 @@
 
 
 <!-- Agenda Section -->
-<section class="agenda-section">
+<section class="agenda-section" id="agenda">
   <div class="container">
     <div class="agenda-container">
 
@@ -250,7 +252,7 @@
 
 
 <!-- Speakers Section -->
-<section class="speakers-section section">
+<section class="speakers-section section" id="speakers">
   <div class="container">
     <header class="section-header">
       <h2 class="section-title">Curated Speakers</h2>
@@ -301,7 +303,7 @@
 
 
 <!-- Sponsors Section -->
-<section class="sponsors-section section with-offset-bottom">
+<section class="sponsors-section section with-offset-bottom" id="sponsors">
   <div class="container">
     <h2 class="section-title">Platinum Sponsors</h2>
     <ul class="sponsor-item-list">
@@ -335,7 +337,7 @@
 
 
 <!-- Registration Form -->
-<section class="registration-form-section">
+<section class="registration-form-section" id="register">
   <div class="container">
 
     <div class="registration-form-panel">
@@ -399,6 +401,7 @@
   </div>
 </section>
 
+</main>
 
 <!-- Footer -->
 <footer class="footer">
@@ -407,7 +410,7 @@
 
       <!-- Left Column -->
       <div class="col-md-8 mb-5 mb-md-0">
-        <a href="#" class="footer__logo mb-4">
+        <a href="#" class="footer__logo mb-4" data-smooth-scroll>
           <img src="img/logos/ycm-white.svg" alt="Logo of YCM">
         </a>
         <small class="footer__disclaimer">Copyright (C) 2018 Young Corporate Malaysians</small>
@@ -420,21 +423,21 @@
           <!-- Links -->
           <div class="col-md-6 mb-4 mb-md-0">
             <ul class="footer-links">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Agenda</a></li>
-              <li><a href="#">Speakers</a></li>
-              <li><a href="#">Sponsors</a></li>
-              <li><a href="#">Register</a></li>
-              <li><a href="#">About YCM</a></li>
+              <li><a href="#about" data-smooth-scroll>About</a></li>
+              <li><a href="#agenda" data-smooth-scroll>Agenda</a></li>
+              <li><a href="#speakers" data-smooth-scroll>Speakers</a></li>
+              <li><a href="#sponsors" data-smooth-scroll>Sponsors</a></li>
+              <li><a href="#register" data-smooth-scroll>Register</a></li>
+              <li><a href="http://ycm.org.my" target="_blank">About YCM</a></li>
             </ul>
           </div>
 
           <!-- Social Links -->
           <div class="col-md-6">
             <ul class="footer-links">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/YoungCorpMsians">Facebook</a></li>
+              <li><a href="https://www.instagram.com/youngcorpmsians">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/young-corporate-malaysians/">LinkedIn</a></li>
             </ul>
           </div>
 

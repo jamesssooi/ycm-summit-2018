@@ -6,6 +6,7 @@
   "author": "Bryon Sigawin <bryon.sigawin@forefront.com.my>",
   "license": "MIT",
   "dependencies": {
+    "moveto": "^1.7.3",
     "scrollmonitor": "^1.2.4",
     "slick-carousel": "^1.8.1"
   },

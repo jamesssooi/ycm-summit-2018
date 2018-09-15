@@ -7,6 +7,7 @@
 import 'slick-carousel';
 import $ from 'jquery';
 import ScrollMonitor from 'scrollmonitor';
+import MoveTo from 'moveto';
 
 window.addEventListener('DOMContentLoaded', () => {
   $('#article-item-list').slick({
@@ -26,7 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   enableNavbarColorToggle();
-  enableHamburgerMenu()
+  enableHamburgerMenu();
+  enableSmoothScrolling();
 });
 
 
@@ -77,5 +79,25 @@ function enableHamburgerMenu() {
       document.body.classList.add('has-backdrop');
       window.addEventListener('click', bodyListener);
     }
+  });
+}
+
+
+/**
+ * Enables smooth scrolling to anchor links.
+ */
+function enableSmoothScrolling() {
+  const moveTo = new MoveTo();
+  $('a[data-smooth-scroll][href]').each(function() {
+    const targetId = $(this).attr('href').substr(1);
+    const targetElement = targetId
+      ? document.getElementById(targetId)
+      : document.documentElement;
+
+    $(this).on('click', (e) => {
+      e.preventDefault();
+      if (!targetElement) return;
+      moveTo.move(targetElement);
+    });
   });
 }
