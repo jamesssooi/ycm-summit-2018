@@ -7,7 +7,6 @@
 import 'slick-carousel';
 import $ from 'jquery';
 import ScrollMonitor from 'scrollmonitor';
-import * as Utils from './utils';
 
 window.addEventListener('DOMContentLoaded', () => {
   $('#article-item-list').slick({
