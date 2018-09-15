@@ -45,7 +45,7 @@
     <a href="#agenda" class="nav-menu__item" data-smooth-scroll>Agenda</a>
     <a href="#speakers" class="nav-menu__item" data-smooth-scroll>Speakers</a>
     <a href="#sponsors" class="nav-menu__item" data-smooth-scroll>Sponsors</a>
-    <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll>Register</a>
+    <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll>Apply Now</a>
   </nav>
 </header>
 
@@ -55,7 +55,7 @@
   <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll>Agenda</a>
   <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll>Speakers</a>
   <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll>Sponsors</a>
-  <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll>Register</a>
+  <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll>Apply Now</a>
 </nav>
 
 <main>
@@ -87,7 +87,7 @@
         >
       </div>
       <div class="col-md-4 text-center">
-        <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll>Register Now</a>
+        <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll>Apply Now</a>
         <a href="#about" class="hero-footer__chevron" data-smooth-scroll>
           <svg class="icon">
             <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
@@ -341,7 +341,7 @@
   <div class="container">
 
     <div class="registration-form-panel">
-      <h2 class="section-title">Register Now</h2>
+      <h2 class="section-title">Apply Now</h2>
       <div class="row">
 
         <!-- Instructions -->
