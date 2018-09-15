@@ -71,7 +71,7 @@
     </h1>
     <div class="hero-masthead__dateline">
       10th Annual YCM Summit<br>
-      <time datetime="2018-11-17">Nov 17 2018</time>&ensp;&middot;&ensp;Aloft Kuala Lumpur
+      <time datetime="2018-11-17T08:30:00+08:00">Nov 24 2018</time>&ensp;&middot;&ensp;Aloft Kuala Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5PM
     </div>
   </div>
 
