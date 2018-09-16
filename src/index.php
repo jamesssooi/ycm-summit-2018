@@ -378,18 +378,18 @@
 
         <!-- Form -->
         <div class="col-lg-5 order-lg-1">
-          <form action="" class="registration-form">
+          <form action="/api/register.php" method="POST" class="registration-form">
             <div class="form-group mb-5">
-              <label for="full-name">Name</label>
-              <input type="text" name="full-name" class="form-control w-100">
+              <label for="name">Name</label>
+              <input type="text" name="name" class="form-control w-100">
             </div>
             <div class="form-group mb-5">
               <label for="email">Email</label>
               <input type="text" name="email" class="form-control w-100">
             </div>
             <div class="form-group mb-5">
-              <label for="contact-no">Contact Number</label>
-              <input type="text" name="contact-no" class="form-control w-100">
+              <label for="contactno">Contact Number</label>
+              <input type="text" name="contactno" class="form-control w-100">
             </div>
             <div class="mb-1">
               <button class="btn btn-primary">
