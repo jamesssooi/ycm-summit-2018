@@ -1,3 +1,6 @@
+<?php
+  include 'data/speakers.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -255,7 +258,7 @@
 <section class="speakers-section section" id="speakers">
   <div class="container">
     <header class="section-header">
-      <h2 class="section-title">Curated Speakers</h2>
+      <h2 class="section-title">Speakers</h2>
     </header>
   </div>
 
@@ -265,9 +268,9 @@
       <!-- Speakers List -->
       <div class="col-md-7">
         <ul class="speakers-item-list row">
-          <?php for ($i = 0; $i < 9; $i++): ?>
+          <?php foreach ($speakers as $speaker): ?>
           <li class="col-6 col-lg-4">
-            <button class="speakers-item">
+            <button class="speakers-item" id="<?php echo $speaker['id'] ?>" data-target="#<?php echo $speaker['id'] ?>-info">
               <div class="speakers-item__profile">
                 <img src="https://unsplash.it/240/240" alt="Photo of X">
                 <div class="speakers-item__logo">
@@ -275,26 +278,31 @@
                 </div>
               </div>
               <p class="speakers-item__details">
-                <strong>Patrick Grove</strong><br>
+                <strong><?php echo $speaker['name'] ?></strong><br>
                 <small>
-                  Cofounder & Group CEO<br>
-                  Captcha Group
+                  <?php echo $speaker['title'] ?><br>
+                  <?php echo $speaker['company'] ?>
                 </small>
               </p>
             </button>
           </li>
-          <?php endfor ;?>
+          <?php endforeach ;?>
         </ul>
       </div>
 
       <!-- Speakers Info -->
       <div class="col-5 d-none d-md-block">
-        <div class="speakers-info">
-          <p>
-            <strong>Patrick Grove</strong><br>
-            Cofounder and Group CEO<br>
-            Captcha Group
-          </p>
+        <div class="speakers-info" id="speakers-info">
+          <?php foreach ($speakers as $speaker): ?>
+          <article id="<?php echo $speaker['id'] ?>-info" class="speakers-info-content">
+            <header>
+              <strong><?php echo $speaker['name'] ?></strong><br>
+              <?php echo $speaker['title'] ?><br>
+              <?php echo $speaker['company'] ?>
+            </header>
+            <?php echo $speaker['description'] ?>
+          </article>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
@@ -362,7 +370,7 @@
               </li>
               <li>
                 <span class="registration-steps__label">Step 3</span>
-                <p>If you are approved, we willsend you further instructions!</p>
+                <p>If you are approved, we will send you further instructions!</p>
               </li>
             </ol>
           </div>
