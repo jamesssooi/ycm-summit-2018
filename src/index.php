@@ -274,16 +274,16 @@ include 'data/agenda.php';
           data-target="#speaker-modal-<?php echo $speaker['id'] ?>"
         >
           <div class="speakers-item__profile">
-            <img src="https://unsplash.it/240/240" alt="Photo of X">
-            <div class="speakers-item__logo">
+            <img src="<?php echo $speaker['img'] ?>" alt="Photo of <?php echo $speaker['name'] ?>">
+            <!-- <div class="speakers-item__logo">
               <img src="https://unsplash.it/72/72" alt="Logo of X">
-            </div>
+            </div> -->
           </div>
           <p class="speakers-item__details">
             <strong><?php echo $speaker['name'] ?></strong><br>
             <small>
               <?php echo $speaker['title'] ?><br>
-              <?php echo $speaker['company'] ?>
+              <em><?php echo $speaker['company'] ?></em>
             </small>
           </p>
         </button>
@@ -311,7 +311,9 @@ include 'data/agenda.php';
         </button>
       </div>
       <div class="modal-body">
-        <?php echo $item['description'] ?>
+        <?php foreach ($item['description'] as $content): ?>
+          <p><?php echo $content ?></p>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
