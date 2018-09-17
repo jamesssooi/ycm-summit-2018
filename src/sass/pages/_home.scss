@@ -373,26 +373,7 @@
 }
 
 // Agenda Modals
-.agenda-modal {
-  border-radius: 0;
-  border: 0;
-  color: white;
-  background: {
-    color: $color-secondary;
-    image: url(../img/pattern-02.png);
-    repeat: no-repeat;
-    position: top left;
-  }
-}
-
-.agenda-modal .modal-header,
-.agenda-modal .modal-body {
-  padding: $spacing-5;
-}
-
-.agenda-modal .modal-header {
-  border-bottom: 1px solid rgba(white, 0.1);
-}
+.agenda-modal {}
 
 .agenda-modal__type {
   text-transform: uppercase;
@@ -413,31 +394,6 @@
   font-size: $font-size-1;
 }
 
-.agenda-modal .close {
-  color: white;
-  opacity: 0.9;
-  text-shadow: none;
-
-  &:hover {
-    opacity: 1 !important;
-    color: white !important;
-  }
-
-  &:focus {
-    outline: 2px solid rgba(white, 0.2);
-  }
-}
-
-.modal.fade .modal-dialog {
-  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-  transform: translate(0%, -50px);
-}
-.modal.show .modal-dialog {
-  transform: translate(0, 0);
-}
-.modal-backdrop.show {
-  opacity: 0.8;
-}
 
 /* Speakers Section
 /* -------------------------------------------------------------------------- */
@@ -507,40 +463,19 @@
   font-size: $font-size-1;
 }
 
-.speakers-info {
-  background-color: $color-secondary;
-  background-image: url('../img/pattern-02.png');
-  background-repeat: no-repeat;
-  background-position: top left;
-  padding: $spacing-6;
-  color: white;
-  transform: translateX(-15px);
-  transition: 0.3s cubic-bezier(0.215, 0.610, 0.355, 1) all;
-  opacity: 0;
-}
-.speakers-info.is-active {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.speakers-info p:last-child {
-  margin-bottom: 0;
-}
-
-.speakers-info-content {
-  display: none;
+.speakers-modal {
   font-size: $font-size-1;
 }
 
-.speakers-info-content.is-active {
-  display: block;
+.speakers-modal header {
+  font-size: $font-size-2;
 }
 
-.speakers-info-content header {
-  font-size: $font-size-2;
-  margin-bottom: $spacing-4;
-  padding-bottom: $spacing-4;
-  border-bottom: 1px solid rgba(white, 0.2);
+.speakers-modal h1 {
+  font-size: $font-size-3;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 

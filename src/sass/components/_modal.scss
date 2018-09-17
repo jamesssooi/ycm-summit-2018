@@ -1,0 +1,57 @@
+/**
+ * @components Modal
+ * @overrides Boostrap
+ */
+
+
+/* Animation Overrides
+/* -------------------------------------------------------------------------- */
+.modal.fade .modal-dialog {
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+  transform: translate(0%, -50px);
+}
+.modal.show .modal-dialog {
+  transform: translate(0, 0);
+}
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
+
+/* Dark Patterned Modal
+/* -------------------------------------------------------------------------- */
+.modal-dark {
+  border-radius: 0;
+  border: 0;
+  color: white;
+  background: {
+    color: $color-secondary;
+    image: url(../img/pattern-02.png);
+    repeat: no-repeat;
+    position: top left;
+  }
+}
+
+.modal-dark .modal-header,
+.modal-dark .modal-body {
+  padding: $spacing-5;
+}
+
+.modal-dark .modal-header {
+  border-bottom: 1px solid rgba(white, 0.1);
+}
+
+.modal-dark .close {
+  color: white;
+  opacity: 0.9;
+  text-shadow: none;
+
+  &:hover {
+    opacity: 1 !important;
+    color: white !important;
+  }
+
+  &:focus {
+    outline: 2px solid rgba(white, 0.2);
+  }
+}

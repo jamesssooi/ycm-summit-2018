@@ -10,26 +10,10 @@ import ScrollMonitor from 'scrollmonitor';
 import MoveTo from 'moveto';
 
 window.addEventListener('DOMContentLoaded', () => {
-  $('#article-item-list').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: false,
-    nextArrow: '.article-item-control.is-next',
-    prevArrow: '.article-item-control.is-prev',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
-  });
-
+  enableArticleCarousel();
   enableNavbarColorToggle();
   enableHamburgerMenu();
   enableSmoothScrolling();
-  enableSpeakersToggle();
   enableFormValidation();
 });
 
@@ -105,84 +89,22 @@ function enableSmoothScrolling() {
 }
 
 
-/**
- * Enables the Speakers section.
- */
-function enableSpeakersToggle() {
-  let state = [];
-
-  // Compute initial state
-  $('.speakers-item').each(function() {
-    state.push({
-      id: $(this)[0].id,
-      buttonElement: $(this)[0],
-      infoElement: $($(this).attr('data-target'))[0],
-      isHover: false,
-      isToggle: false,
-    });
+function enableArticleCarousel() {
+  $('#article-item-list').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    nextArrow: '.article-item-control.is-next',
+    prevArrow: '.article-item-control.is-prev',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   });
-
-  // Attach event listeners
-  state.forEach((speaker, i) => {
-    // Mouseover
-    // $(speaker.buttonElement).on('mouseover', () => {
-    //   state[i].isHover = true;
-    //   window.requestAnimationFrame(() => render());
-    // });
-
-    // // Mouseleave
-    // $(speaker.buttonElement).on('mouseout', () => {
-    //   state[i].isHover = false;
-    //   window.requestAnimationFrame(() => render());
-    // });
-
-    // Click
-    $(speaker.buttonElement).on('click', () => {
-      state[i].isToggle = !state[i].isToggle;
-      window.requestAnimationFrame(() => render());
-    });
-  });
-
-  window.addEventListener('click', (e) => {
-    state = state.map(s => {
-      if (!s.buttonElement.contains(e.target) && !s.infoElement.contains(e.target)) {
-        s.isToggle = false;
-      }
-      return s;
-    });
-    window.requestAnimationFrame(() => render());
-  });
-
-  function render() {
-    let hasActive = state.some(s => s.isToggle || s.isHover);
-    let hasToggle = state.some(s => s.isToggle);
-
-    state.forEach(s => {
-      if (s.isToggle) {
-        s.buttonElement.classList.add('is-active');
-        s.infoElement.classList.add('is-active');
-        return;
-      }
-      if (s.isHover && !hasToggle) {
-        s.buttonElement.classList.add('is-active');
-        s.infoElement.classList.add('is-active');
-        return;
-      }
-      s.buttonElement.classList.remove('is-active');
-      if (hasActive) {
-        s.infoElement.classList.remove('is-active');
-      }
-    });
-
-    if (hasActive) {
-      $('.speakers-item-list').addClass('is-active');
-      $('#speakers-info').addClass('is-active');
-    } else {
-      $('.speakers-item-list').removeClass('is-active');
-      $('#speakers-info').removeClass('is-active');
-    }
-  }
-
 }
 
 

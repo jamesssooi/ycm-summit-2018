@@ -228,7 +228,7 @@ include 'data/agenda.php';
 <?php foreach ($agenda as $index => $item): ?>
 <article class="modal fade" tabindex="-1" role="dialog" id="agenda-modal-<?php echo $index+1 ?>" aria-labelledby="agenda-item-<?php echo $index+1 ?>" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="agenda-modal modal-content">
+    <div class="agenda-modal modal-dark modal-content">
       <div class="modal-header">
         <header>
           <span class="agenda-modal__type"><?php echo $item['type'] ?></span>
@@ -257,58 +257,67 @@ include 'data/agenda.php';
   </div>
 
   <div class="container">
-    <div class="row">
 
-      <!-- Speakers List -->
-      <div class="col-md-7">
-
-        <div class="speakers-disclaimer">
-          Watch this space! We're in the midst of confirming our list of
-          speakers, which may lead to changes in our line-up.
-        </div>
-
-        <ul class="speakers-item-list row">
-          <?php foreach ($speakers as $speaker): ?>
-          <li class="col-6 col-lg-4">
-            <button class="speakers-item" id="<?php echo $speaker['id'] ?>" data-target="#<?php echo $speaker['id'] ?>-info">
-              <div class="speakers-item__profile">
-                <img src="https://unsplash.it/240/240" alt="Photo of X">
-                <div class="speakers-item__logo">
-                  <img src="https://unsplash.it/72/72" alt="Logo of X">
-                </div>
-              </div>
-              <p class="speakers-item__details">
-                <strong><?php echo $speaker['name'] ?></strong><br>
-                <small>
-                  <?php echo $speaker['title'] ?><br>
-                  <?php echo $speaker['company'] ?>
-                </small>
-              </p>
-            </button>
-          </li>
-          <?php endforeach ;?>
-        </ul>
-      </div>
-
-      <!-- Speakers Info -->
-      <div class="col-5 d-none d-md-block">
-        <div class="speakers-info" id="speakers-info">
-          <?php foreach ($speakers as $speaker): ?>
-          <article id="<?php echo $speaker['id'] ?>-info" class="speakers-info-content">
-            <header>
-              <strong><?php echo $speaker['name'] ?></strong><br>
+    <div class="speakers-disclaimer">
+      Watch this space! We're in the midst of confirming our list of
+      speakers, which may lead to changes in our line-up.
+    </div>
+    
+    <!-- Speakers List -->
+    <ul class="speakers-item-list row">
+      <?php foreach ($speakers as $index => $speaker): ?>
+      <li class="col-6 col-md-4 col-lg-3">
+        <button
+          class="speakers-item"
+          id="speaker-item-<?php echo $speaker['id'] ?>"
+          data-toggle="modal"
+          data-target="#speaker-modal-<?php echo $speaker['id'] ?>"
+        >
+          <div class="speakers-item__profile">
+            <img src="https://unsplash.it/240/240" alt="Photo of X">
+            <div class="speakers-item__logo">
+              <img src="https://unsplash.it/72/72" alt="Logo of X">
+            </div>
+          </div>
+          <p class="speakers-item__details">
+            <strong><?php echo $speaker['name'] ?></strong><br>
+            <small>
               <?php echo $speaker['title'] ?><br>
               <?php echo $speaker['company'] ?>
-            </header>
-            <?php echo $speaker['description'] ?>
-          </article>
-          <?php endforeach; ?>
-        </div>
-      </div>
-    </div>
+            </small>
+          </p>
+        </button>
+      </li>
+      <?php endforeach ;?>
+    </ul>
   </div>
 
 </section>
+
+
+<!-- Speakers Modals -->
+<?php foreach ($speakers as $index => $item): ?>
+<article class="modal fade" tabindex="-1" role="dialog" id="speaker-modal-<?php echo $item['id'] ?>" aria-labelledby="speaker-item-<?php echo $item['id'] ?>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="speakers-modal modal-dark modal-content">
+      <div class="modal-header">
+        <header>
+          <h1><?php echo $item['name'] ?></h1>
+          <?php echo $item['title'] ?><br>
+          <?php echo $item['company'] ?>
+        </header>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php echo $item['description'] ?>
+      </div>
+    </div>
+  </div>
+</article>
+<?php endforeach; ?>
+
 
 <!-- Article Section -->
 <a class="anchor is-offset" id="articles"></a>
