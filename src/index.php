@@ -1,5 +1,9 @@
 <?php
-  include 'data/speakers.php';
+
+// Load data
+include 'data/speakers.php';
+include 'data/agenda.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -229,14 +233,18 @@
 
       <!-- Agenda Listings -->
       <ul class="agenda-item-list row">
-        <?php for ($i = 0; $i < 8; $i++): ?>
+        <?php foreach ($agenda as $index => $item): ?>
         <li class="col-md-6">
-          <button class="agenda-item">
+          <button
+            id="agenda-item-<?php echo $index+1 ?>"
+            class="agenda-item"
+            data-toggle="modal"
+            data-target="#agenda-modal-<?php echo $index+1 ?>"
+          >
             <div class="agenda-item__header">
-              <span class="agenda-item__type">Panel Discussion</span>
+              <span class="agenda-item__type"><?php echo $item['type'] ?></span>
               <p class="agenda-item__title">
-                Distributed economy in context: An economic, legal, corporate,
-                and global perspective
+                <?php echo $item['title'] ?>
               </p>
             </div>
             <div class="agenda-item__icon">
@@ -246,13 +254,34 @@
             </div>
           </button>
         </li>
-        <?php endfor; ?>
+        <?php endforeach; ?>
       </ul>
 
     </div>
   </div>
 </section>
 
+<!-- Agenda Modals -->
+<?php foreach ($agenda as $index => $item): ?>
+<article class="modal fade" tabindex="-1" role="dialog" id="agenda-modal-<?php echo $index+1 ?>" aria-labelledby="agenda-item-<?php echo $index+1 ?>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="agenda-modal modal-content">
+      <div class="modal-header">
+        <header>
+          <span class="agenda-modal__type"><?php echo $item['type'] ?></span>
+          <h1><?php echo $item['title'] ?></h1>
+        </header>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php echo $item['description'] ?>
+      </div>
+    </div>
+  </div>
+</article>
+<?php endforeach; ?>
 
 <!-- Speakers Section -->
 <section class="speakers-section section" id="speakers">

@@ -367,6 +367,52 @@
   height: 48px;
 }
 
+// Agenda Modals
+.agenda-modal {
+  border-radius: 0;
+  border: 0;
+  color: white;
+  background: {
+    color: $color-secondary;
+    image: url(../img/pattern-02.png);
+    repeat: no-repeat;
+    position: top left;
+  }
+}
+
+.agenda-modal .modal-header,
+.agenda-modal .modal-body {
+  padding: $spacing-5;
+}
+
+.agenda-modal .modal-header {
+  border-bottom: 1px solid rgba(white, 0.1);
+}
+
+.agenda-modal__type {
+  text-transform: uppercase;
+  font-size: $font-size-1;
+  color: rgba(white, 0.8);
+  font-weight: bold;
+}
+
+.agenda-modal h1 {
+  font-size: $font-size-2;
+  font-weight: bold;
+  @include on-tablet {
+    font-size: $font-size-3;
+  }
+}
+
+.agenda-modal .modal-body {
+  font-size: $font-size-1;
+}
+
+.agenda-modal .close {
+  color: white;
+  opacity: 1;
+  text-shadow: none;
+}
 
 /* Speakers Section
 /* -------------------------------------------------------------------------- */
