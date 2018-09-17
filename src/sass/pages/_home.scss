@@ -431,6 +431,8 @@
   text-align: left;
   margin-bottom: $spacing-4;
   transition: 0.4s cubic-bezier(0.215, 0.610, 0.355, 1) all;
+
+  &:focus { outline: none; }
 }
 
 .speakers-item-list.is-active .speakers-item:not(.is-active) {
@@ -461,6 +463,11 @@
 
 .speakers-item__details {
   font-size: 16px;
+  color: $color-text-l2;
+}
+
+.speakers-item:focus .speakers-item__details {
+  color: $color-text;
 }
 
 .speakers-item__details small {

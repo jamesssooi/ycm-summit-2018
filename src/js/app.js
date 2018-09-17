@@ -125,16 +125,16 @@ function enableSpeakersToggle() {
   // Attach event listeners
   state.forEach((speaker, i) => {
     // Mouseover
-    $(speaker.buttonElement).on('mouseover', () => {
-      state[i].isHover = true;
-      window.requestAnimationFrame(() => render());
-    });
+    // $(speaker.buttonElement).on('mouseover', () => {
+    //   state[i].isHover = true;
+    //   window.requestAnimationFrame(() => render());
+    // });
 
-    // Mouseleave
-    $(speaker.buttonElement).on('mouseout', () => {
-      state[i].isHover = false;
-      window.requestAnimationFrame(() => render());
-    });
+    // // Mouseleave
+    // $(speaker.buttonElement).on('mouseout', () => {
+    //   state[i].isHover = false;
+    //   window.requestAnimationFrame(() => render());
+    // });
 
     // Click
     $(speaker.buttonElement).on('click', () => {
