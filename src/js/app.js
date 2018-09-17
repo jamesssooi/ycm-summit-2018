@@ -55,9 +55,9 @@ function enableHamburgerMenu() {
   const navbar = document.getElementById('nav-bar');
 
   const bodyListener = (e) => {
-    if (menu.contains(e.target)) {
-      return;
-    }
+    // if (menu.contains(e.target)) {
+    //   return;
+    // }
     menu.classList.remove('is-active');
     hamburger.classList.remove('is-active');
     navbar.classList.remove('is-active');
