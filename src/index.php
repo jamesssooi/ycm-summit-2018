@@ -345,7 +345,7 @@ include 'data/agenda.php';
     <h2 class="section-title">Platinum Sponsors</h2>
     <ul class="sponsor-item-list">
       <li>
-        <a href="#" class="sponsor-item">
+        <a href="https://www.pwc.com/my/en.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer">
           <div class="sponsor-item__logo">
             <img src="img/logos/pwc.png" srcset="img/logos/pwc@2x.png" alt="Logo of PwC">
           </div>
@@ -353,7 +353,7 @@ include 'data/agenda.php';
         </a>
       </li>
       <li>
-        <a href="#" class="sponsor-item">
+        <a href="https://www.cimb.com/en/index.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer">
           <div class="sponsor-item__logo">
             <img src="img/logos/cimb.png" srcset="img/logos/cimb@2x.png" alt="Logo of CIMB">
           </div>
@@ -361,7 +361,7 @@ include 'data/agenda.php';
         </a>
       </li>
       <li>
-        <a href="#" class="sponsor-item">
+        <a href="https://www.brunsfield.com/" target="_blank" rel="noopener nofollow noreferrer" class="sponsor-item">
           <div class="sponsor-item__logo">
             <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
           </div>
@@ -375,9 +375,9 @@ include 'data/agenda.php';
     <h2 class="section-title">Silver Sponsor</h2>
     <ul class="sponsor-item-list">
       <li>
-        <a href="#" class="sponsor-item">
+        <a href="https://axiatafoundation.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer">
           <div class="sponsor-item__logo">
-            <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Axiata Foundation">
+            <img src="img/logos/axiata.png" srcset="img/logos/axiata@2x.png" alt="Logo of Axiata Foundation">
           </div>
           <p class="sponsor-item__name">Axiata Foundation</p>
         </a>
@@ -389,7 +389,7 @@ include 'data/agenda.php';
     <h2 class="section-title">Career Partner</h2>
     <ul class="sponsor-item-list">
       <li>
-        <a href="#" class="sponsor-item">
+        <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer">
           <div class="sponsor-item__logo">
             <img src="img/logos/graduan.png" srcset="img/logos/graduan@2x.png" alt="Logo of Graduan">
           </div>

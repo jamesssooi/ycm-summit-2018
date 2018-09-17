@@ -534,7 +534,7 @@
 }
 
 .sponsors-section .section-title {
-  color: $color-text;
+  color: $color-text-l3;
 }
 
 .sponsor-item-list {
@@ -550,12 +550,12 @@
 }
 
 .sponsor-item-list:after {
-  content: '';
-  display: block;
-  height: 1px;
-  width: 100%;
-  background-color: $color-border-l2;
-  margin: 0 $spacing-2 $spacing-6;
+  // content: '';
+  // display: block;
+  // height: 1px;
+  // width: 100%;
+  // background-color: $color-border-l2;
+  // margin: 0 $spacing-2 $spacing-6;
 }
 
 .sponsors-section > .container:last-of-type .sponsor-item-list:after {
@@ -603,6 +603,7 @@
   font-weight: bold;
   margin-bottom: 0;
   font-size: 14px;
+  display: none;
 }
 
 
