@@ -1,5 +1,9 @@
 <?php
-  include 'data/speakers.php';
+
+// Load data
+include 'data/speakers.php';
+include 'data/agenda.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -229,14 +233,18 @@
 
       <!-- Agenda Listings -->
       <ul class="agenda-item-list row">
-        <?php for ($i = 0; $i < 8; $i++): ?>
+        <?php foreach ($agenda as $index => $item): ?>
         <li class="col-md-6">
-          <button class="agenda-item">
+          <button
+            id="agenda-item-<?php echo $index+1 ?>"
+            class="agenda-item"
+            data-toggle="modal"
+            data-target="#agenda-modal-<?php echo $index+1 ?>"
+          >
             <div class="agenda-item__header">
-              <span class="agenda-item__type">Panel Discussion</span>
+              <span class="agenda-item__type"><?php echo $item['type'] ?></span>
               <p class="agenda-item__title">
-                Distributed economy in context: An economic, legal, corporate,
-                and global perspective
+                <?php echo $item['title'] ?>
               </p>
             </div>
             <div class="agenda-item__icon">
@@ -246,13 +254,34 @@
             </div>
           </button>
         </li>
-        <?php endfor; ?>
+        <?php endforeach; ?>
       </ul>
 
     </div>
   </div>
 </section>
 
+<!-- Agenda Modals -->
+<?php foreach ($agenda as $index => $item): ?>
+<article class="modal fade" tabindex="-1" role="dialog" id="agenda-modal-<?php echo $index+1 ?>" aria-labelledby="agenda-item-<?php echo $index+1 ?>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="agenda-modal modal-content">
+      <div class="modal-header">
+        <header>
+          <span class="agenda-modal__type"><?php echo $item['type'] ?></span>
+          <h1><?php echo $item['title'] ?></h1>
+        </header>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php echo $item['description'] ?>
+      </div>
+    </div>
+  </div>
+</article>
+<?php endforeach; ?>
 
 <!-- Speakers Section -->
 <section class="speakers-section section" id="speakers">
@@ -316,29 +345,57 @@
     <h2 class="section-title">Platinum Sponsors</h2>
     <ul class="sponsor-item-list">
       <li>
-        <div class="sponsor-item">
+        <a href="#" class="sponsor-item">
           <div class="sponsor-item__logo">
-            <img src="https://unsplash.it/210/210" alt="Logo of X">
+            <img src="img/logos/pwc.png" srcset="img/logos/pwc@2x.png" alt="Logo of PwC">
           </div>
-          <p class="sponsor-item__name">ACME Inc</p>
-        </div>
+          <p class="sponsor-item__name">PwC Malaysia</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="sponsor-item">
+          <div class="sponsor-item__logo">
+            <img src="img/logos/cimb.png" srcset="img/logos/cimb@2x.png" alt="Logo of CIMB">
+          </div>
+          <p class="sponsor-item__name">CIMB</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="sponsor-item">
+          <div class="sponsor-item__logo">
+            <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
+          </div>
+          <p class="sponsor-item__name">Brunsfield</p>
+        </a>
       </li>
     </ul>
   </div>
 
   <div class="container">
-    <h2 class="section-title">Silver Sponsors</h2>
+    <h2 class="section-title">Silver Sponsor</h2>
     <ul class="sponsor-item-list">
-      <?php for ($i = 0; $i < 4; $i++): ?>
       <li>
-        <div class="sponsor-item">
+        <a href="#" class="sponsor-item">
           <div class="sponsor-item__logo">
-            <img src="https://unsplash.it/210/210" alt="Logo of X">
+            <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Axiata Foundation">
           </div>
-          <p class="sponsor-item__name">ACME Inc</p>
-        </div>
+          <p class="sponsor-item__name">Axiata Foundation</p>
+        </a>
       </li>
-      <?php endfor; ?>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Career Partner</h2>
+    <ul class="sponsor-item-list">
+      <li>
+        <a href="#" class="sponsor-item">
+          <div class="sponsor-item__logo">
+            <img src="img/logos/graduan.png" srcset="img/logos/graduan@2x.png" alt="Logo of Graduan">
+          </div>
+          <p class="sponsor-item__name">Graduan</p>
+        </a>
+      </li>
     </ul>
   </div>
 </section>
@@ -378,18 +435,21 @@
 
         <!-- Form -->
         <div class="col-lg-5 order-lg-1">
-          <form action="" class="registration-form">
+          <form id="registration-form" action="/api/register.php" method="POST" class="registration-form">
             <div class="form-group mb-5">
-              <label for="full-name">Name</label>
-              <input type="text" name="full-name" class="form-control w-100">
+              <label for="name">Name</label>
+              <input type="text" name="name" class="form-control w-100">
+              <span class="error-label" for="name"></span>
             </div>
             <div class="form-group mb-5">
               <label for="email">Email</label>
               <input type="text" name="email" class="form-control w-100">
+              <span class="error-label" for="email"></span>
             </div>
             <div class="form-group mb-5">
-              <label for="contact-no">Contact Number</label>
-              <input type="text" name="contact-no" class="form-control w-100">
+              <label for="contactno">Contact Number</label>
+              <input type="text" name="contactno" class="form-control w-100">
+              <span class="error-label" for="contactno"></span>
             </div>
             <div class="mb-1">
               <button class="btn btn-primary">

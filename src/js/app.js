@@ -30,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
   enableHamburgerMenu();
   enableSmoothScrolling();
   enableSpeakersToggle();
+  enableFormValidation();
 });
 
 
@@ -55,9 +56,9 @@ function enableHamburgerMenu() {
   const navbar = document.getElementById('nav-bar');
 
   const bodyListener = (e) => {
-    if (menu.contains(e.target)) {
-      return;
-    }
+    // if (menu.contains(e.target)) {
+    //   return;
+    // }
     menu.classList.remove('is-active');
     hamburger.classList.remove('is-active');
     navbar.classList.remove('is-active');
@@ -182,4 +183,56 @@ function enableSpeakersToggle() {
     }
   }
 
+}
+
+
+/**
+ * Enables form validation functionalities.
+ */
+function enableFormValidation() {
+
+  let fields = {};
+
+  // Compute initial state
+  $('#registration-form input').each(function() {
+    fields[$(this).attr('name')] = {
+      element: $(this)[0],
+      errors: [],
+    }
+  });
+
+  $('#registration-form').on('submit', function(e) {
+    hideErrors();
+    if (!validateFields()) {
+      displayErrors();
+      e.preventDefault();
+      return;
+    }
+  });
+
+  function validateFields() {
+    let isValid = true;
+    Object.keys(fields).forEach(key => {
+      fields[key].errors = [];
+      if (fields[key].element.value == '') {
+        fields[key].errors.push('This field is required.');
+        isValid = false;
+      }
+    });
+    return isValid;
+  }
+
+  function displayErrors() {
+    Object.keys(fields).forEach(key => {
+      if (fields[key].errors.length > 0) {
+        $(`.error-label[for='${key}']`).text(fields[key].errors[0]);
+      }
+    });
+  }
+
+  function hideErrors() {
+    Object.keys(fields).forEach(key => {
+      $(`.error-label[for='${key}']`).text('');
+    });
+  }
 }
