@@ -7,7 +7,7 @@ require 'lib/getGoogleClient.php';
  *
  * @var string
  */
-define('FORM_URL', 'https://docs.google.com/forms/d/e/1FAIpQLSdDhAxQbvwV460yz1_4bjM5BxAZetdRprki60d_rG_cq2iONg/viewform');
+define('FORM_URL', 'https://docs.google.com/forms/d/e/1FAIpQLSf3PhLaSBihTnp45y0V5fMsWkskDNHsA07xAtt60KT5BnXbQw/viewform');
 
 
 /**
@@ -15,7 +15,7 @@ define('FORM_URL', 'https://docs.google.com/forms/d/e/1FAIpQLSdDhAxQbvwV460yz1_4
  *
  * @var string
  */
-define('SPREADSHEET_ID', '1BGRFJHC5AGMpd3pX5MlDcmOZWxQzC6utvQxfRqUtzhw');
+define('SPREADSHEET_ID', '1rl1zp6_AuMZM8vEnkv1hZMZT9Lf-15eNdNoUs5MDTL4');
 
 
 /**
@@ -23,7 +23,7 @@ define('SPREADSHEET_ID', '1BGRFJHC5AGMpd3pX5MlDcmOZWxQzC6utvQxfRqUtzhw');
  *
  * @var string
  */
-define('SPREADSHEET_RANGE', 'Sheet2!A2:H');
+define('SPREADSHEET_RANGE', 'Microsite Responses!A2:D');
 
 
 /**
@@ -123,14 +123,16 @@ function saveInGoogleSheets($data) {
  */
 function generateGoogleFormURL($data) {
   $fieldName = array(
-    'name'      => 'entry.1314760394',
-    'email'     => 'entry.1829444857',
+    'name'      => 'entry.1829444857',
+    // 'email'     => 'entry.1829444857',
     'contactno' => 'entry.1081583319',
   );
 
   $qsArray = [];
   foreach ($data as $key => $value) {
-    $qsArray[] = $fieldName[$key] . '=' . urlencode($data[$key]);
+    if (isset($fieldName[$key])) {
+      $qsArray[] = $fieldName[$key] . '=' . urlencode($data[$key]);
+    }
   }
 
   return appendQueryString(FORM_URL, join('&', $qsArray));
