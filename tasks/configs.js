@@ -50,7 +50,7 @@ export const configs = {
       verbose: true,
     },
     quality: {
-      jpeg: 70,
+      jpeg: 80,
       png : 70
     }
   },

@@ -10,10 +10,11 @@ import ScrollMonitor from 'scrollmonitor';
 import MoveTo from 'moveto';
 
 window.addEventListener('DOMContentLoaded', () => {
-  enableArticleCarousel();
   enableNavbarColorToggle();
   enableHamburgerMenu();
   enableSmoothScrolling();
+  enableSpeakersHoverEffect();
+  enableArticleCarousel();
   enableFormValidation();
 });
 
@@ -91,6 +92,24 @@ function enableSmoothScrolling() {
 }
 
 
+/**
+ * Enables the hover effect in the speakers list.
+ */
+function enableSpeakersHoverEffect() {
+  $('.speakers-item').on('mouseover', function() {
+    $('.speakers-item-list').addClass('is-hovering');
+    $(this).addClass('is-active');
+  });
+  $('.speakers-item').on('mouseout', function() {
+    $('.speakers-item-list').removeClass('is-hovering');
+    $(this).removeClass('is-active');
+  });
+}
+
+
+/**
+ * Enables the carousel of articles.
+ */
 function enableArticleCarousel() {
   $('#article-item-list').slick({
     slidesToShow: 3,
