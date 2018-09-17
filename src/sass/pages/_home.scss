@@ -447,6 +447,14 @@
   padding-top: 240px;
 }
 
+.speakers-disclaimer {
+  border: 1px solid yellow;
+  padding: $spacing-4;
+  font-size: $font-size-1;
+  margin-bottom: $spacing-6;
+  background-color: lighten(yellow, 40%);
+}
+
 .speakers-item-list {
   @include m-list-unstyled;
 }

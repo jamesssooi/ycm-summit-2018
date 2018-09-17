@@ -216,6 +216,9 @@ include 'data/agenda.php';
         <?php endforeach; ?>
       </ul>
 
+      <!-- Disclaimer -->
+      <small><em>Kindly note that the agenda is subject to change.</em></small>
+
     </div>
   </div>
 </section>
@@ -258,6 +261,12 @@ include 'data/agenda.php';
 
       <!-- Speakers List -->
       <div class="col-md-7">
+
+        <div class="speakers-disclaimer">
+          Watch this space! We're in the midst of confirming our list of
+          speakers, which may lead to changes in our line-up.
+        </div>
+
         <ul class="speakers-item-list row">
           <?php foreach ($speakers as $speaker): ?>
           <li class="col-6 col-lg-4">
@@ -298,8 +307,8 @@ include 'data/agenda.php';
       </div>
     </div>
   </div>
-</section>
 
+</section>
 
 <!-- Article Section -->
 <a class="anchor is-offset" id="articles"></a>
