@@ -89,11 +89,11 @@ include 'data/agenda.php';
 <!-- Hero -->
 <section class="hero" id="hero">
 
-  <div class="hero-pattern">
-    <div class="hero-pattern__image"></div>
+  <div class="hero-pattern" aria-hidden="true">
+    <div class="hero-pattern__image" role="presentation"></div>
   </div>
 
-  <div class="hero-masthead">
+  <header class="hero-masthead">
     <h1 class="hero-masthead__logo">
       <img src="img/logos/de-masthead.svg" alt="Distributed Economy">
     </h1>
@@ -101,9 +101,9 @@ include 'data/agenda.php';
       10th Annual YCM Summit<br>
       <time datetime="2018-11-17T08:30:00+08:00">Nov 24 2018</time>&ensp;&middot;&ensp;Aloft Kuala Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5PM
     </div>
-  </div>
+  </header>
 
-  <div class="hero-footer">
+  <footer class="hero-footer">
     <div class="row align-items-end">
       <div class="col-md-4 text-center text-lg-left mb-4 mb-lg-0">
         <img
@@ -122,7 +122,7 @@ include 'data/agenda.php';
       </div>
       <div class="col-md-4" role="presentation"></div>
     </div>
-  </div>
+  </footer>
 </section>
 
 
@@ -152,7 +152,7 @@ include 'data/agenda.php';
         </div>
       </div>
 
-      <div class="col-md-4 offset-md-2">
+      <aside class="col-md-4 offset-md-2">
         <header class="section-header">
           <h3 class="section-title">Areas of Interest</h3>
         </header>
@@ -188,7 +188,7 @@ include 'data/agenda.php';
             </span>
           </li>
         </ul>
-      </div>
+      </aside>
 
     </article>
   </div>
