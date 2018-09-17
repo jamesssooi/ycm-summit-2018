@@ -533,6 +533,10 @@
   }
 }
 
+.sponsors-section .section-title {
+  color: $color-text;
+}
+
 .sponsor-item-list {
   @include m-list-unstyled;
   display: flex;
@@ -582,7 +586,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: $spacing-2;
+  margin: 0 auto $spacing-2;
 
   @include on-desktop {
     width: 180px;
