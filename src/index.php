@@ -407,18 +407,21 @@ include 'data/agenda.php';
 
         <!-- Form -->
         <div class="col-lg-5 order-lg-1">
-          <form action="/api/register.php" method="POST" class="registration-form">
+          <form id="registration-form" action="/api/register.php" method="POST" class="registration-form">
             <div class="form-group mb-5">
               <label for="name">Name</label>
               <input type="text" name="name" class="form-control w-100">
+              <span class="error-label" for="name"></span>
             </div>
             <div class="form-group mb-5">
               <label for="email">Email</label>
               <input type="text" name="email" class="form-control w-100">
+              <span class="error-label" for="email"></span>
             </div>
             <div class="form-group mb-5">
               <label for="contactno">Contact Number</label>
               <input type="text" name="contactno" class="form-control w-100">
+              <span class="error-label" for="contactno"></span>
             </div>
             <div class="mb-1">
               <button class="btn btn-primary">
