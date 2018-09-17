@@ -275,9 +275,9 @@ include 'data/agenda.php';
         >
           <div class="speakers-item__profile">
             <img src="<?php echo $speaker['img'] ?>" alt="Photo of <?php echo $speaker['name'] ?>">
-            <!-- <div class="speakers-item__logo">
-              <img src="https://unsplash.it/72/72" alt="Logo of X">
-            </div> -->
+            <div class="speakers-item__logo">
+              <img src="<?php echo $speaker['logo'] ?>" alt="Logo of <?php echo $speaker['company'] ?>">
+            </div>
           </div>
           <p class="speakers-item__details">
             <strong><?php echo $speaker['name'] ?></strong><br>

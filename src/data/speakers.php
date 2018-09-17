@@ -4,6 +4,7 @@ $speakers = array(
   array(
     'id' => 'adil-haris',
     'img' => 'img/speakers/adil-haris.jpg',
+    'logo' => 'img/speakers/adil-haris-logo.jpg',
     'name' => 'Adil Haris',
     'title' => 'Product Development Lead and Blockchain Consultant',
     'company' => 'Blockchain Technology Malaysia',
@@ -16,6 +17,7 @@ $speakers = array(
   array(
     'id' => 'nicholas-kaw',
     'img' => 'img/speakers/nicholas-kaw.jpg',
+    'logo' => 'img/speakers/nicholas-kaw-logo.jpg',
     'name' => 'Nicholas Kaw',
     'title' => 'Development Economist',
     'company' => 'Khazanah Nasional',
@@ -28,6 +30,7 @@ $speakers = array(
   array(
     'id' => 'tengku-zafrul',
     'img' => 'img/speakers/tengku-zafrul.jpg',
+    'logo' => 'img/speakers/tengku-zafrul-logo.jpg',
     'name' => 'Tengku Dato’ Sri Zafrul Tengku Abdul Aziz',
     'title' => 'Group Chief Executive Officer/Executive Director',
     'company' => 'CIMB Group Holdings Berhad',
