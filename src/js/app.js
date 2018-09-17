@@ -206,7 +206,6 @@ function enableFormValidation() {
     if (!validateFields()) {
       displayErrors();
       e.preventDefault();
-      console.log('nani');
       return;
     }
   });

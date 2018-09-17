@@ -106,7 +106,7 @@ function saveInGoogleSheets($data) {
   // Create a new row value
   $valueRange = new \Google_Service_Sheets_ValueRange();
   $valueRange->setValues(array(
-    'values' => array($data['name'], $data['email'], $data['contactno'])
+    'values' => array(date_format(date_create(), DATE_ISO8601), $data['name'], $data['email'], $data['contactno'])
   ));
 
   // Inset new row into Google Sheets
