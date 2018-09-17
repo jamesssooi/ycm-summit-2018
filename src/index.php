@@ -36,7 +36,7 @@ include 'data/agenda.php';
 
   <!-- Mobile Fixed Menu -->
   <div class="nav-bar-mobile">
-    <a href="#" class="btn btn-primary">Register</a>
+    <a href="#register" class="btn btn-primary" data-smooth-scroll>Apply Now</a>
     <button class="btn btn-light nav-hamburger" id="nav-hamburger">
       <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
         <rect x="6" y="10" width="20" height="2"></rect>
