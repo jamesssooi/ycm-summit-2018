@@ -17,7 +17,6 @@ include 'data/agenda.php';
   <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 
-
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
@@ -28,7 +27,7 @@ include 'data/agenda.php';
 <header class="nav-bar" id="nav-bar">
   <div class="ycm-gradient-bar is-top" role="presentation"></div>
   <div class="nav-logos">
-    <a href="http://www.ycm.org.my" target="_blank" class="nav-logos__ycm">
+    <a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" class="nav-logos__ycm">
       <img src="img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
       <img src="img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
     </a>
@@ -40,7 +39,14 @@ include 'data/agenda.php';
   <!-- Mobile Fixed Menu -->
   <div class="nav-bar-mobile">
     <a href="#register" class="btn btn-primary" data-smooth-scroll>Apply Now</a>
-    <button class="btn btn-light nav-hamburger" id="nav-hamburger">
+    <button
+      class="btn btn-light nav-hamburger"
+      id="nav-hamburger"
+      aria-label="Menu"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-controls="nav-mobile-menu"
+    >
       <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
         <rect x="6" y="10" width="20" height="2"></rect>
         <rect x="6" y="16" width="20" height="2"></rect>
@@ -60,7 +66,7 @@ include 'data/agenda.php';
 </header>
 
 <!-- Mobile Menu -->
-<nav class="nav-mobile-menu" id="nav-mobile-menu">
+<nav class="nav-mobile-menu" id="nav-mobile-menu" aria-labelledby="">
   <a href="#about" class="nav-mobile-menu__item" data-smooth-scroll>About</a>
   <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll>Agenda</a>
   <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll>Speakers</a>
@@ -99,7 +105,7 @@ include 'data/agenda.php';
       <div class="col-md-4 text-center">
         <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll>Apply Now</a>
         <a href="#about" class="hero-footer__chevron" data-smooth-scroll>
-          <svg class="icon">
+          <svg class="icon" aria-label="Scroll to next section">
             <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
           </svg>
         </a>
@@ -335,7 +341,7 @@ include 'data/agenda.php';
 
     <!-- Prev Button -->
     <button class="article-item-control is-prev">
-      <svg class="icon">
+      <svg class="icon" aria-label="Previous">
         <use xlink:href="svg/sprites.svg#icon-arrow-left"></use>
       </svg>
     </button>
@@ -359,7 +365,7 @@ include 'data/agenda.php';
 
     <!-- Next Button -->
     <button class="article-item-control is-next">
-      <svg class="icon">
+      <svg class="icon" aria-label="Next">
         <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
       </svg>
     </button>
@@ -469,17 +475,17 @@ include 'data/agenda.php';
           <form id="registration-form" action="/api/register.php" method="POST" class="registration-form">
             <div class="form-group mb-5">
               <label for="name">Name</label>
-              <input type="text" name="name" class="form-control w-100">
+              <input type="text" name="name" id="name" class="form-control w-100">
               <span class="error-label" for="name"></span>
             </div>
             <div class="form-group mb-5">
               <label for="email">Email</label>
-              <input type="text" name="email" class="form-control w-100">
+              <input type="text" name="email" id="email" class="form-control w-100">
               <span class="error-label" for="email"></span>
             </div>
             <div class="form-group mb-5">
               <label for="contactno">Contact Number</label>
-              <input type="text" name="contactno" class="form-control w-100">
+              <input type="text" name="contactno" id="contactno" class="form-control w-100">
               <span class="error-label" for="contactno"></span>
             </div>
             <div class="mb-1">
@@ -527,16 +533,16 @@ include 'data/agenda.php';
               <li><a href="#speakers" data-smooth-scroll>Speakers</a></li>
               <li><a href="#sponsors" data-smooth-scroll>Sponsors</a></li>
               <li><a href="#register" data-smooth-scroll>Register</a></li>
-              <li><a href="http://ycm.org.my" target="_blank">About YCM</a></li>
+              <li><a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank">About YCM</a></li>
             </ul>
           </div>
 
           <!-- Social Links -->
           <div class="col-md-6">
             <ul class="footer-links">
-              <li><a href="https://www.facebook.com/YoungCorpMsians">Facebook</a></li>
-              <li><a href="https://www.instagram.com/youngcorpmsians">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/company/young-corporate-malaysians/">LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/YoungCorpMsians" rel="noreferrer noopener nofollow">Facebook</a></li>
+              <li><a href="https://www.instagram.com/youngcorpmsians" rel="noreferrer noopener nofollow">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/young-corporate-malaysians/" rel="noreferrer noopener nofollow">LinkedIn</a></li>
             </ul>
           </div>
 

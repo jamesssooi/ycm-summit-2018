@@ -45,6 +45,7 @@ function enableHamburgerMenu() {
     // }
     menu.classList.remove('is-active');
     hamburger.classList.remove('is-active');
+    hamburger.setAttribute('aria-expanded', 'false');
     navbar.classList.remove('is-active');
     document.body.classList.remove('has-backdrop');
     window.removeEventListener('click', bodyListener);
@@ -61,6 +62,7 @@ function enableHamburgerMenu() {
     } else {
       menu.classList.add('is-active');
       hamburger.classList.add('is-active');
+      hamburger.setAttribute('aria-expanded', 'true');
       navbar.classList.add('is-active');
       document.body.classList.add('has-backdrop');
       window.addEventListener('click', bodyListener);
