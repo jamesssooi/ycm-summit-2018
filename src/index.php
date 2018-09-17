@@ -111,7 +111,8 @@ include 'data/agenda.php';
 
 
 <!-- About DE -->
-<section class="about-de section" id="about">
+<a class="anchor" id="about"></a>
+<section class="about-de section">
   <div class="container">
     <article class="row align-items-center">
 
@@ -179,7 +180,8 @@ include 'data/agenda.php';
 
 
 <!-- Article Section -->
-<section class="article-section section" id="articles">
+<a class="anchor is-offset" id="articles"></a>
+<section class="article-section section">
   <div class="container">
     <header class="section-header">
       <h2 class="section-title">Curated Articles</h2>
@@ -225,7 +227,8 @@ include 'data/agenda.php';
 
 
 <!-- Agenda Section -->
-<section class="agenda-section" id="agenda">
+<a class="anchor is-offset" id="agenda"></a>
+<section class="agenda-section">
   <div class="container">
     <div class="agenda-container">
 
@@ -287,7 +290,8 @@ include 'data/agenda.php';
 <?php endforeach; ?>
 
 <!-- Speakers Section -->
-<section class="speakers-section section" id="speakers">
+<a class="anchor is-offset" id="speakers"></a>
+<section class="speakers-section section">
   <div class="container">
     <header class="section-header">
       <h2 class="section-title">Speakers</h2>
@@ -343,7 +347,8 @@ include 'data/agenda.php';
 
 
 <!-- Sponsors Section -->
-<section class="sponsors-section section with-offset-bottom" id="sponsors">
+<a class="anchor is-offset" id="sponsors"></a>
+<section class="sponsors-section section with-offset-bottom">
   <div class="container">
     <h2 class="section-title">Platinum Sponsors</h2>
     <ul class="sponsor-item-list">
@@ -405,7 +410,8 @@ include 'data/agenda.php';
 
 
 <!-- Registration Form -->
-<section class="registration-form-section" id="register">
+<section class="registration-form-section">
+  <a class="anchor is-offset" id="register"></a>
   <div class="container">
 
     <div class="registration-form-panel">

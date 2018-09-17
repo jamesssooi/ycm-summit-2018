@@ -25,3 +25,17 @@ html, body {
   font-family: $typeface-primary;
   line-height: 1.4;
 }
+
+
+.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+
+.anchor.is-offset {
+  top: -90px;
+  @include on-tablet {
+    top: -100px;
+  }
+}
