@@ -545,6 +545,16 @@
   margin-bottom: $spacing-6;
 }
 
+.sponsor-item {
+  text-decoration: none;
+  color: $color-text-l3;
+  font-size: $font-size-1;
+  &:hover {
+    text-decoration: none;
+    color: $color-text-l2;
+  }
+}
+
 .sponsor-item__logo {
   width: 120px;
   height: 120px;
@@ -571,10 +581,6 @@
   font-weight: bold;
   margin-bottom: 0;
   font-size: 14px;
-  
-  @include on-desktop {
-    font-size: 16px;
-  }
 }
 
 

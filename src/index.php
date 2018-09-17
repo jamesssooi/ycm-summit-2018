@@ -345,29 +345,57 @@ include 'data/agenda.php';
     <h2 class="section-title">Platinum Sponsors</h2>
     <ul class="sponsor-item-list">
       <li>
-        <div class="sponsor-item">
+        <a href="#" class="sponsor-item">
           <div class="sponsor-item__logo">
-            <img src="https://unsplash.it/210/210" alt="Logo of X">
+            <img src="img/logos/pwc.png" srcset="img/logos/pwc@2x.png" alt="Logo of PwC">
           </div>
-          <p class="sponsor-item__name">ACME Inc</p>
-        </div>
+          <p class="sponsor-item__name">PwC Malaysia</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="sponsor-item">
+          <div class="sponsor-item__logo">
+            <img src="img/logos/cimb.png" srcset="img/logos/cimb@2x.png" alt="Logo of CIMB">
+          </div>
+          <p class="sponsor-item__name">CIMB</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="sponsor-item">
+          <div class="sponsor-item__logo">
+            <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
+          </div>
+          <p class="sponsor-item__name">Brunsfield</p>
+        </a>
       </li>
     </ul>
   </div>
 
   <div class="container">
-    <h2 class="section-title">Silver Sponsors</h2>
+    <h2 class="section-title">Silver Sponsor</h2>
     <ul class="sponsor-item-list">
-      <?php for ($i = 0; $i < 4; $i++): ?>
       <li>
-        <div class="sponsor-item">
+        <a href="#" class="sponsor-item">
           <div class="sponsor-item__logo">
-            <img src="https://unsplash.it/210/210" alt="Logo of X">
+            <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Axiata Foundation">
           </div>
-          <p class="sponsor-item__name">ACME Inc</p>
-        </div>
+          <p class="sponsor-item__name">Axiata Foundation</p>
+        </a>
       </li>
-      <?php endfor; ?>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Career Partner</h2>
+    <ul class="sponsor-item-list">
+      <li>
+        <a href="#" class="sponsor-item">
+          <div class="sponsor-item__logo">
+            <img src="img/logos/graduan.png" srcset="img/logos/graduan@2x.png" alt="Logo of Graduan">
+          </div>
+          <p class="sponsor-item__name">Graduan</p>
+        </a>
+      </li>
     </ul>
   </div>
 </section>
