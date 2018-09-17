@@ -179,53 +179,6 @@ include 'data/agenda.php';
 </section>
 
 
-<!-- Article Section -->
-<a class="anchor is-offset" id="articles"></a>
-<section class="article-section section">
-  <div class="container">
-    <header class="section-header">
-      <h2 class="section-title">Curated Articles</h2>
-    </header>
-  </div>
-
-  <!-- Article Listings -->
-  <div class="container position-relative">
-
-    <!-- Prev Button -->
-    <button class="article-item-control is-prev">
-      <svg class="icon">
-        <use xlink:href="svg/sprites.svg#icon-arrow-left"></use>
-      </svg>
-    </button>
-
-    <!-- Carousel -->
-    <div class="article-item-list" id="article-item-list">
-      <?php for ($i = 0; $i < 9; $i++): ?>
-      <div class="article-item">
-        <div class="article-item__image">
-          <img src="https://unsplash.it/380/210" alt="">
-        </div>
-        <div class="article-item__details">
-          <time>Aug 9 2018</time>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </p>
-        </div>
-      </div>
-      <?php endfor ?>
-    </div>
-
-    <!-- Next Button -->
-    <button class="article-item-control is-next">
-      <svg class="icon">
-        <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
-      </svg>
-    </button>
-
-  </div>
-</section>
-
-
 <!-- Agenda Section -->
 <a class="anchor is-offset" id="agenda"></a>
 <section class="agenda-section">
@@ -267,6 +220,7 @@ include 'data/agenda.php';
   </div>
 </section>
 
+
 <!-- Agenda Modals -->
 <?php foreach ($agenda as $index => $item): ?>
 <article class="modal fade" tabindex="-1" role="dialog" id="agenda-modal-<?php echo $index+1 ?>" aria-labelledby="agenda-item-<?php echo $index+1 ?>" aria-hidden="true">
@@ -288,6 +242,7 @@ include 'data/agenda.php';
   </div>
 </article>
 <?php endforeach; ?>
+
 
 <!-- Speakers Section -->
 <a class="anchor is-offset" id="speakers"></a>
@@ -342,6 +297,53 @@ include 'data/agenda.php';
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- Article Section -->
+<a class="anchor is-offset" id="articles"></a>
+<section class="article-section section">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Curated Articles</h2>
+    </header>
+  </div>
+
+  <!-- Article Listings -->
+  <div class="container position-relative">
+
+    <!-- Prev Button -->
+    <button class="article-item-control is-prev">
+      <svg class="icon">
+        <use xlink:href="svg/sprites.svg#icon-arrow-left"></use>
+      </svg>
+    </button>
+
+    <!-- Carousel -->
+    <div class="article-item-list" id="article-item-list">
+      <?php for ($i = 0; $i < 9; $i++): ?>
+      <div class="article-item">
+        <div class="article-item__image">
+          <img src="https://unsplash.it/380/210" alt="">
+        </div>
+        <div class="article-item__details">
+          <time>Aug 9 2018</time>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <?php endfor ?>
+    </div>
+
+    <!-- Next Button -->
+    <button class="article-item-control is-next">
+      <svg class="icon">
+        <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+      </svg>
+    </button>
+
   </div>
 </section>
 

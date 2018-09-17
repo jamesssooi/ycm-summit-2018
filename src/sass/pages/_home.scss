@@ -195,6 +195,7 @@
 .article-section {
   overflow: hidden;
   padding-top: 0;
+  background-color: white;
   @include on-desktop {
     padding-top: inherit;
   }
@@ -224,7 +225,7 @@
 }
 
 .article-item__details {
-  color: white;
+  color: $color-text-l1;
 }
 
 .article-item__details time {
@@ -245,7 +246,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: $color-primary;
+  background-color: white;
   width: 48px;
   height: 48px;
   font-size: 0;
@@ -270,8 +271,12 @@
     left: calc(-48px + #{$spacing-6 * -1});
   }
   &:focus {
-    outline: 2px solid rgba($color-primary, 0.3);
+    outline: 2px solid rgba($color-text, 0.3);
   }
+}
+
+.article-item-control .icon {
+  fill: $color-text;
 }
 
 .article-item-control.slick-disabled {
