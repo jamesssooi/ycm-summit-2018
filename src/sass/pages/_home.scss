@@ -410,8 +410,17 @@
 
 .agenda-modal .close {
   color: white;
-  opacity: 1;
+  opacity: 0.9;
   text-shadow: none;
+
+  &:hover {
+    opacity: 1 !important;
+    color: white !important;
+  }
+
+  &:focus {
+    outline: 2px solid rgba(white, 0.2);
+  }
 }
 
 .modal.fade .modal-dialog {
