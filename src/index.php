@@ -13,7 +13,17 @@ include 'data/agenda.php';
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- SEO & Meta -->
-  <title>Distributed Economy • YCM 10th Annual Summit</title>
+  <title>YCM 10th Annual Summit • Distributed Economy</title>
+  <meta name="description" content="Lorem Ipsum">
+  <meta name="image" content="https://summit.ycm.org.my/img/share-img.jpg">
+  <meta name="og:title" content="YCM 10th Annual Summit • Distributed Economy">
+  <meta name="og:description" content="Lorem Ipsum">
+  <meta name="og:image" content="https://summit.ycm.org.my/img/share-img.jpg">
+  <meta name="og:url" content="https://summit.ycm.org.my/">
+  <meta name="og:site_name" content="YCM 10th Annual Summit • Distributed Economy">
+  <meta name="og:type" content="website">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 
