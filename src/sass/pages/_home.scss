@@ -414,6 +414,17 @@
   text-shadow: none;
 }
 
+.modal.fade .modal-dialog {
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+  transform: translate(0%, -50px);
+}
+.modal.show .modal-dialog {
+  transform: translate(0, 0);
+}
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
 /* Speakers Section
 /* -------------------------------------------------------------------------- */
 .speakers-section {
