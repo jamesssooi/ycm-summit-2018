@@ -207,14 +207,16 @@ include 'data/agenda.php';
       </header>
 
       <!-- Agenda Listings -->
-      <ul class="agenda-item-list row">
+      <ul class="agenda-item-list row align-items-stretch">
         <?php foreach ($agenda as $index => $item): ?>
-        <li class="col-md-6">
-          <button
+        <li class="col-md-6 mb-3">
+          <div
             id="agenda-item-<?php echo $index+1 ?>"
             class="agenda-item"
             data-toggle="modal"
             data-target="#agenda-modal-<?php echo $index+1 ?>"
+            role="button"
+            tabindex="0"
           >
             <div class="agenda-item__header">
               <span class="agenda-item__type"><?php echo $item['type'] ?></span>
@@ -227,13 +229,15 @@ include 'data/agenda.php';
                 <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
               </svg>
             </div>
-          </button>
+          </div>
         </li>
         <?php endforeach; ?>
       </ul>
 
       <!-- Disclaimer -->
-      <small><em>Kindly note that the agenda is subject to change.</em></small>
+      <div class="alert alert-warning" role="alert">
+        <small><em>We're in the midst of finalising our agenda. Kindly note that this list is subject to change.</em></small>
+      </div>
 
     </div>
   </div>
@@ -274,11 +278,15 @@ include 'data/agenda.php';
 
   <div class="container">
 
-    <div class="speakers-disclaimer">
-      Watch this space! We're in the midst of confirming our list of
-      speakers, which may lead to changes in our line-up.
+    <div class="alert alert-warning" role="alert">
+      <small>
+        <em>
+          Watch this space! We're in the midst of confirming our list of
+          speakers, which may lead to changes in our line-up.
+        </em>
+      </small>
     </div>
-    
+
     <!-- Speakers List -->
     <ul class="speakers-item-list row">
       <?php foreach ($speakers as $index => $speaker): ?>
