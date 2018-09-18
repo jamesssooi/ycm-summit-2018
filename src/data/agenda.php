@@ -24,7 +24,7 @@ $agenda = [
   [
     'type' => 'Panel Discussion',
     'title' => 'What is blockchain?',
-    'description' => '<p>Understanding what blockchain technology is and how it could potentially bring about a distributed economy. Focused on examples of how the tehnology is changing/ could change our daily lives and the way we do business.</p><h3>Blockchain: The Game Changer</h3><p>Where will the biggest impact of Blockchain be? Which industries are leveraging the potential of Blockchain?</p><p>This session opens insights into the development of new applications and services based on increased privacy, security, efficiency and transparency that will fundamentally change the way governments and  enterprise do business by highlighting key use cases of blockchain in SEA and around the globe.</p>'
+    'description' => '<p>Understanding what blockchain technology is and how it could potentially bring about a distributed economy. Focused on examples of how the tehnology is changing/ could change our daily lives and the way we do business.</p><h5><strong>Blockchain: The Game Changer</strong></h5><p>Where will the biggest impact of Blockchain be? Which industries are leveraging the potential of Blockchain?</p><p>This session opens insights into the development of new applications and services based on increased privacy, security, efficiency and transparency that will fundamentally change the way governments and  enterprise do business by highlighting key use cases of blockchain in SEA and around the globe.</p>'
   ],
   [
     'type' => 'Panel Discussion',
