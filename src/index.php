@@ -99,7 +99,7 @@ include 'data/agenda.php';
     </h1>
     <div class="hero-masthead__dateline">
       10th Annual YCM Summit<br>
-      <time datetime="2018-11-17T08:30:00+08:00">Nov 24 2018</time>&ensp;&middot;&ensp;Aloft Kuala Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5PM
+      <time datetime="2018-11-17T08:30:00+08:00">Nov 24 2018</time>&ensp;&middot;&ensp;Aloft Kuala Lumpur&nbsp;&middot;&nbsp;8.30AM&nbsp;-&nbsp;5.00PM
     </div>
   </header>
 
