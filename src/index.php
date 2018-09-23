@@ -538,15 +538,15 @@ include 'data/articles.php';
             <ol class="registration-steps">
               <li>
                 <span class="registration-steps__label">Step 1</span>
-                <p>Apply to attend as a delegate before the Oct 24</p>
+                <p>Apply to attend as a delegate by 24th October 2018!</p>
               </li>
               <li>
                 <span class="registration-steps__label">Step 2</span>
-                <p>We'll let you know if you're shortlisted within 2&ndash;3 weeks from the application deadline</p>
+                <p>We will inform you whether you are shortlisted within 2&ndash;3 weeks from the application deadline.</p>
               </li>
               <li>
                 <span class="registration-steps__label">Step 3</span>
-                <p>RSVP your attendance — and we'll see you at the summit!</p>
+                <p>RSVP your attendance &mdash; and we'll see you at the Summit!</p>
               </li>
             </ol>
           </div>
