@@ -47,18 +47,18 @@ include 'data/articles.php';
 <header class="nav-bar" id="nav-bar">
   <div class="ycm-gradient-bar is-top" role="presentation"></div>
   <div class="nav-logos">
-    <a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" class="nav-logos__ycm">
+    <a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" class="nav-logos__ycm" data-track-click="General;Navigation - Click;YCM">
       <img src="img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
       <img src="img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
     </a>
-    <a href="#" class="nav-logos__de" data-smooth-scroll>
+    <a href="#" class="nav-logos__de" data-smooth-scroll data-track-click="General;Navigation - Click;Distributed Economy">
       <img src="img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
     </a>
   </div>
 
   <!-- Mobile Fixed Menu -->
   <div class="nav-bar-mobile">
-    <a href="#register" class="btn btn-primary" data-smooth-scroll>Apply Now</a>
+    <a href="#register" class="btn btn-primary" data-smooth-scroll data-track-click="General;Navigation - Click;Apply Now">Apply Now</a>
     <button
       class="btn btn-light nav-hamburger"
       id="nav-hamburger"
@@ -66,6 +66,7 @@ include 'data/articles.php';
       aria-haspopup="true"
       aria-expanded="false"
       aria-controls="nav-mobile-menu"
+      data-track-click="General;Navigation - Hamburger"
     >
       <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
         <rect x="6" y="10" width="20" height="2"></rect>
@@ -77,21 +78,21 @@ include 'data/articles.php';
 
   <!-- Desktop Menu -->
   <nav class="nav-menu ml-auto">
-    <a href="#about" class="nav-menu__item" data-smooth-scroll>About</a>
-    <a href="#agenda" class="nav-menu__item" data-smooth-scroll>Agenda</a>
-    <a href="#speakers" class="nav-menu__item" data-smooth-scroll>Speakers</a>
-    <a href="#sponsors" class="nav-menu__item" data-smooth-scroll>Sponsors</a>
-    <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll>Apply Now</a>
+    <a href="#about" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;About">About</a>
+    <a href="#agenda" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
+    <a href="#speakers" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
+    <a href="#sponsors" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
+    <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Apply Now">Apply Now</a>
   </nav>
 </header>
 
 <!-- Mobile Menu -->
 <nav class="nav-mobile-menu" id="nav-mobile-menu" aria-labelledby="">
-  <a href="#about" class="nav-mobile-menu__item" data-smooth-scroll>About</a>
-  <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll>Agenda</a>
-  <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll>Speakers</a>
-  <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll>Sponsors</a>
-  <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll>Apply Now</a>
+  <a href="#about" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;About">About</a>
+  <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
+  <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
+  <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
+  <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Apply Now">Apply Now</a>
 </nav>
 
 <main>
@@ -123,8 +124,8 @@ include 'data/articles.php';
         >
       </div>
       <div class="col-md-4 text-center">
-        <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll>Apply Now</a>
-        <a href="#about" class="hero-footer__chevron" data-smooth-scroll>
+        <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll data-track-click="Home;Click - Hero CTA">Apply Now</a>
+        <a href="#about" class="hero-footer__chevron" data-smooth-scroll data-track-click="Home;Click - Hero Scroll Indicator">
           <svg class="icon" aria-label="Scroll to next section">
             <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
           </svg>
@@ -282,6 +283,7 @@ include 'data/articles.php';
             data-target="#agenda-modal-<?php echo $index+1 ?>"
             role="button"
             tabindex="0"
+            data-track-click="Home;Click - Agenda;<?php echo $item['title'] ?>"
           >
             <div class="agenda-item__header">
               <span class="agenda-item__type"><?php echo $item['type'] ?></span>
@@ -361,6 +363,7 @@ include 'data/articles.php';
           id="speaker-item-<?php echo $speaker['id'] ?>"
           data-toggle="modal"
           data-target="#speaker-modal-<?php echo $speaker['id'] ?>"
+          data-track-click="Home;Click - Speaker;<?php echo $speaker['name'] ?>"
         >
           <div class="speakers-item__profile">
             <img src="<?php echo $speaker['img'] ?>" alt="Photo of <?php echo $speaker['name'] ?>">
@@ -426,7 +429,7 @@ include 'data/articles.php';
   <div class="container position-relative">
 
     <!-- Prev Button -->
-    <button class="article-item-control is-prev">
+    <button class="article-item-control is-prev" data-track-click="Home;Click - Article Carousel Control;Previous">
       <svg class="icon" aria-label="Previous">
         <use xlink:href="svg/sprites.svg#icon-arrow-left"></use>
       </svg>
@@ -436,7 +439,13 @@ include 'data/articles.php';
     <div class="article-item-list" id="article-item-list">
 
       <?php foreach ($articles as $item): ?>
-        <a href="<?php echo $item['link'] ?>" target="_blank" rel="noopener nofollow noreferrer" class="article-item">
+        <a
+          href="<?php echo $item['link'] ?>"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          class="article-item"
+          data-track-click="Home;Click - Article;<?php echo $item['link'] ?>"
+        >
           <div class="article-item__image" aria-hidden="true">
             <img src="<?php echo $item['image'] ?>" alt="Cover photo for <?php echo $item['title'] ?>">
           </div>
@@ -456,7 +465,7 @@ include 'data/articles.php';
     </div>
 
     <!-- Next Button -->
-    <button class="article-item-control is-next">
+    <button class="article-item-control is-next" data-track-click="Home;Click - Article Carousel Control;Next">
       <svg class="icon" aria-label="Next">
         <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
       </svg>
@@ -473,7 +482,7 @@ include 'data/articles.php';
     <h2 class="section-title">Platinum Sponsors</h2>
     <ul class="sponsor-item-list">
       <li>
-        <a href="https://www.pwc.com/my/en.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer">
+        <a href="https://www.pwc.com/my/en.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;PwC Malaysia">
           <div class="sponsor-item__logo">
             <img src="img/logos/pwc.png" srcset="img/logos/pwc@2x.png" alt="Logo of PwC">
           </div>
@@ -481,7 +490,7 @@ include 'data/articles.php';
         </a>
       </li>
       <li>
-        <a href="https://www.cimb.com/en/index.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer">
+        <a href="https://www.cimb.com/en/index.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;CIMB">
           <div class="sponsor-item__logo">
             <img src="img/logos/cimb.png" srcset="img/logos/cimb@2x.png" alt="Logo of CIMB">
           </div>
@@ -489,7 +498,7 @@ include 'data/articles.php';
         </a>
       </li>
       <li>
-        <a href="https://www.brunsfield.com/" target="_blank" rel="noopener nofollow noreferrer" class="sponsor-item">
+        <a href="https://www.brunsfield.com/" target="_blank" rel="noopener nofollow noreferrer" class="sponsor-item" data-track-click="Home;Click - Sponsor;Brunsfield">
           <div class="sponsor-item__logo">
             <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
           </div>
@@ -503,7 +512,7 @@ include 'data/articles.php';
     <h2 class="section-title">Silver Sponsor</h2>
     <ul class="sponsor-item-list">
       <li>
-        <a href="https://axiatafoundation.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer">
+        <a href="https://axiatafoundation.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Axiata Foundation">
           <div class="sponsor-item__logo">
             <img src="img/logos/axiata.png" srcset="img/logos/axiata@2x.png" alt="Logo of Axiata Foundation">
           </div>
@@ -517,7 +526,7 @@ include 'data/articles.php';
     <h2 class="section-title">Career Partner</h2>
     <ul class="sponsor-item-list">
       <li>
-        <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer">
+        <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Graduan">
           <div class="sponsor-item__logo">
             <img src="img/logos/graduan.png" srcset="img/logos/graduan@2x.png" alt="Logo of Graduan">
           </div>
@@ -606,7 +615,7 @@ include 'data/articles.php';
 
       <!-- Left Column -->
       <div class="col-md-8 mb-5 mb-md-0">
-        <a href="#" class="footer__logo mb-4" data-smooth-scroll>
+        <a href="#" class="footer__logo mb-4" data-smooth-scroll data-track-click="General;Footer - Click;YCM Logo">
           <img src="img/logos/ycm-white.svg" alt="Logo of YCM">
         </a>
         <small class="footer__disclaimer">Copyright (C) 2018 Young Corporate Malaysians</small>
@@ -619,21 +628,21 @@ include 'data/articles.php';
           <!-- Links -->
           <div class="col-md-6 mb-4 mb-md-0">
             <ul class="footer-links">
-              <li><a href="#about" data-smooth-scroll>About</a></li>
-              <li><a href="#agenda" data-smooth-scroll>Agenda</a></li>
-              <li><a href="#speakers" data-smooth-scroll>Speakers</a></li>
-              <li><a href="#sponsors" data-smooth-scroll>Sponsors</a></li>
-              <li><a href="#register" data-smooth-scroll>Register</a></li>
-              <li><a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank">About YCM</a></li>
+              <li><a href="#about" data-smooth-scroll data-track-click="General;Footer - Click;About">About</a></li>
+              <li><a href="#agenda" data-smooth-scroll data-track-click="General;Footer - Click;Agenda">Agenda</a></li>
+              <li><a href="#speakers" data-smooth-scroll data-track-click="General;Footer - Click;Speakers">Speakers</a></li>
+              <li><a href="#sponsors" data-smooth-scroll data-track-click="General;Footer - Click;Sponsors">Sponsors</a></li>
+              <li><a href="#register" data-smooth-scroll data-track-click="General;Footer - Click;Apply Now">Apply Now</a></li>
+              <li><a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" data-track-click="General;Footer - Click;About YCM>About YCM</a></li>
             </ul>
           </div>
 
           <!-- Social Links -->
           <div class="col-md-6">
             <ul class="footer-links">
-              <li><a href="https://www.facebook.com/YoungCorpMsians" rel="noreferrer noopener nofollow" target="_blank">Facebook</a></li>
-              <li><a href="https://www.instagram.com/youngcorpmsians" rel="noreferrer noopener nofollow" target="_blank">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/company/young-corporate-malaysians/" rel="noreferrer noopener nofollow" target="_blank">LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/YoungCorpMsians" rel="noreferrer noopener nofollow" target="_blank" data-track-click="General;Footer - Click;Facebook">Facebook</a></li>
+              <li><a href="https://www.instagram.com/youngcorpmsians" rel="noreferrer noopener nofollow" target="_blank" data-track-click="General;Footer - Click;Instagram">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/young-corporate-malaysians/" rel="noreferrer noopener nofollow" target="_blank" data-track-click="General;Footer - Click;LinkedIn">LinkedIn</a></li>
             </ul>
           </div>
 

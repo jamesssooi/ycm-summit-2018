@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   enableSpeakersHoverEffect();
   enableArticleCarousel();
   enableFormValidation();
+  enableClickTracking();
 });
 
 
@@ -151,6 +152,13 @@ function enableFormValidation() {
       e.preventDefault();
       return;
     }
+
+    // Send GA event
+    if (gtag) {
+      gtag('event', 'Register', {
+        'event_category': 'Goals'
+      });
+    }
   });
 
   function validateFields() {
@@ -178,4 +186,31 @@ function enableFormValidation() {
       $(`.error-label[for='${key}']`).text('');
     });
   }
+}
+
+
+/**
+ * Enable Google Analytics click trackers.
+ */
+function enableClickTracking() {
+  $('[data-track-click]').each(function() {
+    $(this).on('click auxclick', () => {
+      const eventString = $(this).attr('data-track-click');
+      const split = eventString.split(';');
+      const eventCategory = split[0];
+      const eventName = split[1];
+      const eventLabel = split[2];
+
+      if (!eventCategory && !eventName) {
+        return;
+      }
+
+      if (gtag) {
+        gtag('event', eventName, {
+          'event_category': eventCategory,
+          'event_label': eventLabel,
+        });
+      }
+    });
+  });
 }
