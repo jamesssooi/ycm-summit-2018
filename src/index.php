@@ -182,13 +182,13 @@ include 'data/articles.php';
 
       <aside class="col-md-5 offset-md-1 col-lg-4 offset-lg-2 mb-4 mb-md-0">
         <header class="section-header">
-          <h3 class="section-title">Areas of Interest</h3>
+          <h3 class="section-title">Key Areas</h3>
         </header>
         <ul class="about-de-areas">
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
+                <use xlink:href="svg/sprites.svg#icon-briefcase"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -198,7 +198,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
+                <use xlink:href="svg/sprites.svg#icon-cubes"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -208,7 +208,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
+                <use xlink:href="svg/sprites.svg#icon-upwards"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -218,7 +218,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
+                <use xlink:href="svg/sprites.svg#icon-government"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
