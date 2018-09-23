@@ -15,10 +15,10 @@ $speakers = array(
     ],
   ),
   array(
-    'id' => 'nicholas-kaw',
+    'id' => 'nicholas-khaw',
     'img' => 'img/speakers/nicholas-kaw.jpg',
     'logo' => 'img/speakers/nicholas-kaw-logo.jpg',
-    'name' => 'Nicholas Kaw',
+    'name' => 'Nicholas Khaw',
     'title' => 'Development Economist',
     'company' => 'Khazanah Nasional',
     'description' => [
