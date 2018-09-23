@@ -14,10 +14,10 @@ include 'data/agenda.php';
 
   <!-- SEO & Meta -->
   <title>YCM 10th Annual Summit • Distributed Economy</title>
-  <meta name="description" content="Lorem Ipsum">
+  <meta name="description" content="Young Corporate Malaysians is proud to host Malaysia's first conference on Distributed Economy (DE). Come and join us to explore DE from the economic, legal, corporate and global perspective!">
   <meta name="image" content="https://summit.ycm.org.my/img/share-img.jpg">
   <meta name="og:title" content="YCM 10th Annual Summit • Distributed Economy">
-  <meta name="og:description" content="Lorem Ipsum">
+  <meta name="og:description" content="Young Corporate Malaysians is proud to host Malaysia's first conference on Distributed Economy (DE). Come and join us to explore DE from the economic, legal, corporate and global perspective!">
   <meta name="og:image" content="https://summit.ycm.org.my/img/share-img.jpg">
   <meta name="og:url" content="https://summit.ycm.org.my/">
   <meta name="og:site_name" content="YCM 10th Annual Summit • Distributed Economy">
@@ -132,27 +132,54 @@ include 'data/agenda.php';
   <div class="container">
     <article class="row align-items-center">
 
-      <div class="col-md-6 position-relative mb-5">
+      <div class="col-md-6 col-lg-6 position-relative mb-5">
         <img class="about-de-pattern" src="img/pattern-01.png" role="presentation">
         <div class="about-de-body">
           <header class="section-header">
             <h2 class="section-title">About Distributed Economy</h2>
           </header>
           <p class="about-de-body__pullout">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            consectetur nibh.
+            Distributed Economy explores the possibility of sustainable
+            industrial development through a synergistic regional approach
+            instead of large-scaled, centralised production that may be not be
+            sustainable in the long-run.
           </p>
           <p>
-            Aenean eget urna ac ante feugiat lobortis id in augue. In et risus
-            lacinia augue aliquam eleifend. Nunc vulputate euismod mi a fermentum.
-            In rhoncus arcu elementum, lobortis lacus et, faucibus nisl. Phasellus
-            quis nisl egestas, aliquet risus in, varius orci. Aliquam tincidunt
-            lorem leo. Praesent facilisis mi urna, id iaculis lorem porttitor at. 
+            The distributed economy is made up of network of relationships that
+            allows small and medium sized enterprises (SMEs) to advance through
+            information technology. Where government policies and strategies
+            have failed, a distributed economy in contrast, doesn’t rely on a
+            central system to boost productivity. Rather, it opens the doors for
+            all entities within the network regardless of size or location, to
+            innovation and growth.
           </p>
+          <p>
+
+            With the emergence of technologies like blockchain, that allows free
+            open-source information sharing, inclusive peer-2-peer sharing
+            platforms and open access financial technolgies, the concept of a
+            distributed economy is no longer a far fetched vision.
+          </p>
+
+          <figure class="de-diagram d-lg-none mt-4">
+            <div class="de-diagram__item">
+              <img src="img/de-diagram-01.svg" alt="">
+              <span>Centralised</span>
+            </div>
+            <div class="de-diagram__item">
+              <img src="img/de-diagram-02.svg" alt="">
+              <span>Shared</span>
+            </div>
+            <div class="de-diagram__item">
+              <img src="img/de-diagram-03.svg" alt="">
+              <span>Distributed</span>
+            </div>
+          </figure>
+
         </div>
       </div>
 
-      <aside class="col-md-4 offset-md-2">
+      <aside class="col-md-5 offset-md-1 col-lg-4 offset-lg-2 mb-4 mb-md-0">
         <header class="section-header">
           <h3 class="section-title">Areas of Interest</h3>
         </header>
@@ -164,7 +191,7 @@ include 'data/agenda.php';
               </svg>
             </div>
             <span class="about-de-areas__title">
-              Blockchain
+              Employment &amp; Job Creation
             </span>
           </li>
           <li class="about-de-areas__item">
@@ -174,7 +201,7 @@ include 'data/agenda.php';
               </svg>
             </div>
             <span class="about-de-areas__title">
-              Regulatory Bodies
+              Blockchain &amp; Open Financial Technologies
             </span>
           </li>
           <li class="about-de-areas__item">
@@ -184,13 +211,41 @@ include 'data/agenda.php';
               </svg>
             </div>
             <span class="about-de-areas__title">
-              Government
+              Inequality: Progress for Everyone
+            </span>
+          </li>
+          <li class="about-de-areas__item">
+            <div class="about-de-areas__icon">
+              <svg class="icon">
+                <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
+              </svg>
+            </div>
+            <span class="about-de-areas__title">
+              Regulating the Platform Economy
             </span>
           </li>
         </ul>
       </aside>
 
     </article>
+  </div>
+
+  <!-- Diagram -->
+  <div class="container">
+    <figure class="de-diagram d-none d-lg-flex">
+      <div class="de-diagram__item">
+        <img src="img/de-diagram-01.svg" alt="">
+        <span>Centralised</span>
+      </div>
+      <div class="de-diagram__item">
+        <img src="img/de-diagram-02.svg" alt="">
+        <span>Shared</span>
+      </div>
+      <div class="de-diagram__item">
+        <img src="img/de-diagram-03.svg" alt="">
+        <span>Distributed</span>
+      </div>
+    </figure>
   </div>
 </section>
 
@@ -468,21 +523,20 @@ include 'data/agenda.php';
         <div class="col-lg-6 offset-lg-1 order-lg-2 mb-5 mb-lg-0">
           <div class="registration-instructions">
             <p class="registration-instructions__pullout">
-              Lorem ipsum pitch and selling point here. Free? Exclusive?
-              Networking Opportunities?
+              Apply now to be a part of Malaysia’s first conference on Distributed Economy!
             </p>
             <ol class="registration-steps">
               <li>
                 <span class="registration-steps__label">Step 1</span>
-                <p>Register your interest</p>
+                <p>Apply to attend as a delegate before the Oct 24</p>
               </li>
               <li>
                 <span class="registration-steps__label">Step 2</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                <p>We'll let you know if you're shortlisted within 2&ndash;3 weeks from the application deadline</p>
               </li>
               <li>
                 <span class="registration-steps__label">Step 3</span>
-                <p>If you are approved, we will send you further instructions!</p>
+                <p>RSVP your attendance — and we'll see you at the summit!</p>
               </li>
             </ol>
           </div>

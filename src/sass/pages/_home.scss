@@ -191,6 +191,36 @@
   color: white;
 }
 
+// DE Diagram
+.de-diagram {
+  display: flex;
+}
+
+.de-diagram__item {
+  flex-basis: 1;
+  width: 100%;
+  margin-bottom: $spacing-4;
+}
+
+.de-diagram img {
+  display: block;
+  margin: 0 auto;
+  width: 210px;
+  max-width: 100%;
+  @include on-tablet {
+    width: 100%;
+  }
+}
+
+.de-diagram span {
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  font-size: $font-size-1;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
 /* Article Listings
 /* -------------------------------------------------------------------------- */
 .article-section {
