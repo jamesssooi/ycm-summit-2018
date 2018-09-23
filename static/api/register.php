@@ -124,7 +124,7 @@ function saveInGoogleSheets($data) {
 function generateGoogleFormURL($data) {
   $fieldName = array(
     'name'      => 'entry.1829444857',
-    // 'email'     => 'entry.1829444857',
+    'email'     => 'entry.1251102372',
     'contactno' => 'entry.1081583319',
   );
 
