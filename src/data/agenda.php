@@ -23,7 +23,7 @@ $agenda = [
   ],
   [
     'type' => 'Panel Discussion',
-    'title' => 'Blockchain: The World’s Game Changer?',
+    'title' => 'Blockchain: The world’s game changer?',
     'description' => '<p>What is blockchain — and how will it enable a more distributed economy? Where will the biggest impact of Blockchain be? Which industries are leveraging the potential of Blockchain?</p><p>This session opens insights into the development of new applications and services based on increased privacy, security, efficiency and transparency that could fundamentally disrupt governments and enterprise (MNCs & SMEs) operations by highlighting key examples of blockchain in SEA and around the globe.</p>'
   ],
   [
