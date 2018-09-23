@@ -244,6 +244,13 @@
 
 .article-item {
   padding: $spacing-4;
+  display: block;
+  text-decoration: none;
+  color: $color-text-l2;
+  &:hover {
+    color: $color-text;
+    text-decoration: none;
+  }
 }
 
 .article-item__image {
@@ -256,19 +263,42 @@
 }
 
 .article-item__details {
-  color: $color-text-l1;
 }
 
 .article-item__details time {
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: $font-size-1;
+  color: $color-text-l3;
   display: block;
   margin-bottom: $spacing-2;
   font-weight: bold;
 }
 
+.article-item__title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: $spacing-2;
+  text-decoration: underline;
+}
+
 .article-item__details p {
+  font-size: $font-size-1;
+}
+
+.article-item__tags {
+  @include m-list-unstyled;
+  margin-bottom: $spacing-4;
+}
+
+.article-item__tags li {
+  display: inline-block;
+  padding: $spacing-1 $spacing-2;
+  background-color: rgb(240, 240, 240);
+  color: $color-text-l4;
+  font-size: 12px;
+  // font-weight: bold;
+  font-style: italic;
 }
 
 // Controls

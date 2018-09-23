@@ -3,6 +3,7 @@
 // Load data
 include 'data/speakers.php';
 include 'data/agenda.php';
+include 'data/articles.php';
 
 ?>
 <!DOCTYPE html>
@@ -424,19 +425,25 @@ include 'data/agenda.php';
 
     <!-- Carousel -->
     <div class="article-item-list" id="article-item-list">
-      <?php for ($i = 0; $i < 9; $i++): ?>
-      <div class="article-item">
-        <div class="article-item__image">
-          <img src="https://unsplash.it/380/210" alt="">
-        </div>
-        <div class="article-item__details">
-          <time>Aug 9 2018</time>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </p>
-        </div>
-      </div>
-      <?php endfor ?>
+
+      <?php foreach ($articles as $item): ?>
+        <a href="<?php echo $item['link'] ?>" target="_blank" rel="noopener nofollow noreferrer" class="article-item">
+          <div class="article-item__image" aria-hidden="true">
+            <img src="<?php echo $item['image'] ?>" alt="Cover photo for <?php echo $item['title'] ?>">
+          </div>
+          <div class="article-item__details">
+            <time><?php echo date_format($item['date'], "M j, Y") ?></time>
+            <span class="article-item__title">
+              <?php echo $item['title']; ?>
+            </span>
+            <ul class="article-item__tags">
+              <?php foreach ($item['tags'] as $tag): ?>
+                <li><?php echo $tag ?></li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        </a>
+      <?php endforeach; ?>
     </div>
 
     <!-- Next Button -->
