@@ -500,6 +500,14 @@
   }
 }
 
+.speakers-item__open-icon {
+  position: absolute;
+  top: $spacing-1;
+  right: $spacing-1;
+  transform: rotate(-45deg);
+  fill: white;
+}
+
 .speakers-modal {
   font-size: $font-size-1;
 }

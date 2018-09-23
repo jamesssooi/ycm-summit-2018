@@ -357,6 +357,9 @@ include 'data/agenda.php';
             <div class="speakers-item__logo">
               <img src="<?php echo $speaker['logo'] ?>" alt="Logo of <?php echo $speaker['company'] ?>">
             </div>
+            <svg class="speakers-item__open-icon icon" aria-hidden="true">
+              <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+            </svg>
           </div>
           <p class="speakers-item__details">
             <strong><?php echo $speaker['name'] ?></strong><br>
