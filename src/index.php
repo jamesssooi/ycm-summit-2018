@@ -631,9 +631,9 @@ include 'data/articles.php';
           <!-- Social Links -->
           <div class="col-md-6">
             <ul class="footer-links">
-              <li><a href="https://www.facebook.com/YoungCorpMsians" rel="noreferrer noopener nofollow">Facebook</a></li>
-              <li><a href="https://www.instagram.com/youngcorpmsians" rel="noreferrer noopener nofollow">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/company/young-corporate-malaysians/" rel="noreferrer noopener nofollow">LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/YoungCorpMsians" rel="noreferrer noopener nofollow" target="_blank">Facebook</a></li>
+              <li><a href="https://www.instagram.com/youngcorpmsians" rel="noreferrer noopener nofollow" target="_blank">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/young-corporate-malaysians/" rel="noreferrer noopener nofollow" target="_blank">LinkedIn</a></li>
             </ul>
           </div>
 
