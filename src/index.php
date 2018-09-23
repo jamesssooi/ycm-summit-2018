@@ -563,7 +563,7 @@ include 'data/articles.php';
 
         <!-- Form -->
         <div class="col-lg-5 order-lg-1">
-          <form id="registration-form" action="/api/register.php" method="POST" class="registration-form">
+          <form id="registration-form" action="/api/register.php" method="POST" class="registration-form" target="_blank">
             <div class="form-group mb-5">
               <label for="name">Name</label>
               <input type="text" name="name" id="name" class="form-control w-100">
