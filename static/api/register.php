@@ -44,7 +44,8 @@ function main() {
   try {
     validatePostData($_POST);
   } catch (Exception $e) {
-    respondWithError($e->getMessage(), 400);
+    logMessage(sprintf('No data received.', 'WARNING'));
+    // respondWithError($e->getMessage(), 400);
   }
 
   // Collect data into variable
