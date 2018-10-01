@@ -22,7 +22,7 @@ $agenda = [
     'description' => '<p>In this session, we will discuss if structuring an economy as a distributed network can more equitably distribute income and wealth amongst all those who help to generate it. This session pushes delegates to rethink many conventional economic theories such as Money creation & resource ownership: why endow commercial banks with the right to create money as interest-based debt? Could it be alternatively created by the state, or communities? What is the the potential of free open-source hardware and software licensing - open access to information? How could it instrumental in reducing inequality?</p>'
   ],
   [
-    'type' => 'Panel Discussion',
+    'type' => 'Flash Talk',
     'title' => 'Blockchain: The world’s game changer?',
     'description' => '<p>What is blockchain — and how will it enable a more distributed economy? Where will the biggest impact of Blockchain be? Which industries are leveraging the potential of Blockchain?</p><p>This session opens insights into the development of new applications and services based on increased privacy, security, efficiency and transparency that could fundamentally disrupt governments and enterprise (MNCs & SMEs) operations by highlighting key examples of blockchain in SEA and around the globe.</p>'
   ],
