@@ -5,6 +5,8 @@ include 'data/speakers.php';
 include 'data/agenda.php';
 include 'data/articles.php';
 
+$theme_dir = get_stylesheet_directory_uri();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +41,7 @@ include 'data/articles.php';
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="<?php echo $theme_dir ?>/css/main.css">
 </head>
 <body>
 
@@ -48,11 +50,11 @@ include 'data/articles.php';
   <div class="ycm-gradient-bar is-top" role="presentation"></div>
   <div class="nav-logos">
     <a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" class="nav-logos__ycm" data-track-click="General;Navigation - Click;YCM">
-      <img src="img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
-      <img src="img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
+      <img src="<?php echo $theme_dir ?>/img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
+      <img src="<?php echo $theme_dir ?>/img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
     </a>
     <a href="#" class="nav-logos__de" data-smooth-scroll data-track-click="General;Navigation - Click;Distributed Economy">
-      <img src="img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
+      <img src="<?php echo $theme_dir ?>/img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
     </a>
   </div>
 
@@ -106,7 +108,7 @@ include 'data/articles.php';
 
   <header class="hero-masthead">
     <h1 class="hero-masthead__logo">
-      <img src="img/logos/de-masthead.svg" alt="Distributed Economy">
+      <img src="<?php echo $theme_dir ?>/img/logos/de-masthead.svg" alt="Distributed Economy">
     </h1>
     <div class="hero-masthead__dateline">
       10th Annual YCM Summit<br>
@@ -118,7 +120,7 @@ include 'data/articles.php';
     <div class="row align-items-end">
       <div class="col-md-4 text-center text-lg-left mb-4 mb-lg-0">
         <img
-          src="img/logos/ycm-10th-anniversary.png"
+          src="<?php echo $theme_dir ?>/img/logos/ycm-10th-anniversary.png"
           srcset="img/logos/ycm-10th-anniversary@2x.png 2x"
           alt="YCM 10th Anniversary"
         >
@@ -127,7 +129,7 @@ include 'data/articles.php';
         <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll data-track-click="Home;Click - Hero CTA">Apply Now</a>
         <a href="#about" class="hero-footer__chevron" data-smooth-scroll data-track-click="Home;Click - Hero Scroll Indicator">
           <svg class="icon" aria-label="Scroll to next section">
-            <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
+            <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-chevron-down"></use>
           </svg>
         </a>
       </div>
@@ -144,7 +146,7 @@ include 'data/articles.php';
     <article class="row align-items-center">
 
       <div class="col-md-6 col-lg-6 position-relative mb-5">
-        <img class="about-de-pattern" src="img/pattern-01.png" role="presentation">
+        <img class="about-de-pattern" src="<?php echo $theme_dir ?>/img/pattern-01.png" role="presentation">
         <div class="about-de-body">
           <header class="section-header">
             <h2 class="section-title">About Distributed Economy</h2>
@@ -174,15 +176,15 @@ include 'data/articles.php';
 
           <figure class="de-diagram d-lg-none mt-4">
             <div class="de-diagram__item">
-              <img src="img/de-diagram-01.svg" alt="">
+              <img src="<?php echo $theme_dir ?>/img/de-diagram-01.svg" alt="">
               <span>Centralised</span>
             </div>
             <div class="de-diagram__item">
-              <img src="img/de-diagram-02.svg" alt="">
+              <img src="<?php echo $theme_dir ?>/img/de-diagram-02.svg" alt="">
               <span>Shared</span>
             </div>
             <div class="de-diagram__item">
-              <img src="img/de-diagram-03.svg" alt="">
+              <img src="<?php echo $theme_dir ?>/img/de-diagram-03.svg" alt="">
               <span>Distributed</span>
             </div>
           </figure>
@@ -198,7 +200,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-briefcase"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-briefcase"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -208,7 +210,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-cubes"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-cubes"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -218,7 +220,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-upwards"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-upwards"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -228,7 +230,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-government"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-government"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -245,15 +247,15 @@ include 'data/articles.php';
   <div class="container">
     <figure class="de-diagram d-none d-lg-flex">
       <div class="de-diagram__item">
-        <img src="img/de-diagram-01.svg" alt="">
+        <img src="<?php echo $theme_dir ?>/img/de-diagram-01.svg" alt="">
         <span>Centralised</span>
       </div>
       <div class="de-diagram__item">
-        <img src="img/de-diagram-02.svg" alt="">
+        <img src="<?php echo $theme_dir ?>/img/de-diagram-02.svg" alt="">
         <span>Shared</span>
       </div>
       <div class="de-diagram__item">
-        <img src="img/de-diagram-03.svg" alt="">
+        <img src="<?php echo $theme_dir ?>/img/de-diagram-03.svg" alt="">
         <span>Distributed</span>
       </div>
     </figure>
@@ -293,7 +295,7 @@ include 'data/articles.php';
             </div>
             <div class="agenda-item__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
               </svg>
             </div>
           </div>
@@ -371,7 +373,7 @@ include 'data/articles.php';
               <img src="<?php echo $speaker['logo'] ?>" alt="Logo of <?php echo $speaker['company'] ?>">
             </div>
             <svg class="speakers-item__open-icon icon" aria-hidden="true">
-              <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+              <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
             </svg>
           </div>
           <p class="speakers-item__details">
@@ -431,7 +433,7 @@ include 'data/articles.php';
     <!-- Prev Button -->
     <button class="article-item-control is-prev" data-track-click="Home;Click - Article Carousel Control;Previous">
       <svg class="icon" aria-label="Previous">
-        <use xlink:href="svg/sprites.svg#icon-arrow-left"></use>
+        <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-left"></use>
       </svg>
     </button>
 
@@ -467,7 +469,7 @@ include 'data/articles.php';
     <!-- Next Button -->
     <button class="article-item-control is-next" data-track-click="Home;Click - Article Carousel Control;Next">
       <svg class="icon" aria-label="Next">
-        <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+        <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
       </svg>
     </button>
 
@@ -484,7 +486,7 @@ include 'data/articles.php';
       <li>
         <a href="https://www.pwc.com/my/en.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;PwC Malaysia">
           <div class="sponsor-item__logo">
-            <img src="img/logos/pwc.png" srcset="img/logos/pwc@2x.png" alt="Logo of PwC">
+            <img src="<?php echo $theme_dir ?>/img/logos/pwc.png" srcset="img/logos/pwc@2x.png" alt="Logo of PwC">
           </div>
           <p class="sponsor-item__name">PwC Malaysia</p>
         </a>
@@ -492,7 +494,7 @@ include 'data/articles.php';
       <li>
         <a href="https://www.cimb.com/en/index.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;CIMB">
           <div class="sponsor-item__logo">
-            <img src="img/logos/cimb.png" srcset="img/logos/cimb@2x.png" alt="Logo of CIMB">
+            <img src="<?php echo $theme_dir ?>/img/logos/cimb.png" srcset="img/logos/cimb@2x.png" alt="Logo of CIMB">
           </div>
           <p class="sponsor-item__name">CIMB</p>
         </a>
@@ -500,7 +502,7 @@ include 'data/articles.php';
       <li>
         <a href="https://www.brunsfield.com/" target="_blank" rel="noopener nofollow noreferrer" class="sponsor-item" data-track-click="Home;Click - Sponsor;Brunsfield">
           <div class="sponsor-item__logo">
-            <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
+            <img src="<?php echo $theme_dir ?>/img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
           </div>
           <p class="sponsor-item__name">Brunsfield</p>
         </a>
@@ -514,7 +516,7 @@ include 'data/articles.php';
       <li>
         <a href="https://axiatafoundation.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Axiata Foundation">
           <div class="sponsor-item__logo">
-            <img src="img/logos/axiata.png" srcset="img/logos/axiata@2x.png" alt="Logo of Axiata Foundation">
+            <img src="<?php echo $theme_dir ?>/img/logos/axiata.png" srcset="img/logos/axiata@2x.png" alt="Logo of Axiata Foundation">
           </div>
           <p class="sponsor-item__name">Axiata Foundation</p>
         </a>
@@ -528,7 +530,7 @@ include 'data/articles.php';
       <li>
         <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Graduan">
           <div class="sponsor-item__logo">
-            <img src="img/logos/graduan.png" srcset="img/logos/graduan@2x.png" alt="Logo of Graduan">
+            <img src="<?php echo $theme_dir ?>/img/logos/graduan.png" srcset="img/logos/graduan@2x.png" alt="Logo of Graduan">
           </div>
           <p class="sponsor-item__name">Graduan</p>
         </a>
@@ -592,7 +594,7 @@ include 'data/articles.php';
               <button class="btn btn-primary">
                 Continue
                 <svg class="icon">
-                  <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+                  <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
                 </svg>
               </button>
             </div>
@@ -616,7 +618,7 @@ include 'data/articles.php';
       <!-- Left Column -->
       <div class="col-md-8 mb-5 mb-md-0">
         <a href="#" class="footer__logo mb-4" data-smooth-scroll data-track-click="General;Footer - Click;YCM Logo">
-          <img src="img/logos/ycm-white.svg" alt="Logo of YCM">
+          <img src="<?php echo $theme_dir ?>/img/logos/ycm-white.svg" alt="Logo of YCM">
         </a>
         <small class="footer__disclaimer">Copyright (C) 2018 Young Corporate Malaysians</small>
       </div>
@@ -633,7 +635,7 @@ include 'data/articles.php';
               <li><a href="#speakers" data-smooth-scroll data-track-click="General;Footer - Click;Speakers">Speakers</a></li>
               <li><a href="#sponsors" data-smooth-scroll data-track-click="General;Footer - Click;Sponsors">Sponsors</a></li>
               <li><a href="#register" data-smooth-scroll data-track-click="General;Footer - Click;Apply Now">Apply Now</a></li>
-              <li><a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" data-track-click="General;Footer - Click;About YCM>About YCM</a></li>
+              <li><a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" data-track-click="General;Footer - Click;About YCM">About YCM</a></li>
             </ul>
           </div>
 
@@ -656,7 +658,7 @@ include 'data/articles.php';
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="./js/app.js?c=<?php echo date('W') ?>" charset="utf-8"></script>
+<script src="<?php echo $theme_dir ?>/js/app.js?c=<?php echo date('W') ?>" charset="utf-8"></script>
 
 </body>
 </html>
