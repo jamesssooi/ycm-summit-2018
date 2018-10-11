@@ -5,6 +5,11 @@ include 'data/speakers.php';
 include 'data/agenda.php';
 include 'data/articles.php';
 
+$speakersQuery = new WP_Query([
+  'post_type' => 'speaker',
+  'posts_per_page' => -1
+]);
+
 $theme_dir = get_stylesheet_directory_uri();
 
 ?>
@@ -358,34 +363,35 @@ $theme_dir = get_stylesheet_directory_uri();
 
     <!-- Speakers List -->
     <ul class="speakers-item-list row">
-      <?php foreach ($speakers as $index => $speaker): ?>
-      <li class="col-6 col-md-4 col-lg-3">
-        <button
-          class="speakers-item"
-          id="speaker-item-<?php echo $speaker['id'] ?>"
-          data-toggle="modal"
-          data-target="#speaker-modal-<?php echo $speaker['id'] ?>"
-          data-track-click="Home;Click - Speaker;<?php echo $speaker['name'] ?>"
-        >
-          <div class="speakers-item__profile">
-            <img src="<?php echo $speaker['img'] ?>" alt="Photo of <?php echo $speaker['name'] ?>">
-            <div class="speakers-item__logo">
-              <img src="<?php echo $speaker['logo'] ?>" alt="Logo of <?php echo $speaker['company'] ?>">
+      <?php while ($speakersQuery->have_posts()): $speakersQuery->the_post() ?>
+        <li class="col-6 col-md-4 col-lg-3">
+          <?php global $post; ?>
+          <button
+            class="speakers-item"
+            id="speaker-item-<?php echo $post->post_name ?>"
+            data-toggle="modal"
+            data-target="#speaker-modal-<?php echo $post->post_name ?>"
+            data-track-click="Home;Click - Speaker;<?php the_title() ?>"
+          >
+            <div class="speakers-item__profile">
+              <img src="<?php the_field('profile_photo') ?>" alt="Photo of <?php the_title() ?>">
+              <div class="speakers-item__logo">
+                <img src="<?php the_field('company_logo') ?>" alt="Logo of <?php the_field('company') ?>">
+              </div>
+              <svg class="speakers-item__open-icon icon" aria-hidden="true">
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
+              </svg>
             </div>
-            <svg class="speakers-item__open-icon icon" aria-hidden="true">
-              <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
-            </svg>
-          </div>
-          <p class="speakers-item__details">
-            <strong><?php echo $speaker['name'] ?></strong><br>
-            <small>
-              <?php echo $speaker['title'] ?><br>
-              <em><?php echo $speaker['company'] ?></em>
-            </small>
-          </p>
-        </button>
-      </li>
-      <?php endforeach ;?>
+            <p class="speakers-item__details">
+              <strong><?php the_title() ?></strong><br>
+              <small>
+                <?php the_field('title') ?><br>
+                <em><?php the_field('company') ?></em>
+              </small>
+            </p>
+          </button>
+        </li>
+      <?php endwhile; ?>
     </ul>
   </div>
 
@@ -393,29 +399,28 @@ $theme_dir = get_stylesheet_directory_uri();
 
 
 <!-- Speakers Modals -->
-<?php foreach ($speakers as $index => $item): ?>
-<article class="modal fade" tabindex="-1" role="dialog" id="speaker-modal-<?php echo $item['id'] ?>" aria-labelledby="speaker-item-<?php echo $item['id'] ?>" aria-hidden="true">
+<?php while ($speakersQuery->have_posts()): $speakersQuery->the_post(); ?>
+<?php global $post; ?>
+<article class="modal fade" tabindex="-1" role="dialog" id="speaker-modal-<?php echo $post->post_name ?>" aria-labelledby="speaker-item-<?php echo $post->post_name ?>" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="speakers-modal modal-dark modal-content">
       <div class="modal-header">
         <header>
-          <h1><?php echo $item['name'] ?></h1>
-          <?php echo $item['title'] ?><br>
-          <?php echo $item['company'] ?>
+          <h1><?php the_title() ?></h1>
+          <?php the_field('title') ?><br>
+          <?php the_field('company') ?>
         </header>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <?php foreach ($item['description'] as $content): ?>
-          <p><?php echo $content ?></p>
-        <?php endforeach; ?>
+        <?php the_field('description'); ?>
       </div>
     </div>
   </div>
 </article>
-<?php endforeach; ?>
+<?php endwhile; ?>
 
 
 <!-- Article Section -->
