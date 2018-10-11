@@ -10,6 +10,11 @@ $speakersQuery = new WP_Query([
   'posts_per_page' => -1
 ]);
 
+$agendaQuery = new WP_Query([
+  'post_type' => 'agenda',
+  'posts_per_page' => -1
+]);
+
 $theme_dir = get_stylesheet_directory_uri();
 
 ?>
@@ -281,31 +286,30 @@ $theme_dir = get_stylesheet_directory_uri();
 
       <!-- Agenda Listings -->
       <ul class="agenda-item-list row align-items-stretch">
-        <?php foreach ($agenda as $index => $item): ?>
-        <li class="col-md-6 mb-3">
-          <div
-            id="agenda-item-<?php echo $index+1 ?>"
-            class="agenda-item"
-            data-toggle="modal"
-            data-target="#agenda-modal-<?php echo $index+1 ?>"
-            role="button"
-            tabindex="0"
-            data-track-click="Home;Click - Agenda;<?php echo $item['title'] ?>"
-          >
-            <div class="agenda-item__header">
-              <span class="agenda-item__type"><?php echo $item['type'] ?></span>
-              <p class="agenda-item__title">
-                <?php echo $item['title'] ?>
-              </p>
+        <?php while ($agendaQuery->have_posts()): $agendaQuery->the_post() ?>
+          <?php global $post; ?>
+          <li class="col-md-6 mb-3">
+            <div
+              id="agenda-item-<?php echo $post->post_name ?>"
+              class="agenda-item"
+              data-toggle="modal"
+              data-target="#agenda-modal-<?php echo $post->post_name ?>"
+              role="button"
+              tabindex="0"
+              data-track-click="Home;Click - Agenda;<?php the_title() ?>"
+            >
+              <div class="agenda-item__header">
+                <span class="agenda-item__type"><?php the_field('type') ?></span>
+                <p class="agenda-item__title"><?php the_title() ?></p>
+              </div>
+              <div class="agenda-item__icon">
+                <svg class="icon">
+                  <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
+                </svg>
+              </div>
             </div>
-            <div class="agenda-item__icon">
-              <svg class="icon">
-                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
-        </li>
-        <?php endforeach; ?>
+          </li>
+        <?php endwhile; ?>
       </ul>
 
       <!-- Disclaimer -->
@@ -319,26 +323,27 @@ $theme_dir = get_stylesheet_directory_uri();
 
 
 <!-- Agenda Modals -->
-<?php foreach ($agenda as $index => $item): ?>
-<article class="modal fade" tabindex="-1" role="dialog" id="agenda-modal-<?php echo $index+1 ?>" aria-labelledby="agenda-item-<?php echo $index+1 ?>" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="agenda-modal modal-dark modal-content">
-      <div class="modal-header">
-        <header>
-          <span class="agenda-modal__type"><?php echo $item['type'] ?></span>
-          <h1><?php echo $item['title'] ?></h1>
-        </header>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <?php echo $item['description'] ?>
+<?php while ($agendaQuery->have_posts()): $agendaQuery->the_post() ?>
+  <?php global $post; ?>
+  <article class="modal fade" tabindex="-1" role="dialog" id="agenda-modal-<?php echo $post->post_name ?>" aria-labelledby="agenda-item-<?php echo $post->post_name ?>" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="agenda-modal modal-dark modal-content">
+        <div class="modal-header">
+          <header>
+            <span class="agenda-modal__type"><?php the_field('type') ?></span>
+            <h1><?php the_title() ?></h1>
+          </header>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <?php the_field('description') ?>
+        </div>
       </div>
     </div>
-  </div>
-</article>
-<?php endforeach; ?>
+  </article>
+<?php endwhile; ?>
 
 
 <!-- Speakers Section -->
