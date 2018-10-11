@@ -496,7 +496,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <li>
         <a href="https://www.pwc.com/my/en.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;PwC Malaysia">
           <div class="sponsor-item__logo">
-            <img src="<?php echo $theme_dir ?>/img/logos/pwc.png" srcset="img/logos/pwc@2x.png" alt="Logo of PwC">
+            <img src="<?php echo $theme_dir ?>/img/logos/pwc.png" srcset="<?php echo $theme_dir ?>/img/logos/pwc@2x.png" alt="Logo of PwC">
           </div>
           <p class="sponsor-item__name">PwC Malaysia</p>
         </a>
@@ -504,7 +504,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <li>
         <a href="https://www.cimb.com/en/index.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;CIMB">
           <div class="sponsor-item__logo">
-            <img src="<?php echo $theme_dir ?>/img/logos/cimb.png" srcset="img/logos/cimb@2x.png" alt="Logo of CIMB">
+            <img src="<?php echo $theme_dir ?>/img/logos/cimb.png" srcset="<?php echo $theme_dir ?>/img/logos/cimb@2x.png" alt="Logo of CIMB">
           </div>
           <p class="sponsor-item__name">CIMB</p>
         </a>
@@ -512,7 +512,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <li>
         <a href="https://www.brunsfield.com/" target="_blank" rel="noopener nofollow noreferrer" class="sponsor-item" data-track-click="Home;Click - Sponsor;Brunsfield">
           <div class="sponsor-item__logo">
-            <img src="<?php echo $theme_dir ?>/img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
+            <img src="<?php echo $theme_dir ?>/img/logos/brunsfield.png" srcset="<?php echo $theme_dir ?>/img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
           </div>
           <p class="sponsor-item__name">Brunsfield</p>
         </a>
@@ -526,7 +526,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <li>
         <a href="https://axiatafoundation.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Axiata Foundation">
           <div class="sponsor-item__logo">
-            <img src="<?php echo $theme_dir ?>/img/logos/axiata.png" srcset="img/logos/axiata@2x.png" alt="Logo of Axiata Foundation">
+            <img src="<?php echo $theme_dir ?>/img/logos/axiata.png" srcset="<?php echo $theme_dir ?>/img/logos/axiata@2x.png" alt="Logo of Axiata Foundation">
           </div>
           <p class="sponsor-item__name">Axiata Foundation</p>
         </a>
@@ -540,7 +540,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <li>
         <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Graduan">
           <div class="sponsor-item__logo">
-            <img src="<?php echo $theme_dir ?>/img/logos/graduan.png" srcset="img/logos/graduan@2x.png" alt="Logo of Graduan">
+            <img src="<?php echo $theme_dir ?>/img/logos/graduan.png" srcset="<?php echo $theme_dir ?>/img/logos/graduan@2x.png" alt="Logo of Graduan">
           </div>
           <p class="sponsor-item__name">Graduan</p>
         </a>
