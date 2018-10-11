@@ -17,7 +17,7 @@ module.exports = {
     // vendor: [],
   },
   output: {
-    path: path.join(__dirname, 'public', 'js'),
+    path: path.join(__dirname, 'public', 'wp-content', 'themes', 'ycmsummit2018'),
     filename: '[name].js',
     publicPath: '/',
   },
