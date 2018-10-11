@@ -40,4 +40,17 @@ $speakers = array(
       'Zafrul graduated from the University of Bristol, United Kingdom with a Bachelor of Science (Hons) Economics and Accounting and obtained a Master of Arts (MA) in Finance and Management from the University of Exeter, United Kingdom. He also holds a Fellow Chartered Banker with the Asian Institute of Chartered Bankers.'
     ]
   ),
+  array(
+    'id' => 'wong-wai-ken',
+    'img' => 'img/speakers/placeholder.png',
+    'logo' => 'img/speakers/tengku-zafrul-logo.jpg',
+    'name' => 'Wong Wai Ken',
+    'title' => 'Country Manager, Malaysia',
+    'company' => 'StashAway',
+    'description' => [
+      'Tengku Dato’ Sri Zafrul Tengku Abdul Aziz is the Group Chief Executive Officer/Executive Director of CIMB Group Holdings Berhad, a leading ASEAN universal bank and a world leader in Islamic finance with presence in 15 countries worldwide. He is also the Chief Executive Officer/Executive Director of CIMB Bank Berhad and Commissioner of PT Bank CIMB Niaga Tbk.',
+      'With over 21 years of experience in the financial services sector, specialising in Investment Banking, Zafrul’s last position was with Maybank Investment Bank Berhad and Maybank Kim Eng Holdings as Chief Executive Officer. He also held senior positions in Citigroup Malaysia, Kenanga Holdings Berhad and Avenue Securities. He also experienced being an entrepreneur by setting up Tune Money Sdn Bhd, Asia’s first “no-frills” online financial service provider.',
+      'Zafrul graduated from the University of Bristol, United Kingdom with a Bachelor of Science (Hons) Economics and Accounting and obtained a Master of Arts (MA) in Finance and Management from the University of Exeter, United Kingdom. He also holds a Fellow Chartered Banker with the Asian Institute of Chartered Bankers.'
+    ]
+  ),
 );
