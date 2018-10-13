@@ -12,7 +12,8 @@ $speakersQuery = new WP_Query([
 
 $agendaQuery = new WP_Query([
   'post_type' => 'agenda',
-  'posts_per_page' => -1
+  'posts_per_page' => -1,
+  'order' => 'ASC'
 ]);
 
 $theme_dir = get_stylesheet_directory_uri();
@@ -379,7 +380,11 @@ $theme_dir = get_stylesheet_directory_uri();
             data-track-click="Home;Click - Speaker;<?php the_title() ?>"
           >
             <div class="speakers-item__profile">
-              <img src="<?php the_field('profile_photo') ?>" alt="Photo of <?php the_title() ?>">
+              <?php if (get_field('profile_photo')): ?>
+                <img src="<?php the_field('profile_photo') ?>" alt="Photo of <?php the_title() ?>">
+              <?php else: ?>
+                <img src="<?php echo $theme_dir ?>/img/speakers/placeholder.png" alt="Placeholder image">
+              <?php endif; ?>
               <div class="speakers-item__logo">
                 <img src="<?php the_field('company_logo') ?>" alt="Logo of <?php the_field('company') ?>">
               </div>
