@@ -5,6 +5,19 @@ include 'data/speakers.php';
 include 'data/agenda.php';
 include 'data/articles.php';
 
+$speakersQuery = new WP_Query([
+  'post_type' => 'speaker',
+  'posts_per_page' => -1
+]);
+
+$agendaQuery = new WP_Query([
+  'post_type' => 'agenda',
+  'posts_per_page' => -1,
+  'order' => 'ASC'
+]);
+
+$theme_dir = get_stylesheet_directory_uri();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,23 +36,23 @@ include 'data/articles.php';
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- SEO & Meta -->
-  <title>YCM 10th Annual Summit • Distributed Economy</title>
-  <meta name="description" content="Young Corporate Malaysians is proud to host Malaysia's first conference on Distributed Economy (DE). Come and join us to explore DE from the economic, legal, corporate and global perspective!">
-  <meta name="image" content="https://summit.ycm.org.my/img/share-img.jpg">
-  <meta name="og:title" content="YCM 10th Annual Summit • Distributed Economy">
-  <meta name="og:description" content="Young Corporate Malaysians is proud to host Malaysia's first conference on Distributed Economy (DE). Come and join us to explore DE from the economic, legal, corporate and global perspective!">
-  <meta name="og:image" content="https://summit.ycm.org.my/img/share-img.jpg">
+  <title>YCM 10th Annual Summit 2018 • Distributed Economy</title>
+  <meta name="description" content="YCM (Young Corporate Malaysians) will be hosting its 10th Annual Summit 2018 on Distributed Economy! Join us on 24th November 2018 in Kuala Lumpur!">
+  <meta name="image" content="<?php echo $theme_dir ?>/img/share-img.jpg">
+  <meta name="og:title" content="YCM 10th Annual Summit 2018 • Distributed Economy">
+  <meta name="og:description" content="YCM (Young Corporate Malaysians) will be hosting its 10th Annual Summit 2018 on Distributed Economy! Join us on 24th November 2018 in Kuala Lumpur!">
+  <meta name="og:image" content="<?php echo $theme_dir ?>/img/share-img.jpg">
   <meta name="og:url" content="https://summit.ycm.org.my/">
-  <meta name="og:site_name" content="YCM 10th Annual Summit • Distributed Economy">
+  <meta name="og:site_name" content="YCM 10th Annual Summit 2018 • Distributed Economy">
   <meta name="og:type" content="website">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="<?php echo $theme_dir ?>/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="<?php echo $theme_dir ?>/img/favicon-16x16.png" sizes="16x16" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="<?php echo $theme_dir ?>/css/main.css">
 </head>
 <body>
 
@@ -48,11 +61,11 @@ include 'data/articles.php';
   <div class="ycm-gradient-bar is-top" role="presentation"></div>
   <div class="nav-logos">
     <a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" class="nav-logos__ycm" data-track-click="General;Navigation - Click;YCM">
-      <img src="img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
-      <img src="img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
+      <img src="<?php echo $theme_dir ?>/img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
+      <img src="<?php echo $theme_dir ?>/img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
     </a>
     <a href="#" class="nav-logos__de" data-smooth-scroll data-track-click="General;Navigation - Click;Distributed Economy">
-      <img src="img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
+      <img src="<?php echo $theme_dir ?>/img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
     </a>
   </div>
 
@@ -106,11 +119,11 @@ include 'data/articles.php';
 
   <header class="hero-masthead">
     <h1 class="hero-masthead__logo">
-      <img src="img/logos/de-masthead.svg" alt="Distributed Economy">
+      <img src="<?php echo $theme_dir ?>/img/logos/de-masthead.svg" alt="10th Annual YCM Summit: Distributed Economy">
     </h1>
     <div class="hero-masthead__dateline">
       10th Annual YCM Summit<br>
-      <time datetime="2018-11-17T08:30:00+08:00">Nov&nbsp;24&nbsp;2018</time>&ensp;&middot;&ensp;Aloft&nbsp;Kuala&nbsp;Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5.00PM
+      <time datetime="2018-11-17T08:30:00+08:00">Nov&nbsp;24&nbsp;2018</time>&ensp;&middot;&ensp;Kuala&nbsp;Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5.00PM
     </div>
   </header>
 
@@ -118,7 +131,7 @@ include 'data/articles.php';
     <div class="row align-items-end">
       <div class="col-md-4 text-center text-lg-left mb-4 mb-lg-0">
         <img
-          src="img/logos/ycm-10th-anniversary.png"
+          src="<?php echo $theme_dir ?>/img/logos/ycm-10th-anniversary.png"
           srcset="img/logos/ycm-10th-anniversary@2x.png 2x"
           alt="YCM 10th Anniversary"
         >
@@ -127,7 +140,7 @@ include 'data/articles.php';
         <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll data-track-click="Home;Click - Hero CTA">Apply Now</a>
         <a href="#about" class="hero-footer__chevron" data-smooth-scroll data-track-click="Home;Click - Hero Scroll Indicator">
           <svg class="icon" aria-label="Scroll to next section">
-            <use xlink:href="svg/sprites.svg#icon-chevron-down"></use>
+            <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-chevron-down"></use>
           </svg>
         </a>
       </div>
@@ -144,7 +157,7 @@ include 'data/articles.php';
     <article class="row align-items-center">
 
       <div class="col-md-6 col-lg-6 position-relative mb-5">
-        <img class="about-de-pattern" src="img/pattern-01.png" role="presentation">
+        <img class="about-de-pattern" src="<?php echo $theme_dir ?>/img/pattern-01.png" role="presentation">
         <div class="about-de-body">
           <header class="section-header">
             <h2 class="section-title">About Distributed Economy</h2>
@@ -174,15 +187,15 @@ include 'data/articles.php';
 
           <figure class="de-diagram d-lg-none mt-4">
             <div class="de-diagram__item">
-              <img src="img/de-diagram-01.svg" alt="">
+              <img src="<?php echo $theme_dir ?>/img/de-diagram-01.svg" alt="">
               <span>Centralised</span>
             </div>
             <div class="de-diagram__item">
-              <img src="img/de-diagram-02.svg" alt="">
+              <img src="<?php echo $theme_dir ?>/img/de-diagram-02.svg" alt="">
               <span>Shared</span>
             </div>
             <div class="de-diagram__item">
-              <img src="img/de-diagram-03.svg" alt="">
+              <img src="<?php echo $theme_dir ?>/img/de-diagram-03.svg" alt="">
               <span>Distributed</span>
             </div>
           </figure>
@@ -198,7 +211,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-briefcase"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-briefcase"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -208,7 +221,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-cubes"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-cubes"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -218,7 +231,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-upwards"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-upwards"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -228,7 +241,7 @@ include 'data/articles.php';
           <li class="about-de-areas__item">
             <div class="about-de-areas__icon">
               <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-government"></use>
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-government"></use>
               </svg>
             </div>
             <span class="about-de-areas__title">
@@ -245,15 +258,15 @@ include 'data/articles.php';
   <div class="container">
     <figure class="de-diagram d-none d-lg-flex">
       <div class="de-diagram__item">
-        <img src="img/de-diagram-01.svg" alt="">
+        <img src="<?php echo $theme_dir ?>/img/de-diagram-01.svg" alt="">
         <span>Centralised</span>
       </div>
       <div class="de-diagram__item">
-        <img src="img/de-diagram-02.svg" alt="">
+        <img src="<?php echo $theme_dir ?>/img/de-diagram-02.svg" alt="">
         <span>Shared</span>
       </div>
       <div class="de-diagram__item">
-        <img src="img/de-diagram-03.svg" alt="">
+        <img src="<?php echo $theme_dir ?>/img/de-diagram-03.svg" alt="">
         <span>Distributed</span>
       </div>
     </figure>
@@ -274,31 +287,30 @@ include 'data/articles.php';
 
       <!-- Agenda Listings -->
       <ul class="agenda-item-list row align-items-stretch">
-        <?php foreach ($agenda as $index => $item): ?>
-        <li class="col-md-6 mb-3">
-          <div
-            id="agenda-item-<?php echo $index+1 ?>"
-            class="agenda-item"
-            data-toggle="modal"
-            data-target="#agenda-modal-<?php echo $index+1 ?>"
-            role="button"
-            tabindex="0"
-            data-track-click="Home;Click - Agenda;<?php echo $item['title'] ?>"
-          >
-            <div class="agenda-item__header">
-              <span class="agenda-item__type"><?php echo $item['type'] ?></span>
-              <p class="agenda-item__title">
-                <?php echo $item['title'] ?>
-              </p>
+        <?php while ($agendaQuery->have_posts()): $agendaQuery->the_post() ?>
+          <?php global $post; ?>
+          <li class="col-md-6 mb-3">
+            <div
+              id="agenda-item-<?php echo $post->post_name ?>"
+              class="agenda-item"
+              data-toggle="modal"
+              data-target="#agenda-modal-<?php echo $post->post_name ?>"
+              role="button"
+              tabindex="0"
+              data-track-click="Home;Click - Agenda;<?php the_title() ?>"
+            >
+              <div class="agenda-item__header">
+                <span class="agenda-item__type"><?php the_field('type') ?></span>
+                <p class="agenda-item__title"><?php the_title() ?></p>
+              </div>
+              <div class="agenda-item__icon">
+                <svg class="icon">
+                  <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
+                </svg>
+              </div>
             </div>
-            <div class="agenda-item__icon">
-              <svg class="icon">
-                <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-          </div>
-        </li>
-        <?php endforeach; ?>
+          </li>
+        <?php endwhile; ?>
       </ul>
 
       <!-- Disclaimer -->
@@ -312,26 +324,27 @@ include 'data/articles.php';
 
 
 <!-- Agenda Modals -->
-<?php foreach ($agenda as $index => $item): ?>
-<article class="modal fade" tabindex="-1" role="dialog" id="agenda-modal-<?php echo $index+1 ?>" aria-labelledby="agenda-item-<?php echo $index+1 ?>" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="agenda-modal modal-dark modal-content">
-      <div class="modal-header">
-        <header>
-          <span class="agenda-modal__type"><?php echo $item['type'] ?></span>
-          <h1><?php echo $item['title'] ?></h1>
-        </header>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <?php echo $item['description'] ?>
+<?php while ($agendaQuery->have_posts()): $agendaQuery->the_post() ?>
+  <?php global $post; ?>
+  <article class="modal fade" tabindex="-1" role="dialog" id="agenda-modal-<?php echo $post->post_name ?>" aria-labelledby="agenda-item-<?php echo $post->post_name ?>" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="agenda-modal modal-dark modal-content">
+        <div class="modal-header">
+          <header>
+            <span class="agenda-modal__type"><?php the_field('type') ?></span>
+            <h1><?php the_title() ?></h1>
+          </header>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <?php the_field('description') ?>
+        </div>
       </div>
     </div>
-  </div>
-</article>
-<?php endforeach; ?>
+  </article>
+<?php endwhile; ?>
 
 
 <!-- Speakers Section -->
@@ -356,34 +369,39 @@ include 'data/articles.php';
 
     <!-- Speakers List -->
     <ul class="speakers-item-list row">
-      <?php foreach ($speakers as $index => $speaker): ?>
-      <li class="col-6 col-md-4 col-lg-3">
-        <button
-          class="speakers-item"
-          id="speaker-item-<?php echo $speaker['id'] ?>"
-          data-toggle="modal"
-          data-target="#speaker-modal-<?php echo $speaker['id'] ?>"
-          data-track-click="Home;Click - Speaker;<?php echo $speaker['name'] ?>"
-        >
-          <div class="speakers-item__profile">
-            <img src="<?php echo $speaker['img'] ?>" alt="Photo of <?php echo $speaker['name'] ?>">
-            <div class="speakers-item__logo">
-              <img src="<?php echo $speaker['logo'] ?>" alt="Logo of <?php echo $speaker['company'] ?>">
+      <?php while ($speakersQuery->have_posts()): $speakersQuery->the_post() ?>
+        <li class="col-6 col-md-4 col-lg-3">
+          <?php global $post; ?>
+          <button
+            class="speakers-item"
+            id="speaker-item-<?php echo $post->post_name ?>"
+            data-toggle="modal"
+            data-target="#speaker-modal-<?php echo $post->post_name ?>"
+            data-track-click="Home;Click - Speaker;<?php the_title() ?>"
+          >
+            <div class="speakers-item__profile">
+              <?php if (get_field('profile_photo')): ?>
+                <img src="<?php the_field('profile_photo') ?>" alt="Photo of <?php the_title() ?>">
+              <?php else: ?>
+                <img src="<?php echo $theme_dir ?>/img/speakers/placeholder.png" alt="Placeholder image">
+              <?php endif; ?>
+              <div class="speakers-item__logo">
+                <img src="<?php the_field('company_logo') ?>" alt="Logo of <?php the_field('company') ?>">
+              </div>
+              <svg class="speakers-item__open-icon icon" aria-hidden="true">
+                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
+              </svg>
             </div>
-            <svg class="speakers-item__open-icon icon" aria-hidden="true">
-              <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
-            </svg>
-          </div>
-          <p class="speakers-item__details">
-            <strong><?php echo $speaker['name'] ?></strong><br>
-            <small>
-              <?php echo $speaker['title'] ?><br>
-              <em><?php echo $speaker['company'] ?></em>
-            </small>
-          </p>
-        </button>
-      </li>
-      <?php endforeach ;?>
+            <p class="speakers-item__details">
+              <strong><?php the_title() ?></strong><br>
+              <small>
+                <?php the_field('title') ?><br>
+                <em><?php the_field('company') ?></em>
+              </small>
+            </p>
+          </button>
+        </li>
+      <?php endwhile; ?>
     </ul>
   </div>
 
@@ -391,32 +409,32 @@ include 'data/articles.php';
 
 
 <!-- Speakers Modals -->
-<?php foreach ($speakers as $index => $item): ?>
-<article class="modal fade" tabindex="-1" role="dialog" id="speaker-modal-<?php echo $item['id'] ?>" aria-labelledby="speaker-item-<?php echo $item['id'] ?>" aria-hidden="true">
+<?php while ($speakersQuery->have_posts()): $speakersQuery->the_post(); ?>
+<?php global $post; ?>
+<article class="modal fade" tabindex="-1" role="dialog" id="speaker-modal-<?php echo $post->post_name ?>" aria-labelledby="speaker-item-<?php echo $post->post_name ?>" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="speakers-modal modal-dark modal-content">
       <div class="modal-header">
         <header>
-          <h1><?php echo $item['name'] ?></h1>
-          <?php echo $item['title'] ?><br>
-          <?php echo $item['company'] ?>
+          <h1><?php the_title() ?></h1>
+          <?php the_field('title') ?><br>
+          <?php the_field('company') ?>
         </header>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <?php foreach ($item['description'] as $content): ?>
-          <p><?php echo $content ?></p>
-        <?php endforeach; ?>
+        <?php the_field('description'); ?>
       </div>
     </div>
   </div>
 </article>
-<?php endforeach; ?>
+<?php endwhile; ?>
 
 
 <!-- Article Section -->
+<?php wp_reset_query(); ?>
 <a class="anchor is-offset" id="articles"></a>
 <section class="article-section section">
   <div class="container">
@@ -431,43 +449,40 @@ include 'data/articles.php';
     <!-- Prev Button -->
     <button class="article-item-control is-prev" data-track-click="Home;Click - Article Carousel Control;Previous">
       <svg class="icon" aria-label="Previous">
-        <use xlink:href="svg/sprites.svg#icon-arrow-left"></use>
+        <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-left"></use>
       </svg>
     </button>
 
     <!-- Carousel -->
     <div class="article-item-list" id="article-item-list">
-
-      <?php foreach ($articles as $item): ?>
+      <?php while (have_rows('articles')): the_row() ?>
         <a
-          href="<?php echo $item['link'] ?>"
+          href="<?php the_sub_field('article_url') ?>"
           target="_blank"
           rel="noopener nofollow noreferrer"
           class="article-item"
-          data-track-click="Home;Click - Article;<?php echo $item['link'] ?>"
+          data-track-click="Home;Click - Article;<?php the_sub_field('article_url') ?>"
         >
           <div class="article-item__image" aria-hidden="true">
-            <img src="<?php echo $item['image'] ?>" alt="Cover photo for <?php echo $item['title'] ?>">
+            <img src="<?php the_sub_field('article_image') ?>" alt="Cover photo for <?php the_sub_field('article_title') ?>">
           </div>
           <div class="article-item__details">
-            <time><?php echo date_format($item['date'], "M j, Y") ?></time>
+            <time><?php the_sub_field('article_date') ?></time>
             <span class="article-item__title">
-              <?php echo $item['title']; ?>
+              <?php the_sub_field('article_title') ?>
             </span>
             <ul class="article-item__tags">
-              <?php foreach ($item['tags'] as $tag): ?>
-                <li><?php echo $tag ?></li>
-              <?php endforeach; ?>
+              <li><?php the_sub_field('article_label') ?></li>
             </ul>
           </div>
         </a>
-      <?php endforeach; ?>
+      <?php endwhile; ?>
     </div>
 
     <!-- Next Button -->
     <button class="article-item-control is-next" data-track-click="Home;Click - Article Carousel Control;Next">
       <svg class="icon" aria-label="Next">
-        <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+        <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
       </svg>
     </button>
 
@@ -484,7 +499,7 @@ include 'data/articles.php';
       <li>
         <a href="https://www.pwc.com/my/en.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;PwC Malaysia">
           <div class="sponsor-item__logo">
-            <img src="img/logos/pwc.png" srcset="img/logos/pwc@2x.png" alt="Logo of PwC">
+            <img src="<?php echo $theme_dir ?>/img/logos/pwc.png" srcset="<?php echo $theme_dir ?>/img/logos/pwc@2x.png" alt="Logo of PwC">
           </div>
           <p class="sponsor-item__name">PwC Malaysia</p>
         </a>
@@ -492,7 +507,7 @@ include 'data/articles.php';
       <li>
         <a href="https://www.cimb.com/en/index.html" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;CIMB">
           <div class="sponsor-item__logo">
-            <img src="img/logos/cimb.png" srcset="img/logos/cimb@2x.png" alt="Logo of CIMB">
+            <img src="<?php echo $theme_dir ?>/img/logos/cimb.png" srcset="<?php echo $theme_dir ?>/img/logos/cimb@2x.png" alt="Logo of CIMB">
           </div>
           <p class="sponsor-item__name">CIMB</p>
         </a>
@@ -500,7 +515,7 @@ include 'data/articles.php';
       <li>
         <a href="https://www.brunsfield.com/" target="_blank" rel="noopener nofollow noreferrer" class="sponsor-item" data-track-click="Home;Click - Sponsor;Brunsfield">
           <div class="sponsor-item__logo">
-            <img src="img/logos/brunsfield.png" srcset="img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
+            <img src="<?php echo $theme_dir ?>/img/logos/brunsfield.png" srcset="<?php echo $theme_dir ?>/img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
           </div>
           <p class="sponsor-item__name">Brunsfield</p>
         </a>
@@ -514,7 +529,7 @@ include 'data/articles.php';
       <li>
         <a href="https://axiatafoundation.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Axiata Foundation">
           <div class="sponsor-item__logo">
-            <img src="img/logos/axiata.png" srcset="img/logos/axiata@2x.png" alt="Logo of Axiata Foundation">
+            <img src="<?php echo $theme_dir ?>/img/logos/axiata.png" srcset="<?php echo $theme_dir ?>/img/logos/axiata@2x.png" alt="Logo of Axiata Foundation">
           </div>
           <p class="sponsor-item__name">Axiata Foundation</p>
         </a>
@@ -528,7 +543,7 @@ include 'data/articles.php';
       <li>
         <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Graduan">
           <div class="sponsor-item__logo">
-            <img src="img/logos/graduan.png" srcset="img/logos/graduan@2x.png" alt="Logo of Graduan">
+            <img src="<?php echo $theme_dir ?>/img/logos/graduan.png" srcset="<?php echo $theme_dir ?>/img/logos/graduan@2x.png" alt="Logo of Graduan">
           </div>
           <p class="sponsor-item__name">Graduan</p>
         </a>
@@ -592,7 +607,7 @@ include 'data/articles.php';
               <button class="btn btn-primary">
                 Continue
                 <svg class="icon">
-                  <use xlink:href="svg/sprites.svg#icon-arrow-right"></use>
+                  <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
                 </svg>
               </button>
             </div>
@@ -616,7 +631,7 @@ include 'data/articles.php';
       <!-- Left Column -->
       <div class="col-md-8 mb-5 mb-md-0">
         <a href="#" class="footer__logo mb-4" data-smooth-scroll data-track-click="General;Footer - Click;YCM Logo">
-          <img src="img/logos/ycm-white.svg" alt="Logo of YCM">
+          <img src="<?php echo $theme_dir ?>/img/logos/ycm-white.svg" alt="Logo of YCM">
         </a>
         <small class="footer__disclaimer">Copyright (C) 2018 Young Corporate Malaysians</small>
       </div>
@@ -633,7 +648,7 @@ include 'data/articles.php';
               <li><a href="#speakers" data-smooth-scroll data-track-click="General;Footer - Click;Speakers">Speakers</a></li>
               <li><a href="#sponsors" data-smooth-scroll data-track-click="General;Footer - Click;Sponsors">Sponsors</a></li>
               <li><a href="#register" data-smooth-scroll data-track-click="General;Footer - Click;Apply Now">Apply Now</a></li>
-              <li><a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" data-track-click="General;Footer - Click;About YCM>About YCM</a></li>
+              <li><a href="http://www.ycm.org.my" rel="noreferrer noopener nofollow" target="_blank" data-track-click="General;Footer - Click;About YCM">About YCM</a></li>
             </ul>
           </div>
 
@@ -656,7 +671,7 @@ include 'data/articles.php';
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="./js/app.js?c=<?php echo date('W') ?>" charset="utf-8"></script>
+<script src="<?php echo $theme_dir ?>/js/app.js?c=<?php echo date('W') ?>" charset="utf-8"></script>
 
 </body>
 </html>
