@@ -434,6 +434,7 @@ $theme_dir = get_stylesheet_directory_uri();
 
 
 <!-- Article Section -->
+<?php wp_reset_query(); ?>
 <a class="anchor is-offset" id="articles"></a>
 <section class="article-section section">
   <div class="container">
@@ -454,31 +455,28 @@ $theme_dir = get_stylesheet_directory_uri();
 
     <!-- Carousel -->
     <div class="article-item-list" id="article-item-list">
-
-      <?php foreach ($articles as $item): ?>
+      <?php while (have_rows('articles')): the_row() ?>
         <a
-          href="<?php echo $item['link'] ?>"
+          href="<?php the_sub_field('article_url') ?>"
           target="_blank"
           rel="noopener nofollow noreferrer"
           class="article-item"
-          data-track-click="Home;Click - Article;<?php echo $item['link'] ?>"
+          data-track-click="Home;Click - Article;<?php the_sub_field('article_url') ?>"
         >
           <div class="article-item__image" aria-hidden="true">
-            <img src="<?php echo $item['image'] ?>" alt="Cover photo for <?php echo $item['title'] ?>">
+            <img src="<?php the_sub_field('article_image') ?>" alt="Cover photo for <?php the_sub_field('article_title') ?>">
           </div>
           <div class="article-item__details">
-            <time><?php echo date_format($item['date'], "M j, Y") ?></time>
+            <time><?php the_sub_field('article_date') ?></time>
             <span class="article-item__title">
-              <?php echo $item['title']; ?>
+              <?php the_sub_field('article_title') ?>
             </span>
             <ul class="article-item__tags">
-              <?php foreach ($item['tags'] as $tag): ?>
-                <li><?php echo $tag ?></li>
-              <?php endforeach; ?>
+              <li><?php the_sub_field('article_label') ?></li>
             </ul>
           </div>
         </a>
-      <?php endforeach; ?>
+      <?php endwhile; ?>
     </div>
 
     <!-- Next Button -->
