@@ -36,19 +36,19 @@ $theme_dir = get_stylesheet_directory_uri();
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- SEO & Meta -->
-  <title>YCM 10th Annual Summit • Distributed Economy</title>
-  <meta name="description" content="Young Corporate Malaysians is proud to host Malaysia's first conference on Distributed Economy (DE). Come and join us to explore DE from the economic, legal, corporate and global perspective!">
-  <meta name="image" content="https://summit.ycm.org.my/img/share-img.jpg">
-  <meta name="og:title" content="YCM 10th Annual Summit • Distributed Economy">
-  <meta name="og:description" content="Young Corporate Malaysians is proud to host Malaysia's first conference on Distributed Economy (DE). Come and join us to explore DE from the economic, legal, corporate and global perspective!">
-  <meta name="og:image" content="https://summit.ycm.org.my/img/share-img.jpg">
+  <title>YCM 10th Annual Summit 2018 • Distributed Economy</title>
+  <meta name="description" content="YCM (Young Corporate Malaysians) will be hosting its 10th Annual Summit 2018 on Distributed Economy! Join us on 24th November 2018 in Kuala Lumpur!">
+  <meta name="image" content="<?php echo $theme_dir ?>/img/share-img.jpg">
+  <meta name="og:title" content="YCM 10th Annual Summit 2018 • Distributed Economy">
+  <meta name="og:description" content="YCM (Young Corporate Malaysians) will be hosting its 10th Annual Summit 2018 on Distributed Economy! Join us on 24th November 2018 in Kuala Lumpur!">
+  <meta name="og:image" content="<?php echo $theme_dir ?>/img/share-img.jpg">
   <meta name="og:url" content="https://summit.ycm.org.my/">
-  <meta name="og:site_name" content="YCM 10th Annual Summit • Distributed Economy">
+  <meta name="og:site_name" content="YCM 10th Annual Summit 2018 • Distributed Economy">
   <meta name="og:type" content="website">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="<?php echo $theme_dir ?>/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="<?php echo $theme_dir ?>/img/favicon-16x16.png" sizes="16x16" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -119,11 +119,11 @@ $theme_dir = get_stylesheet_directory_uri();
 
   <header class="hero-masthead">
     <h1 class="hero-masthead__logo">
-      <img src="<?php echo $theme_dir ?>/img/logos/de-masthead.svg" alt="Distributed Economy">
+      <img src="<?php echo $theme_dir ?>/img/logos/de-masthead.svg" alt="10th Annual YCM Summit: Distributed Economy">
     </h1>
     <div class="hero-masthead__dateline">
       10th Annual YCM Summit<br>
-      <time datetime="2018-11-17T08:30:00+08:00">Nov&nbsp;24&nbsp;2018</time>&ensp;&middot;&ensp;Aloft&nbsp;Kuala&nbsp;Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5.00PM
+      <time datetime="2018-11-17T08:30:00+08:00">Nov&nbsp;24&nbsp;2018</time>&ensp;&middot;&ensp;Kuala&nbsp;Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5.00PM
     </div>
   </header>
 
