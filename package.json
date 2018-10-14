@@ -1,10 +1,10 @@
 {
-  "name": "Boilr",
-  "version": "0.6.0",
-  "description": "A modern front-end boilerplate to kickstart your next project.",
-  "main": "index.js",
-  "author": "Bryon Sigawin <bryon.sigawin@forefront.com.my>",
-  "license": "MIT",
+  "name": "ycm-summit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.php",
+  "author": "James Ooi <james.ooi@ycm.org.my>",
+  "license": "UNLICENSED",
   "dependencies": {
     "moveto": "^1.7.3",
     "scrollmonitor": "^1.2.4",
