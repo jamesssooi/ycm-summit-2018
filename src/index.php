@@ -122,8 +122,11 @@ $theme_dir = get_stylesheet_directory_uri();
       <img src="<?php echo $theme_dir ?>/img/logos/de-masthead.svg" alt="10th Annual YCM Summit: Distributed Economy">
     </h1>
     <div class="hero-masthead__dateline">
-      10th Annual YCM Summit<br>
+      10th Annual YCM Summit
+      <br>
       <time datetime="2018-11-17T08:30:00+08:00">Nov&nbsp;24&nbsp;2018</time>&ensp;&middot;&ensp;Kuala&nbsp;Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5.00PM
+      <br>
+      <span class="badge badge-light">Deadline Extended!</span>
     </div>
   </header>
 
@@ -559,7 +562,10 @@ $theme_dir = get_stylesheet_directory_uri();
   <div class="container">
 
     <div class="registration-form-panel">
-      <h2 class="section-title">Apply Now</h2>
+      <h2 class="section-title">
+        Apply Now<br class="d-md-none">
+        <span class="badge badge-light">Deadline Extended!</span>
+      </h2>
       <div class="row">
 
         <!-- Instructions -->
@@ -571,7 +577,7 @@ $theme_dir = get_stylesheet_directory_uri();
             <ol class="registration-steps">
               <li>
                 <span class="registration-steps__label">Step 1</span>
-                <p>Apply to attend as a delegate by 24th October 2018!</p>
+                <p>Apply to attend as a delegate by <strong>15th&nbsp;November&nbsp;2018!</strong></p>
               </li>
               <li>
                 <span class="registration-steps__label">Step 2</span>
