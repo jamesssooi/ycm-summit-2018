@@ -122,8 +122,11 @@ $theme_dir = get_stylesheet_directory_uri();
       <img src="<?php echo $theme_dir ?>/img/logos/de-masthead.svg" alt="10th Annual YCM Summit: Distributed Economy">
     </h1>
     <div class="hero-masthead__dateline">
-      10th Annual YCM Summit<br>
+      10th Annual YCM Summit
+      <br>
       <time datetime="2018-11-17T08:30:00+08:00">Nov&nbsp;24&nbsp;2018</time>&ensp;&middot;&ensp;Kuala&nbsp;Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5.00PM
+      <br>
+      <span class="badge badge-light">Deadline Extended!</span>
     </div>
   </header>
 
