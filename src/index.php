@@ -559,7 +559,10 @@ $theme_dir = get_stylesheet_directory_uri();
   <div class="container">
 
     <div class="registration-form-panel">
-      <h2 class="section-title">Apply Now</h2>
+      <h2 class="section-title">
+        Apply Now<br class="d-md-none">
+        <span class="badge badge-light">Deadline Extended!</span>
+      </h2>
       <div class="row">
 
         <!-- Instructions -->
@@ -571,7 +574,7 @@ $theme_dir = get_stylesheet_directory_uri();
             <ol class="registration-steps">
               <li>
                 <span class="registration-steps__label">Step 1</span>
-                <p>Apply to attend as a delegate by 24th October 2018!</p>
+                <p>Apply to attend as a delegate by <strong>15th&nbsp;November&nbsp;2018!</strong></p>
               </li>
               <li>
                 <span class="registration-steps__label">Step 2</span>

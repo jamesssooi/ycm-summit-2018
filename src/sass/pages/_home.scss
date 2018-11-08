@@ -677,6 +677,18 @@
   }
 }
 
+.registration-form-panel .section-title .badge {
+  position: relative;
+  margin-top: $spacing-2;
+
+  @include on-tablet {
+    font-size: 0.7em;
+    padding: 0.4em 0.7em;
+    margin-top: 0;
+    top: -3px;
+  }
+}
+
 .registration-instructions {
   position: relative;
 }
