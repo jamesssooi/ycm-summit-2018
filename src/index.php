@@ -135,7 +135,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <div class="col-md-4 text-center text-lg-left mb-4 mb-lg-0">
         <img
           src="<?php echo $theme_dir ?>/img/logos/ycm-10th-anniversary.png"
-          srcset="img/logos/ycm-10th-anniversary@2x.png 2x"
+          srcset="<?php echo $theme_dir ?>/img/logos/ycm-10th-anniversary@2x.png 2x"
           alt="YCM 10th Anniversary"
         >
       </div>
