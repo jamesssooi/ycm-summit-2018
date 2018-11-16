@@ -571,7 +571,8 @@ $theme_dir = get_stylesheet_directory_uri();
             </p>
             <p>
               We have closed our registration. If you have registered and
-              require assistance, you may contact us at info@ycm.org.my.
+              require assistance, you may contact us at
+              <a href="mailto:summit@ycm.org.my">summit@ycm.org.my</a>.
             </p>
           </div>
         </div>
