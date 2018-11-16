@@ -71,7 +71,6 @@ $theme_dir = get_stylesheet_directory_uri();
 
   <!-- Mobile Fixed Menu -->
   <div class="nav-bar-mobile">
-    <a href="#register" class="btn btn-primary" data-smooth-scroll data-track-click="General;Navigation - Click;Apply Now">Apply Now</a>
     <button
       class="btn btn-light nav-hamburger"
       id="nav-hamburger"
@@ -95,7 +94,6 @@ $theme_dir = get_stylesheet_directory_uri();
     <a href="#agenda" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
     <a href="#speakers" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
     <a href="#sponsors" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
-    <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Apply Now">Apply Now</a>
   </nav>
 </header>
 
@@ -105,7 +103,6 @@ $theme_dir = get_stylesheet_directory_uri();
   <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
   <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
   <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
-  <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Apply Now">Apply Now</a>
 </nav>
 
 <main>
@@ -126,7 +123,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <br>
       <time datetime="2018-11-17T08:30:00+08:00">Nov&nbsp;24&nbsp;2018</time>&ensp;&middot;&ensp;Kuala&nbsp;Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5.00PM
       <br>
-      <span class="badge badge-light">Deadline Extended!</span>
+      <span class="badge badge-light">Application Closed</span>
     </div>
   </header>
 
@@ -140,7 +137,6 @@ $theme_dir = get_stylesheet_directory_uri();
         >
       </div>
       <div class="col-md-4 text-center">
-        <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll data-track-click="Home;Click - Hero CTA">Apply Now</a>
         <a href="#about" class="hero-footer__chevron" data-smooth-scroll data-track-click="Home;Click - Hero Scroll Indicator">
           <svg class="icon" aria-label="Scroll to next section">
             <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-chevron-down"></use>
@@ -563,62 +559,21 @@ $theme_dir = get_stylesheet_directory_uri();
 
     <div class="registration-form-panel">
       <h2 class="section-title">
-        Apply Now<br class="d-md-none">
-        <span class="badge badge-light">Deadline Extended!</span>
+        Application Closed
       </h2>
       <div class="row">
 
         <!-- Instructions -->
-        <div class="col-lg-6 offset-lg-1 order-lg-2 mb-5 mb-lg-0">
+        <div class="col-lg-6">
           <div class="registration-instructions">
             <p class="registration-instructions__pullout">
-              Apply now to be a part of Malaysia’s first conference on Distributed Economy!
+              See you there!
             </p>
-            <ol class="registration-steps">
-              <li>
-                <span class="registration-steps__label">Step 1</span>
-                <p>Apply to attend as a delegate by <strong>15th&nbsp;November&nbsp;2018!</strong></p>
-              </li>
-              <li>
-                <span class="registration-steps__label">Step 2</span>
-                <p>We will inform you whether you are shortlisted within 2&ndash;3 weeks from the application deadline.</p>
-              </li>
-              <li>
-                <span class="registration-steps__label">Step 3</span>
-                <p>RSVP your attendance &mdash; and we'll see you at the Summit!</p>
-              </li>
-            </ol>
+            <p>
+              We have closed our registration. If you have registered and
+              require assistance, you may contact us at info@ycm.org.my.
+            </p>
           </div>
-        </div>
-
-        <!-- Form -->
-        <div class="col-lg-5 order-lg-1">
-          <form id="registration-form" action="/api/register.php" method="POST" class="registration-form" target="_blank">
-            <div class="form-group mb-5">
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" class="form-control w-100">
-              <span class="error-label" for="name"></span>
-            </div>
-            <div class="form-group mb-5">
-              <label for="email">Email</label>
-              <input type="text" name="email" id="email" class="form-control w-100">
-              <span class="error-label" for="email"></span>
-            </div>
-            <div class="form-group mb-5">
-              <label for="contactno">Contact Number</label>
-              <input type="text" name="contactno" id="contactno" class="form-control w-100">
-              <span class="error-label" for="contactno"></span>
-            </div>
-            <div class="mb-1">
-              <button class="btn btn-primary">
-                Continue
-                <svg class="icon">
-                  <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
-                </svg>
-              </button>
-            </div>
-            <small>You will continue your registration in Google Forms</small>
-          </form>
         </div>
 
       </div>

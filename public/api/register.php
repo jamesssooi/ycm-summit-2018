@@ -40,6 +40,10 @@ define('LOG_PATH', __DIR__ . '/private/register.log');
  * @return void
  */
 function main() {
+
+  respondWithError('Registrations are now closed.', 400);
+  return;
+
   // Validate incoming data
   try {
     validatePostData($_POST);

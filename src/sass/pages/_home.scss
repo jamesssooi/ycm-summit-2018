@@ -695,7 +695,7 @@
 
 .registration-instructions__pullout {
   line-height: 1.4;
-  margin-bottom: $spacing-6;
+  color: $color-primary;
   
   @include on-desktop {
     font-weight: bold;
