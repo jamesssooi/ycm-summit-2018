@@ -551,14 +551,23 @@ $theme_dir = get_stylesheet_directory_uri();
   </div>
 
   <div class="container">
-    <h2 class="section-title">Career Partner</h2>
     <ul class="sponsor-item-list">
       <li>
         <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Graduan">
+          <h2 class="section-title">Career Partner</h2>
           <div class="sponsor-item__logo">
             <img src="<?php echo $theme_dir ?>/img/logos/graduan.png" srcset="<?php echo $theme_dir ?>/img/logos/graduan@2x.png" alt="Logo of Graduan">
           </div>
           <p class="sponsor-item__name">Graduan</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Graduan">
+          <h2 class="section-title">Event Partner</h2>
+          <div class="sponsor-item__logo">
+            <img src="<?php echo $theme_dir ?>/img/logos/moovby.png" srcset="<?php echo $theme_dir ?>/img/logos/moovby@2x.png" alt="Logo of Moovby">
+          </div>
+          <p class="sponsor-item__name">Moovby</p>
         </a>
       </li>
     </ul>
