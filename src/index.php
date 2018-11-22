@@ -299,7 +299,7 @@ $theme_dir = get_stylesheet_directory_uri();
               data-track-click="Home;Click - Agenda;<?php the_title() ?>"
             >
               <div class="agenda-item__header">
-                <span class="agenda-item__type"><?php the_field('type') ?></span>
+                <span class="agenda-item__type"><?php the_field('type') ?>&ensp;&middot;&ensp;<?php the_field('time') ?></span>
                 <p class="agenda-item__title"><?php the_title() ?></p>
               </div>
               <div class="agenda-item__icon">
@@ -313,8 +313,8 @@ $theme_dir = get_stylesheet_directory_uri();
       </ul>
 
       <!-- Disclaimer -->
-      <div class="alert alert-warning" role="alert">
-        <small><em>We're in the midst of finalising our agenda. Kindly note that this list is subject to change.</em></small>
+      <div class="alert alert-secondary" role="alert">
+        <small><em>This list may be subject to change</em></small>
       </div>
 
     </div>
@@ -330,7 +330,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <div class="agenda-modal modal-dark modal-content">
         <div class="modal-header">
           <header>
-            <span class="agenda-modal__type"><?php the_field('type') ?></span>
+            <span class="agenda-modal__type"><?php the_field('type') ?>&ensp;&middot;&ensp;<?php the_field('time') ?></span>
             <h1><?php the_title() ?></h1>
           </header>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -339,6 +339,24 @@ $theme_dir = get_stylesheet_directory_uri();
         </div>
         <div class="modal-body">
           <?php the_field('description') ?>
+
+          <?php $speakers = get_field('speakers'); ?>
+          <?php if ($speakers): ?>
+            <h5><strong>Speakers</strong></h5>
+            <div class="row">
+              <?php foreach ($speakers as $speaker): ?>
+                <div class="col-12 col-sm-6 d-flex align-items-center mb-2">
+                  <img
+                    class="mr-2"
+                    style="width: 50px; height: 50px;"
+                    src="<?php the_field('profile_photo', $speaker->ID) ?>"
+                    alt="Photo of <?php echo $speaker->post_title ?>"
+                  >
+                  <strong><?php echo $speaker->post_title ?></strong>
+                </div>
+              <?php endforeach ?>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
@@ -356,15 +374,6 @@ $theme_dir = get_stylesheet_directory_uri();
   </div>
 
   <div class="container">
-
-    <div class="alert alert-warning" role="alert">
-      <small>
-        <em>
-          Watch this space! We're in the midst of confirming our list of
-          speakers, which may lead to changes in our line-up.
-        </em>
-      </small>
-    </div>
 
     <!-- Speakers List -->
     <ul class="speakers-item-list row">
@@ -402,6 +411,11 @@ $theme_dir = get_stylesheet_directory_uri();
         </li>
       <?php endwhile; ?>
     </ul>
+
+    <div class="alert alert-secondary" role="alert">
+      <small><em>This list may be subject to change.</em></small>
+    </div>
+
   </div>
 
 </section>
