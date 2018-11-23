@@ -71,6 +71,7 @@ $theme_dir = get_stylesheet_directory_uri();
 
   <!-- Mobile Fixed Menu -->
   <div class="nav-bar-mobile">
+    <a href="/booklet/?utm_source=website" class="btn btn-primary" data-track-click="General;Navigation - Click;Booklet">Booklet</a>
     <button
       class="btn btn-light nav-hamburger"
       id="nav-hamburger"
@@ -94,6 +95,7 @@ $theme_dir = get_stylesheet_directory_uri();
     <a href="#agenda" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
     <a href="#speakers" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
     <a href="#sponsors" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
+    <a href="/booklet/?utm_source=website" class="nav-menu__item is-cta" data-track-click="General;Navigation - Click;Booklet">Booklet</a>
   </nav>
 </header>
 
@@ -103,6 +105,7 @@ $theme_dir = get_stylesheet_directory_uri();
   <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
   <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
   <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
+  <a href="/booklet/?utm_source=website" class="nav-mobile-menu__item is-cta" data-track-click="General;Navigation - Click;Booklet">Download Booklet</a>
 </nav>
 
 <main>
@@ -122,8 +125,6 @@ $theme_dir = get_stylesheet_directory_uri();
       10th Annual YCM Summit
       <br>
       <time datetime="2018-11-17T08:30:00+08:00">Nov&nbsp;24&nbsp;2018</time>&ensp;&middot;&ensp;Kuala&nbsp;Lumpur&ensp;&middot;&ensp;8.30AM&nbsp;-&nbsp;5.00PM
-      <br>
-      <span class="badge badge-light">Application Closed</span>
     </div>
   </header>
 
@@ -137,6 +138,9 @@ $theme_dir = get_stylesheet_directory_uri();
         >
       </div>
       <div class="col-md-4 text-center">
+        <a href="/booklet/?utm_source=website" class="btn btn-primary with-shadow mb-4" data-track-click="Home;Click - Download Booklet;Hero">
+          Download Booklet
+        </a>
         <a href="#about" class="hero-footer__chevron" data-smooth-scroll data-track-click="Home;Click - Hero Scroll Indicator">
           <svg class="icon" aria-label="Scroll to next section">
             <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-chevron-down"></use>
@@ -559,15 +563,6 @@ $theme_dir = get_stylesheet_directory_uri();
             <img src="<?php echo $theme_dir ?>/img/logos/graduan.png" srcset="<?php echo $theme_dir ?>/img/logos/graduan@2x.png" alt="Logo of Graduan">
           </div>
           <p class="sponsor-item__name">Graduan</p>
-        </a>
-      </li>
-      <li>
-        <a href="https://graduan.com/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Graduan">
-          <h2 class="section-title">Event Partner</h2>
-          <div class="sponsor-item__logo">
-            <img src="<?php echo $theme_dir ?>/img/logos/moovby.png" srcset="<?php echo $theme_dir ?>/img/logos/moovby@2x.png" alt="Logo of Moovby">
-          </div>
-          <p class="sponsor-item__name">Moovby</p>
         </a>
       </li>
     </ul>
