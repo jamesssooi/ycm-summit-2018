@@ -71,7 +71,7 @@ $theme_dir = get_stylesheet_directory_uri();
 
   <!-- Mobile Fixed Menu -->
   <div class="nav-bar-mobile">
-    <a href="/booklet/?utm_source=website" class="btn btn-primary" data-track-click="General;Navigation - Click;Booklet">Booklet</a>
+    <a href="/booklet/?utm_source=website" target="_blank" class="btn btn-primary" data-track-click="General;Navigation - Click;Booklet">Booklet</a>
     <button
       class="btn btn-light nav-hamburger"
       id="nav-hamburger"
@@ -95,7 +95,7 @@ $theme_dir = get_stylesheet_directory_uri();
     <a href="#agenda" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
     <a href="#speakers" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
     <a href="#sponsors" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
-    <a href="/booklet/?utm_source=website" class="nav-menu__item is-cta" data-track-click="General;Navigation - Click;Booklet">Booklet</a>
+    <a href="/booklet/?utm_source=website" target="_blank" class="nav-menu__item is-cta" data-track-click="General;Navigation - Click;Booklet">Booklet</a>
   </nav>
 </header>
 
@@ -105,7 +105,7 @@ $theme_dir = get_stylesheet_directory_uri();
   <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
   <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
   <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
-  <a href="/booklet/?utm_source=website" class="nav-mobile-menu__item is-cta" data-track-click="General;Navigation - Click;Booklet">Download Booklet</a>
+  <a href="/booklet/?utm_source=website" target="_blank" class="nav-mobile-menu__item is-cta" data-track-click="General;Navigation - Click;Booklet">Download Booklet</a>
 </nav>
 
 <main>
@@ -138,7 +138,7 @@ $theme_dir = get_stylesheet_directory_uri();
         >
       </div>
       <div class="col-md-4 text-center">
-        <a href="/booklet/?utm_source=website" class="btn btn-primary with-shadow mb-4" data-track-click="Home;Click - Download Booklet;Hero">
+        <a href="/booklet/?utm_source=website" target="_blank" class="btn btn-primary with-shadow mb-4" data-track-click="Home;Click - Download Booklet;Hero">
           Download Booklet
         </a>
         <a href="#about" class="hero-footer__chevron" data-smooth-scroll data-track-click="Home;Click - Hero Scroll Indicator">
