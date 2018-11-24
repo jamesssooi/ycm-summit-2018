@@ -316,11 +316,6 @@ $theme_dir = get_stylesheet_directory_uri();
         <?php endwhile; ?>
       </ul>
 
-      <!-- Disclaimer -->
-      <div class="alert alert-secondary" role="alert">
-        <small><em>This list may be subject to change</em></small>
-      </div>
-
     </div>
   </div>
 </section>
@@ -415,10 +410,6 @@ $theme_dir = get_stylesheet_directory_uri();
         </li>
       <?php endwhile; ?>
     </ul>
-
-    <div class="alert alert-secondary" role="alert">
-      <small><em>This list may be subject to change.</em></small>
-    </div>
 
   </div>
 
