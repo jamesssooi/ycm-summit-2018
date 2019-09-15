@@ -154,6 +154,7 @@ $theme_dir = get_stylesheet_directory_uri();
 
 
 <!-- About DE -->
+<?php $about = get_field("about_section") ?>
 <a class="anchor" id="about"></a>
 <section class="about-de section">
   <div class="container">
@@ -163,116 +164,20 @@ $theme_dir = get_stylesheet_directory_uri();
         <img class="about-de-pattern" src="<?php echo $theme_dir ?>/img/pattern-01.png" role="presentation">
         <div class="about-de-body">
           <header class="section-header">
-            <h2 class="section-title">About Distributed Economy</h2>
+            <h2 class="section-title"><?php echo $about['title_left'] ?></h2>
           </header>
-          <p class="about-de-body__pullout">
-            Distributed Economy explores the possibility of sustainable
-            industrial development through a synergistic regional approach
-            instead of large-scaled, centralised production that may be not be
-            sustainable in the long-run.
-          </p>
-          <p>
-            The distributed economy is made up of network of relationships that
-            allows small and medium sized enterprises (SMEs) to advance through
-            information technology. Where government policies and strategies
-            have failed, a distributed economy in contrast, doesn’t rely on a
-            central system to boost productivity. Rather, it opens the doors for
-            all entities within the network regardless of size or location, to
-            innovation and growth.
-          </p>
-          <p>
-
-            With the emergence of technologies like blockchain, that allows free
-            open-source information sharing, inclusive peer-2-peer sharing
-            platforms and open access financial technolgies, the concept of a
-            distributed economy is no longer a far fetched vision.
-          </p>
-
-          <figure class="de-diagram d-lg-none mt-4">
-            <div class="de-diagram__item">
-              <img src="<?php echo $theme_dir ?>/img/de-diagram-01.svg" alt="">
-              <span>Centralised</span>
-            </div>
-            <div class="de-diagram__item">
-              <img src="<?php echo $theme_dir ?>/img/de-diagram-02.svg" alt="">
-              <span>Shared</span>
-            </div>
-            <div class="de-diagram__item">
-              <img src="<?php echo $theme_dir ?>/img/de-diagram-03.svg" alt="">
-              <span>Distributed</span>
-            </div>
-          </figure>
-
+          <?php echo $about['body_left'] ?>
         </div>
       </div>
 
       <aside class="col-md-5 offset-md-1 col-lg-4 offset-lg-2 mb-4 mb-md-0">
         <header class="section-header">
-          <h3 class="section-title">Key Areas</h3>
+          <h3 class="section-title"><?php echo $about['title_right'] ?></h3>
         </header>
-        <ul class="about-de-areas">
-          <li class="about-de-areas__item">
-            <div class="about-de-areas__icon">
-              <svg class="icon">
-                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-briefcase"></use>
-              </svg>
-            </div>
-            <span class="about-de-areas__title">
-              Employment &amp; Job Creation
-            </span>
-          </li>
-          <li class="about-de-areas__item">
-            <div class="about-de-areas__icon">
-              <svg class="icon">
-                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-cubes"></use>
-              </svg>
-            </div>
-            <span class="about-de-areas__title">
-              Blockchain &amp; Open Financial Technologies
-            </span>
-          </li>
-          <li class="about-de-areas__item">
-            <div class="about-de-areas__icon">
-              <svg class="icon">
-                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-upwards"></use>
-              </svg>
-            </div>
-            <span class="about-de-areas__title">
-              Inequality: Progress for Everyone
-            </span>
-          </li>
-          <li class="about-de-areas__item">
-            <div class="about-de-areas__icon">
-              <svg class="icon">
-                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-government"></use>
-              </svg>
-            </div>
-            <span class="about-de-areas__title">
-              Regulating the Platform Economy
-            </span>
-          </li>
-        </ul>
+        <?php echo $about['body_right'] ?>
       </aside>
 
     </article>
-  </div>
-
-  <!-- Diagram -->
-  <div class="container">
-    <figure class="de-diagram d-none d-lg-flex">
-      <div class="de-diagram__item">
-        <img src="<?php echo $theme_dir ?>/img/de-diagram-01.svg" alt="">
-        <span>Centralised</span>
-      </div>
-      <div class="de-diagram__item">
-        <img src="<?php echo $theme_dir ?>/img/de-diagram-02.svg" alt="">
-        <span>Shared</span>
-      </div>
-      <div class="de-diagram__item">
-        <img src="<?php echo $theme_dir ?>/img/de-diagram-03.svg" alt="">
-        <span>Distributed</span>
-      </div>
-    </figure>
   </div>
 </section>
 
