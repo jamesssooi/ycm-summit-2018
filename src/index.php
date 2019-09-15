@@ -64,8 +64,8 @@ $theme_dir = get_stylesheet_directory_uri();
       <img src="<?php echo $theme_dir ?>/img/logos/ycm-white.svg" class="ycm-logo-white" alt="Logo of YCM">
       <img src="<?php echo $theme_dir ?>/img/logos/ycm-black.svg" class="ycm-logo-black" alt="Logo of YCM">
     </a>
-    <a href="#" class="nav-logos__de" data-smooth-scroll data-track-click="General;Navigation - Click;Distributed Economy">
-      <img src="<?php echo $theme_dir ?>/img/logos/de-masthead-black.svg" class="de-logo-black" alt="Logo of Distributed Economy">
+    <a href="#" class="nav-logos__de" data-smooth-scroll data-track-click="General;Navigation - Click;Summit Logo">
+      <img src="<?php echo $theme_dir ?>/img/logos/rrr-nav-logo.png" class="de-logo-black" alt="Logo of 11th Annual YCM Summit">
     </a>
   </div>
 
