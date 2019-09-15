@@ -36,14 +36,14 @@ $theme_dir = get_stylesheet_directory_uri();
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- SEO & Meta -->
-  <title>YCM 10th Annual Summit 2018 • Distributed Economy</title>
-  <meta name="description" content="YCM (Young Corporate Malaysians) will be hosting its 10th Annual Summit 2018 on Distributed Economy! Join us on 24th November 2018 in Kuala Lumpur!">
+  <title>YCM 11th Annual Summit 2019 • Reboot Rewire Rethink</title>
+  <meta name="description" content="YCM (Young Corporate Malaysians) will be hosting its 11th Annual Summit 2019 on Reboot Rewire Rethink! Join us on 16th November 2019 in Kuala Lumpur!">
   <meta name="image" content="<?php echo $theme_dir ?>/img/share-img.jpg">
-  <meta name="og:title" content="YCM 10th Annual Summit 2018 • Distributed Economy">
-  <meta name="og:description" content="YCM (Young Corporate Malaysians) will be hosting its 10th Annual Summit 2018 on Distributed Economy! Join us on 24th November 2018 in Kuala Lumpur!">
+  <meta name="og:title" content="YCM 11th Annual Summit 2019 • Reboot Rewire Rethink">
+  <meta name="og:description" content="YCM (Young Corporate Malaysians) will be hosting its 11th Annual Summit 2019 on Reboot Rewire Rethink! Join us on 16th November 2019 in Kuala Lumpur!">
   <meta name="og:image" content="<?php echo $theme_dir ?>/img/share-img.jpg">
   <meta name="og:url" content="https://summit.ycm.org.my/">
-  <meta name="og:site_name" content="YCM 10th Annual Summit 2018 • Distributed Economy">
+  <meta name="og:site_name" content="YCM 11th Annual Summit 2019 • Reboot Rewire Rethink">
   <meta name="og:type" content="website">
 
   <!-- Favicons -->
