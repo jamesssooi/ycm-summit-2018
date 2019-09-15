@@ -406,6 +406,21 @@ $theme_dir = get_stylesheet_directory_uri();
 <!-- Sponsors Section -->
 <a class="anchor is-offset" id="sponsors"></a>
 <section class="sponsors-section section with-offset-bottom">
+
+  <div class="container">
+    <h2 class="section-title">Strategic Partner</h2>
+    <ul class="sponsor-item-list">
+      <li>
+        <a href="https://asb.edu.my/" class="sponsor-item" target="_blank" rel="noopener nofollow noreferrer" data-track-click="Home;Click - Sponsor;Asia School of Business">
+          <div class="sponsor-item__logo">
+            <img src="<?php echo $theme_dir ?>/img/logos/asb.png" srcset="<?php echo $theme_dir ?>/img/logos/asb@2x.png" alt="Logo of Asia School of Business">
+          </div>
+          <p class="sponsor-item__name">Asia School of Business</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
   <div class="container">
     <h2 class="section-title">Platinum Sponsors</h2>
     <ul class="sponsor-item-list">
@@ -431,6 +446,14 @@ $theme_dir = get_stylesheet_directory_uri();
             <img src="<?php echo $theme_dir ?>/img/logos/brunsfield.png" srcset="<?php echo $theme_dir ?>/img/logos/brunsfield@2x.png" alt="Logo of Brunsfield">
           </div>
           <p class="sponsor-item__name">Brunsfield</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://mdec.my/" target="_blank" rel="noopener nofollow noreferrer" class="sponsor-item" data-track-click="Home;Click - Sponsor;MDEC">
+          <div class="sponsor-item__logo">
+            <img src="<?php echo $theme_dir ?>/img/logos/mdec.png" srcset="<?php echo $theme_dir ?>/img/logos/mdec@2x.png" alt="Logo of MDEC">
+          </div>
+          <p class="sponsor-item__name">MDEC</p>
         </a>
       </li>
     </ul>
