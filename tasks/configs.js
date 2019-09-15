@@ -4,7 +4,7 @@ export const production = env === 'production' ? true : false;
 export const baseDir = {
   static: './static',
   src: './src',
-  dist: './public/wp-content/themes/ycmsummit2018',
+  dist: './public/wp-content/themes/ycmsummit2019',
 
   styles: {
     src: ['sass/**/*.scss', 'css/**/*.css'],
