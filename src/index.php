@@ -490,27 +490,22 @@ $theme_dir = get_stylesheet_directory_uri();
 
 
 <!-- Registration Form -->
+<?php $registration = get_field('registration_section') ?>
 <section class="registration-form-section">
   <a class="anchor is-offset" id="register"></a>
   <div class="container">
 
     <div class="registration-form-panel">
       <h2 class="section-title">
-        Application Closed
+      <?php echo $registration['title'] ?>
       </h2>
       <div class="row">
 
         <!-- Instructions -->
         <div class="col-lg-6">
           <div class="registration-instructions">
-            <p class="registration-instructions__pullout">
-              See you there!
-            </p>
-            <p>
-              We have closed our registration. If you have registered and
-              require assistance, you may contact us at
-              <a href="mailto:summit@ycm.org.my">summit@ycm.org.my</a>.
-            </p>
+          <?php echo $registration['content'] ?>
+            <a href="<?php echo $registration['registration_link'] ?>" class="btn btn-primary" data-track-click="Goals;Register"><?php echo $registration['registration_button'] ?></a>
           </div>
         </div>
 
@@ -532,7 +527,7 @@ $theme_dir = get_stylesheet_directory_uri();
         <a href="#" class="footer__logo mb-4" data-smooth-scroll data-track-click="General;Footer - Click;YCM Logo">
           <img src="<?php echo $theme_dir ?>/img/logos/ycm-white.svg" alt="Logo of YCM">
         </a>
-        <small class="footer__disclaimer">Copyright (C) 2018 Young Corporate Malaysians</small>
+        <small class="footer__disclaimer">Copyright (C) <?php echo date("Y"); ?> Young Corporate Malaysians</small>
       </div>
 
       <!-- Right Column -->
