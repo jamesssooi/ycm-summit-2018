@@ -93,7 +93,9 @@ $theme_dir = get_stylesheet_directory_uri();
   <nav class="nav-menu ml-auto">
     <a href="#about" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;About">About</a>
     <a href="#agenda" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
-    <a href="#speakers" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
+    <?php if ($speakersQuery->have_posts()): ?>
+      <a href="#speakers" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
+    <?php endif; ?>
     <a href="#sponsors" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
     <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Register">Register</a>
   </nav>
@@ -103,7 +105,9 @@ $theme_dir = get_stylesheet_directory_uri();
 <nav class="nav-mobile-menu" id="nav-mobile-menu" aria-labelledby="">
   <a href="#about" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;About">About</a>
   <a href="#agenda" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Agenda">Agenda</a>
-  <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
+  <?php if ($speakersQuery->have_posts()): ?>
+    <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
+  <?php endif; ?>
   <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
   <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Register">Register</a>
 </nav>
@@ -215,8 +219,11 @@ $theme_dir = get_stylesheet_directory_uri();
         <?php endwhile; ?>
       </ul>
 
+      <div class="alert alert-warning"><em><small>Agenda might be subject to change.</small></em></div>
+
     </div>
   </div>
+
 </section>
 
 
@@ -263,57 +270,59 @@ $theme_dir = get_stylesheet_directory_uri();
 
 
 <!-- Speakers Section -->
-<a class="anchor is-offset" id="speakers"></a>
-<section class="speakers-section section">
-  <div class="container">
-    <header class="section-header">
-      <h2 class="section-title">Speakers</h2>
-    </header>
-  </div>
+<?php if ($speakersQuery->have_posts()): ?>
+  <a class="anchor is-offset" id="speakers"></a>
+  <section class="speakers-section section">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Speakers</h2>
+      </header>
+    </div>
 
-  <div class="container">
+    <div class="container">
 
-    <!-- Speakers List -->
-    <ul class="speakers-item-list row">
-      <?php while ($speakersQuery->have_posts()): $speakersQuery->the_post() ?>
-        <li class="col-6 col-md-4 col-lg-3">
-          <?php global $post; ?>
-          <button
-            class="speakers-item"
-            id="speaker-item-<?php echo $post->post_name ?>"
-            data-toggle="modal"
-            data-target="#speaker-modal-<?php echo $post->post_name ?>"
-            data-track-click="Home;Click - Speaker;<?php the_title() ?>"
-          >
-            <div class="speakers-item__profile">
-              <?php if (get_field('profile_photo')): ?>
-                <img src="<?php the_field('profile_photo') ?>" alt="Photo of <?php the_title() ?>">
-              <?php else: ?>
-                <img src="<?php echo $theme_dir ?>/img/speakers/placeholder.png" alt="Placeholder image">
-              <?php endif; ?>
-              <div class="speakers-item__logo">
-                <img src="<?php the_field('company_logo') ?>" alt="Logo of <?php the_field('company') ?>">
+      <!-- Speakers List -->
+      <ul class="speakers-item-list row">
+        <?php while ($speakersQuery->have_posts()): $speakersQuery->the_post() ?>
+          <li class="col-6 col-md-4 col-lg-3">
+            <?php global $post; ?>
+            <button
+              class="speakers-item"
+              id="speaker-item-<?php echo $post->post_name ?>"
+              data-toggle="modal"
+              data-target="#speaker-modal-<?php echo $post->post_name ?>"
+              data-track-click="Home;Click - Speaker;<?php the_title() ?>"
+            >
+              <div class="speakers-item__profile">
+                <?php if (get_field('profile_photo')): ?>
+                  <img src="<?php the_field('profile_photo') ?>" alt="Photo of <?php the_title() ?>">
+                <?php else: ?>
+                  <img src="<?php echo $theme_dir ?>/img/speakers/placeholder.png" alt="Placeholder image">
+                <?php endif; ?>
+                <div class="speakers-item__logo">
+                  <img src="<?php the_field('company_logo') ?>" alt="Logo of <?php the_field('company') ?>">
+                </div>
+                <svg class="speakers-item__open-icon icon" aria-hidden="true">
+                  <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
+                </svg>
               </div>
-              <svg class="speakers-item__open-icon icon" aria-hidden="true">
-                <use xlink:href="<?php echo $theme_dir ?>/svg/sprites.svg#icon-arrow-right"></use>
-              </svg>
-            </div>
-            <p class="speakers-item__details">
-              <strong><?php the_title() ?></strong><br>
-              <small>
-                <?php the_field('title') ?><br>
-                <em><?php the_field('company') ?></em>
-              </small>
-            </p>
-          </button>
-        </li>
-      <?php endwhile; ?>
-    </ul>
+              <p class="speakers-item__details">
+                <strong><?php the_title() ?></strong><br>
+                <small>
+                  <?php the_field('title') ?><br>
+                  <em><?php the_field('company') ?></em>
+                </small>
+              </p>
+            </button>
+          </li>
+        <?php endwhile; ?>
+      </ul>
 
-  </div>
+      <div class="alert alert-warning"><em><small>Speakers might be subject to change.</small></em></div>
 
-</section>
-
+    </div>
+  </section>
+<?php endif; ?>
 
 <!-- Speakers Modals -->
 <?php while ($speakersQuery->have_posts()): $speakersQuery->the_post(); ?>
@@ -378,9 +387,11 @@ $theme_dir = get_stylesheet_directory_uri();
             <span class="article-item__title">
               <?php the_sub_field('article_title') ?>
             </span>
-            <ul class="article-item__tags">
-              <li><?php the_sub_field('article_label') ?></li>
-            </ul>
+            <?php if (get_sub_field('article_label')): ?>
+              <ul class="article-item__tags">
+                <li><?php the_sub_field('article_label') ?></li>
+              </ul>
+            <?php endif; ?>
           </div>
         </a>
       <?php endwhile; ?>
