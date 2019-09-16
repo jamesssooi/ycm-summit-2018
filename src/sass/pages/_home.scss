@@ -225,8 +225,11 @@
 /* -------------------------------------------------------------------------- */
 .article-section {
   overflow: hidden;
-  padding-top: 0;
   background-color: white;
+}
+
+.article-section.no-top-padding {
+  padding-top: 0;
   @include on-desktop {
     padding-top: inherit;
   }

@@ -352,7 +352,7 @@ $theme_dir = get_stylesheet_directory_uri();
 <!-- Article Section -->
 <?php wp_reset_query(); ?>
 <a class="anchor is-offset" id="articles"></a>
-<section class="article-section section">
+<section class="article-section section <?php echo ($speakersQuery->have_posts()) ? "no-top-padding" : "" ?>">
   <div class="container">
     <header class="section-header">
       <h2 class="section-title">Curated Articles</h2>
