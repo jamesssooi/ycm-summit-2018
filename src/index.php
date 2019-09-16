@@ -71,7 +71,7 @@ $theme_dir = get_stylesheet_directory_uri();
 
   <!-- Mobile Fixed Menu -->
   <div class="nav-bar-mobile">
-    <a href="#register" class="btn btn-primary" data-smooth-scroll data-track-click="General;Navigation - Click;Register">Register</a>
+    <a href="#register" class="btn btn-primary" data-smooth-scroll data-track-click="General;Navigation - Click;Register">Apply</a>
     <button
       class="btn btn-light nav-hamburger"
       id="nav-hamburger"
@@ -97,7 +97,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <a href="#speakers" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
     <?php endif; ?>
     <a href="#sponsors" class="nav-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
-    <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Register">Register</a>
+    <a href="#register" class="nav-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Register">Apply</a>
   </nav>
 </header>
 
@@ -109,7 +109,7 @@ $theme_dir = get_stylesheet_directory_uri();
     <a href="#speakers" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Speakers">Speakers</a>
   <?php endif; ?>
   <a href="#sponsors" class="nav-mobile-menu__item" data-smooth-scroll data-track-click="General;Navigation - Click;Sponsors">Sponsors</a>
-  <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Register">Register</a>
+  <a href="#register" class="nav-mobile-menu__item is-cta" data-smooth-scroll data-track-click="General;Navigation - Click;Register">Apply</a>
 </nav>
 
 <main>
@@ -137,7 +137,7 @@ $theme_dir = get_stylesheet_directory_uri();
       <div class="col-md-4 text-center text-lg-left mb-4 mb-lg-0"></div>
       <div class="col-md-4 text-center">
         <a href="#register" class="btn btn-primary with-shadow mb-4" data-smooth-scroll data-track-click="Home;Click - Register">
-          Register Now
+          Apply Now
         </a>
         <a href="#about" class="hero-footer__chevron" data-smooth-scroll data-track-click="Home;Click - Hero Scroll Indicator">
           <svg class="icon" aria-label="Scroll to next section">
